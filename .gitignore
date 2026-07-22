@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+node-v20.11.1-win-x64/
+*.zip
+*.log
+
+# Build output
+dist/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary python scripts
+*.py
