@@ -499,31 +499,33 @@
         <h3 id="modalJobTitle" style="font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;">Apply for Job</h3>
         <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 24px;">Please complete the form fields to submit your application details.</p>
 
-        <!-- Form fields -->
-        <form id="jobForm" onsubmit="submitJobForm(event)">
-          <input type="hidden" id="formJobName" />
+        <!-- Form fields (Targeting hr@edvanta-edu.com) -->
+        <form id="jobForm" action="https://formsubmit.co/hr@edvanta-edu.com" method="POST" onsubmit="submitJobForm(event)">
+          <input type="hidden" id="formJobName" name="Job Position" />
+          <input type="hidden" name="_subject" id="emailSubject" value="New Job Application - Edvanta Careers" />
+          <input type="hidden" name="_template" value="table" />
           
           <div class="form-group">
             <label for="appName">Full Name</label>
-            <input type="text" id="appName" class="form-control" required placeholder="John Doe" />
+            <input type="text" id="appName" name="Full Name" class="form-control" required placeholder="John Doe" />
           </div>
 
           <div class="form-group">
             <label for="appEmail">Email Address</label>
-            <input type="email" id="appEmail" class="form-control" required placeholder="john.doe@example.com" />
+            <input type="email" id="appEmail" name="Email Address" class="form-control" required placeholder="john.doe@example.com" />
           </div>
 
           <div class="form-group">
             <label for="appResume">Resume Link (GitHub / Drive)</label>
-            <input type="url" id="appResume" class="form-control" required placeholder="https://github.com/johndoe/resume" />
+            <input type="url" id="appResume" name="Resume Link" class="form-control" required placeholder="https://github.com/johndoe/resume" />
           </div>
 
           <div class="form-group">
             <label for="appPitch">Why Edvanta? (Short Pitch)</label>
-            <textarea id="appPitch" class="form-control" required placeholder="Briefly describe your experiences and drive..." style="min-height: 80px;"></textarea>
+            <textarea id="appPitch" name="Why Edvanta (Pitch)" class="form-control" required placeholder="Briefly describe your experiences and drive..." style="min-height: 80px;"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Submit Application</button>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Submit Application to hr@edvanta-edu.com</button>
         </form>
       </div>
     </div>
@@ -700,6 +702,7 @@
 
       function openApplyModal(jobName) {
         formJobName.value = jobName;
+        document.getElementById('emailSubject').value = `New Job Application: ${jobName}`;
         modalJobTitle.textContent = `Apply for: ${jobName}`;
         modal.classList.add('open');
       }
@@ -714,9 +717,41 @@
         
         const name = document.getElementById('appName').value.trim();
         const email = document.getElementById('appEmail').value.trim();
-        const job = formJobName.value;
+        const resume = document.getElementById('appResume').value.trim();
+        const pitch = document.getElementById('appPitch').value.trim();
+        const job = formJobName.value || 'Job Position';
 
-        alert(`Thank you, ${name}! Your application for the "${job}" position has been submitted. We will contact you at ${email} shortly.`);
+        // 1. Submit background email payload via FormSubmit API targeting hr@edvanta-edu.com
+        fetch('https://formsubmit.co/ajax/hr@edvanta-edu.com', {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            _subject: `New Job Application: ${job} - ${name}`,
+            _replyto: email,
+            "Applicant Name": name,
+            "Applicant Email": email,
+            "Job Position": job,
+            "Resume Link": resume,
+            "Why Edvanta (Pitch)": pitch
+          })
+        }).catch(err => console.log(err));
+
+        // 2. Open mailto link targeting hr@edvanta-edu.com directly
+        const subject = encodeURIComponent(`Job Application for ${job} - ${name}`);
+        const body = encodeURIComponent(
+          `Full Name: ${name}\n` +
+          `Email Address: ${email}\n` +
+          `Position Applied: ${job}\n` +
+          `Resume Link: ${resume}\n\n` +
+          `Why Edvanta (Pitch):\n${pitch}`
+        );
+        
+        window.location.href = `mailto:hr@edvanta-edu.com?subject=${subject}&body=${body}`;
+
+        alert(`Thank you, ${name}! Your application for the "${job}" position has been submitted and forwarded directly to hr@edvanta-edu.com.`);
         closeApplyModal();
       }
     </script>
