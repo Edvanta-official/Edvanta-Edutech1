@@ -105,6 +105,11 @@ body {
   position: relative;
 }
 
+/* Master Section Transparency Override: Remove all backside white section divs */
+section, .section, main, footer, .community-section, .sitemap-container {
+  background-color: transparent !important;
+}
+
 /* Animated Floating Soft Light Blue, White & Light Yellow Rotating Bubble Orbs */
 body::before {
   content: '';
