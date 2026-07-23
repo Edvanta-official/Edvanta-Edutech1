@@ -3377,11 +3377,19 @@ html {
 }
 
 .logo-svg {
-  height: 32px !important;
+  height: 44px !important;
   width: auto !important;
-  min-width: 135px !important;
-  max-width: 160px !important;
+  min-width: 160px !important;
+  max-width: 200px !important;
   overflow: visible !important;
+}
+
+.logo img {
+  height: 44px !important;
+  max-height: 46px !important;
+  width: auto !important;
+  display: block !important;
+  object-fit: contain !important;
 }
 
 
