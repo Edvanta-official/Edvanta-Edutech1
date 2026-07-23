@@ -116,6 +116,12 @@ footer, .sitemap-footer {
   padding-bottom: 10px !important;
 }
 
+#scrollTopBtn:hover {
+  transform: translateY(-4px) scale(1.1) !important;
+  background-color: #0369a1 !important;
+  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.5) !important;
+}
+
 /* Multi-Color Small 3D Floating Glowing Orbs (Red, Pink, Yellow, Blue, Orange, Purple, White) */
 body::before {
   content: '';
