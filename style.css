@@ -107,11 +107,38 @@ body {
   padding-bottom: 0 !important;
 }
 
-/* Master Section Transparency Override: Remove all backside white section divs */
-section, .section, main, footer, .community-section, .sitemap-container, .sitemap-footer, .about-hero-partner-bar, .partners-section {
+/* Master Section & Card Transparency Overrides */
+main, footer, .community-section, .sitemap-container, .sitemap-footer, .about-hero-partner-bar, .partners-section {
   background-color: transparent !important;
-  background: transparent !important;
-  border: none !important;
+}
+
+/* Dark Hero Banner & Pricing Card Enclosures - High Contrast Protection */
+section[style*="0f172a"], section[style*="1e293b"], .course-hero-banner, .hero-dark-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  color: #ffffff !important;
+  border-radius: 32px !important;
+  margin: 20px auto !important;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25) !important;
+}
+
+section[style*="0f172a"] h1, section[style*="1e293b"] h1,
+section[style*="0f172a"] h2, section[style*="1e293b"] h2,
+section[style*="0f172a"] h3, section[style*="1e293b"] h3 {
+  color: #ffffff !important;
+}
+
+section[style*="0f172a"] p, section[style*="1e293b"] p {
+  color: #cbd5e1 !important;
+}
+
+section[style*="0f172a"] ul li, section[style*="1e293b"] ul li {
+  color: #e2e8f0 !important;
+}
+
+/* Pricing Card High Contrast inside Hero */
+div[style*="backdrop-filter"] span[style*="ffffff"],
+div[style*="backdrop-filter"] span[style*="40px"] {
+  color: #ffffff !important;
 }
 
 footer, .sitemap-footer {
