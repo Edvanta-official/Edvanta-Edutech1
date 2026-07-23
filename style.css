@@ -108,8 +108,9 @@ body {
 }
 
 /* Master Section & Card Transparency Overrides */
-main, footer, .community-section, .sitemap-container, .sitemap-footer, .about-hero-partner-bar, .partners-section {
+main, footer, .community-section, .sitemap-container, .sitemap-footer, .about-hero-partner-bar, .partners-section, .about-hero-section {
   background-color: transparent !important;
+  background: transparent !important;
 }
 
 /* Dark Hero Banner & Pricing Card Enclosures - High Contrast Protection */
