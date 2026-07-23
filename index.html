@@ -35,28 +35,29 @@
         
         <!-- Centered Floating Pill Navigation Container -->
         <div class="nav-pill-container glass-panel" style="display: flex; align-items: center; height: 56px; border-radius: 50px; background: rgba(255, 255, 255, 0.92); border: 1px solid rgba(255, 255, 255, 0.55); backdrop-filter: blur(22px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08); padding: 0 32px 0 20px; gap: 36px;">
-          <!-- Logo (Exact Calligraphic E + EDVANTA Green Badge Matching Screenshot) -->
-          <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; height: 40px;">
-            <svg class="logo-svg" viewBox="0 0 420 95" width="165" height="42" xmlns="http://www.w3.org/2000/svg">
+          <!-- Logo (Exact Calligraphic E + EDVANTA Green Badge + Tagline Matching Image 3) -->
+          <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+            <svg class="logo-svg" viewBox="0 0 420 120" width="165" height="48" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <style>
                   @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@500;600;700&display=swap');
-                  .l-box-bg { fill: #ffffff; stroke: #94a3b8; stroke-width: 2.5; rx: 6px; }
-                  .l-name-bg { fill: #8ba895; rx: 6px; }
+                  .l-box-bg { fill: #ffffff; stroke: #94a3b8; stroke-width: 2.5; rx: 4px; }
+                  .l-name-bg { fill: #8ba895; rx: 4px; }
                   .l-script-e { font-family: 'Great Vibes', 'Playfair Display', cursive, serif; font-size: 68px; font-weight: 700; font-style: italic; fill: #0f172a; }
                   .l-text-edvanta { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; fill: #ffffff; letter-spacing: 6.5px; }
-                  
-                  [data-theme="dark"] .l-box-bg { fill: #1e293b; stroke: #cbd5e1; }
-                  [data-theme="dark"] .l-script-e { fill: #ffffff; }
+                  .l-tagline { font-family: 'Great Vibes', cursive, serif; font-size: 22px; fill: #475569; font-style: italic; }
                 </style>
               </defs>
               <!-- Left Box: Calligraphic E -->
-              <rect x="4" y="4" width="85" height="85" rx="8" class="l-box-bg" />
+              <rect x="4" y="4" width="85" height="85" rx="4" class="l-box-bg" />
               <text x="46.5" y="67" text-anchor="middle" class="l-script-e">E</text>
 
               <!-- Right Box: EDVANTA -->
-              <rect x="98" y="4" width="318" height="85" rx="8" class="l-name-bg" />
-              <text x="257" y="56" text-anchor="middle" class="l-text-edvanta">EDVANTA</text>
+              <rect x="96" y="4" width="318" height="85" rx="4" class="l-name-bg" />
+              <text x="255" y="56" text-anchor="middle" class="l-text-edvanta">EDVANTA</text>
+
+              <!-- Tagline: Ignite your growth, inspire your mind -->
+              <text x="210" y="112" text-anchor="middle" class="l-tagline">Ignite your growth, inspire your mind</text>
             </svg>
           </a>
 
@@ -211,19 +212,7 @@
         <div class="navbar-actions-new" style="display: flex; align-items: center; gap: 16px;">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" class="btn-signup-new">Sign Up</a>
         </div>
-      </div>
     </header>
-
-    <!-- Floating Theme Switcher -->
-    <div class="floating-theme-switch" id="themeToggler">
-      <button class="theme-btn active" data-mode="light" title="Light Mode">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      </button>
-      <div class="theme-divider"></div>
-      <button class="theme-btn" data-mode="dark" title="Dark Mode">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-    </div>
 
         <!-- Hero Section (Fixed Text Contrast & Pristine Color Palette) -->
     <section class="hero-skill-hub" style="padding: 140px 0 60px 0; position: relative; overflow: hidden; background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);">
