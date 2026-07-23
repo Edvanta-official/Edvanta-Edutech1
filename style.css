@@ -116,67 +116,87 @@ footer, .sitemap-footer {
   padding-bottom: 10px !important;
 }
 
-/* Animated Floating Red, Pink, Yellow, Blue & White Rotating Mixed Bubble Orbs */
+/* Small Sequential Floating Bubbles (Blue -> Pink -> Red -> Yellow -> White) */
 body::before {
   content: '';
   position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
   z-index: -10;
   background: 
-    radial-gradient(circle at 18% 22%, rgba(239, 68, 68, 0.45) 0%, rgba(239, 68, 68, 0.08) 32%, transparent 55%),  /* Red Bubble */
-    radial-gradient(circle at 78% 22%, rgba(236, 72, 153, 0.45) 0%, rgba(236, 72, 153, 0.08) 32%, transparent 55%), /* Pink Bubble */
-    radial-gradient(circle at 25% 75%, rgba(250, 204, 21, 0.5) 0%, rgba(250, 204, 21, 0.1) 30%, transparent 50%),   /* Yellow Bubble */
-    radial-gradient(circle at 75% 75%, rgba(56, 189, 248, 0.5) 0%, rgba(56, 189, 248, 0.1) 30%, transparent 50%),  /* Blue Bubble */
-    radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.2) 25%, transparent 45%); /* White Bubble */
-  animation: rotateAndFloatFiveColorBubbles1 20s ease-in-out infinite alternate;
+    /* Blue Bubbles */
+    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.75) 0%, rgba(56, 189, 248, 0.2) 20px, transparent 40px),
+    radial-gradient(circle at 50% 15%, rgba(56, 189, 248, 0.75) 0%, rgba(56, 189, 248, 0.2) 25px, transparent 50px),
+    radial-gradient(circle at 82% 18%, rgba(56, 189, 248, 0.75) 0%, rgba(56, 189, 248, 0.2) 22px, transparent 44px),
+    
+    /* Pink Bubbles beside Blue */
+    radial-gradient(circle at 22% 24%, rgba(236, 72, 153, 0.75) 0%, rgba(236, 72, 153, 0.2) 22px, transparent 45px),
+    radial-gradient(circle at 62% 20%, rgba(236, 72, 153, 0.75) 0%, rgba(236, 72, 153, 0.2) 28px, transparent 55px),
+    radial-gradient(circle at 92% 22%, rgba(236, 72, 153, 0.75) 0%, rgba(236, 72, 153, 0.2) 20px, transparent 40px),
+
+    /* Red Bubbles beside Pink */
+    radial-gradient(circle at 34% 28%, rgba(239, 68, 68, 0.75) 0%, rgba(239, 68, 68, 0.2) 20px, transparent 40px),
+    radial-gradient(circle at 74% 26%, rgba(239, 68, 68, 0.75) 0%, rgba(239, 68, 68, 0.2) 26px, transparent 50px),
+
+    /* Yellow Bubbles beside Red */
+    radial-gradient(circle at 44% 32%, rgba(250, 204, 21, 0.8) 0%, rgba(250, 204, 21, 0.25) 24px, transparent 48px),
+    radial-gradient(circle at 84% 30%, rgba(250, 204, 21, 0.8) 0%, rgba(250, 204, 21, 0.25) 22px, transparent 44px),
+
+    /* White Bubbles */
+    radial-gradient(circle at 16% 12%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.3) 18px, transparent 35px),
+    radial-gradient(circle at 56% 10%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.3) 20px, transparent 40px);
+
+  animation: floatSmallSequentialBubbles1 18s ease-in-out infinite alternate;
   pointer-events: none;
-  filter: blur(35px);
+  filter: blur(10px);
 }
 
-/* Secondary Mixed Bubble Layer */
+/* Secondary Layer: Stream of Blue -> Pink -> Red -> Yellow Bubbles */
 body::after {
   content: '';
   position: fixed;
-  top: -35%;
-  left: -35%;
-  width: 170%;
-  height: 170%;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
   z-index: -9;
   background: 
-    radial-gradient(circle at 65% 30%, rgba(244, 114, 182, 0.42) 0%, transparent 45%),  /* Soft Pink */
-    radial-gradient(circle at 30% 65%, rgba(248, 113, 113, 0.42) 0%, transparent 45%),  /* Soft Red */
-    radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.75) 0%, transparent 40%),  /* White */
-    radial-gradient(circle at 15% 40%, rgba(56, 189, 248, 0.45) 0%, transparent 45%),   /* Sky Blue */
-    radial-gradient(circle at 45% 80%, rgba(253, 224, 71, 0.45) 0%, transparent 45%);   /* Yellow */
-  animation: rotateAndFloatFiveColorBubbles2 24s linear infinite;
+    radial-gradient(circle at 12% 65%, rgba(56, 189, 248, 0.75) 0%, transparent 40px),
+    radial-gradient(circle at 26% 70%, rgba(236, 72, 153, 0.75) 0%, transparent 44px),
+    radial-gradient(circle at 40% 75%, rgba(239, 68, 68, 0.75) 0%, transparent 42px),
+    radial-gradient(circle at 54% 80%, rgba(250, 204, 21, 0.8) 0%, transparent 46px),
+    radial-gradient(circle at 68% 85%, rgba(56, 189, 248, 0.75) 0%, transparent 38px),
+    radial-gradient(circle at 82% 90%, rgba(236, 72, 153, 0.75) 0%, transparent 48px),
+    radial-gradient(circle at 94% 92%, rgba(239, 68, 68, 0.75) 0%, transparent 40px);
+
+  animation: floatSmallSequentialBubbles2 22s linear infinite;
   pointer-events: none;
-  filter: blur(40px);
+  filter: blur(12px);
 }
 
-@keyframes rotateAndFloatFiveColorBubbles1 {
+@keyframes floatSmallSequentialBubbles1 {
   0% {
-    transform: rotate(0deg) translate(0px, 0px) scale(1);
+    transform: translateY(0px) rotate(0deg) scale(1);
   }
   50% {
-    transform: rotate(180deg) translate(-40px, 45px) scale(1.1);
+    transform: translateY(-40px) translateX(30px) rotate(180deg) scale(1.08);
   }
   100% {
-    transform: rotate(360deg) translate(40px, -40px) scale(1);
+    transform: translateY(30px) translateX(-30px) rotate(360deg) scale(1);
   }
 }
 
-@keyframes rotateAndFloatFiveColorBubbles2 {
+@keyframes floatSmallSequentialBubbles2 {
   0% {
-    transform: rotate(0deg) translate(0px, 0px) scale(1);
+    transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: rotate(180deg) translate(45px, -45px) scale(1.06);
+    transform: translateY(40px) translateX(-40px) rotate(180deg);
   }
   100% {
-    transform: rotate(360deg) translate(0px, 0px) scale(1);
+    transform: translateY(0px) rotate(360deg);
   }
 }
 
