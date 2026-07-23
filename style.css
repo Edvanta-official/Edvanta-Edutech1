@@ -4754,3 +4754,10 @@ div[style*="background:#ffffff"] p {
   color: #f1f5f9 !important;
   -webkit-text-fill-color: #f1f5f9 !important;
 }
+
+/* Permanent Bright Mode Override - Disable Dark Theme & Hide Toggler */
+#themeToggler,
+.floating-theme-switch,
+.theme-toggler-vertical {
+  display: none !important;
+}
