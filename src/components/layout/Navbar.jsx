@@ -20,30 +20,9 @@ const Navbar = () => {
   return (
     <nav className="glass sticky top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/5 py-4 px-4 md:px-8">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo (Exact Calligraphic E + EDVANTA Green Badge + Tagline Matching 3rd Image) */}
+        {/* Logo (Exact 2nd Image company-logo.png) */}
         <Link to="/" className="flex items-center text-decoration-none">
-          <svg className="logo-svg" viewBox="0 0 420 120" width="165" height="48" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <style>
-                {`
-                @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@500;600;700&display=swap');
-                .l-box-bg { fill: #ffffff; stroke: #8ba895; stroke-width: 2.5; rx: 6px; }
-                .l-name-bg { fill: #8ba895; rx: 6px; }
-                .l-script-e { font-family: 'Great Vibes', 'Playfair Display', cursive, serif; font-size: 68px; font-weight: 700; font-style: italic; fill: #0f172a; }
-                .l-text-edvanta { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; fill: #ffffff; letter-spacing: 6.5px; }
-                .l-tagline { font-family: 'Great Vibes', cursive, serif; font-size: 21px; fill: #475569; font-style: italic; }
-                [data-theme="dark"] .l-box-bg { fill: #1e293b; stroke: #9ebaa9; }
-                [data-theme="dark"] .l-script-e { fill: #ffffff; }
-                [data-theme="dark"] .l-tagline { fill: #cbd5e1; }
-                `}
-              </style>
-            </defs>
-            <rect x="4" y="4" width="85" height="85" rx="6" className="l-box-bg" />
-            <text x="46.5" y="67" textAnchor="middle" className="l-script-e">E</text>
-            <rect x="98" y="4" width="318" height="85" rx="6" className="l-name-bg" />
-            <text x="257" y="56" textAnchor="middle" className="l-text-edvanta">EDVANTA</text>
-            <text x="210" y="114" textAnchor="middle" className="l-tagline">Ignite your growth, inspire your mind</text>
-          </svg>
+          <img src="images/company-logo.png" alt="Edvanta Logo" style={{ height: '44px', width: 'auto', display: 'block', objectFit: 'contain' }} />
         </Link>
 
         {/* Desktop Menu */}
