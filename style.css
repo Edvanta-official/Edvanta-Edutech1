@@ -106,11 +106,17 @@ body {
 }
 
 /* Master Section Transparency Override: Remove all backside white section divs */
-section, .section, main, footer, .community-section, .sitemap-container {
+section, .section, main, footer, .community-section, .sitemap-container, .sitemap-footer {
   background-color: transparent !important;
+  background: transparent !important;
 }
 
-/* Animated Floating Soft Light Blue, White & Light Yellow Rotating Bubble Orbs */
+footer, .sitemap-footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 10px !important;
+}
+
+/* Animated Floating Red, Pink, Yellow, Blue & White Rotating Mixed Bubble Orbs */
 body::before {
   content: '';
   position: fixed;
@@ -120,17 +126,17 @@ body::before {
   height: 200%;
   z-index: -10;
   background: 
-    radial-gradient(circle at 20% 25%, rgba(56, 189, 248, 0.28) 0%, rgba(56, 189, 248, 0.05) 30%, transparent 50%),
-    radial-gradient(circle at 75% 20%, rgba(250, 204, 21, 0.25) 0%, rgba(250, 204, 21, 0.05) 30%, transparent 50%),
-    radial-gradient(circle at 35% 75%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 25%, transparent 45%),
-    radial-gradient(circle at 80% 70%, rgba(186, 230, 253, 0.3) 0%, rgba(186, 230, 253, 0.05) 30%, transparent 50%),
-    radial-gradient(circle at 50% 40%, rgba(254, 240, 138, 0.25) 0%, transparent 45%);
-  animation: rotateAndFloatLightBubbles1 22s ease-in-out infinite alternate;
+    radial-gradient(circle at 18% 22%, rgba(239, 68, 68, 0.45) 0%, rgba(239, 68, 68, 0.08) 32%, transparent 55%),  /* Red Bubble */
+    radial-gradient(circle at 78% 22%, rgba(236, 72, 153, 0.45) 0%, rgba(236, 72, 153, 0.08) 32%, transparent 55%), /* Pink Bubble */
+    radial-gradient(circle at 25% 75%, rgba(250, 204, 21, 0.5) 0%, rgba(250, 204, 21, 0.1) 30%, transparent 50%),   /* Yellow Bubble */
+    radial-gradient(circle at 75% 75%, rgba(56, 189, 248, 0.5) 0%, rgba(56, 189, 248, 0.1) 30%, transparent 50%),  /* Blue Bubble */
+    radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.2) 25%, transparent 45%); /* White Bubble */
+  animation: rotateAndFloatFiveColorBubbles1 20s ease-in-out infinite alternate;
   pointer-events: none;
-  filter: blur(45px);
+  filter: blur(35px);
 }
 
-/* Secondary Soft Rotating & Floating Bubble Layer */
+/* Secondary Mixed Bubble Layer */
 body::after {
   content: '';
   position: fixed;
@@ -140,36 +146,34 @@ body::after {
   height: 170%;
   z-index: -9;
   background: 
-    radial-gradient(circle at 65% 30%, rgba(250, 204, 21, 0.22) 0%, transparent 45%),
-    radial-gradient(circle at 25% 65%, rgba(56, 189, 248, 0.25) 0%, transparent 45%),
-    radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.45) 0%, transparent 40%),
-    radial-gradient(circle at 15% 40%, rgba(254, 240, 138, 0.22) 0%, transparent 45%);
-  animation: rotateAndFloatLightBubbles2 26s linear infinite;
+    radial-gradient(circle at 65% 30%, rgba(244, 114, 182, 0.42) 0%, transparent 45%),  /* Soft Pink */
+    radial-gradient(circle at 30% 65%, rgba(248, 113, 113, 0.42) 0%, transparent 45%),  /* Soft Red */
+    radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.75) 0%, transparent 40%),  /* White */
+    radial-gradient(circle at 15% 40%, rgba(56, 189, 248, 0.45) 0%, transparent 45%),   /* Sky Blue */
+    radial-gradient(circle at 45% 80%, rgba(253, 224, 71, 0.45) 0%, transparent 45%);   /* Yellow */
+  animation: rotateAndFloatFiveColorBubbles2 24s linear infinite;
   pointer-events: none;
-  filter: blur(50px);
+  filter: blur(40px);
 }
 
-@keyframes rotateAndFloatLightBubbles1 {
+@keyframes rotateAndFloatFiveColorBubbles1 {
   0% {
     transform: rotate(0deg) translate(0px, 0px) scale(1);
-    filter: blur(45px);
   }
   50% {
-    transform: rotate(180deg) translate(-30px, 40px) scale(1.08);
-    filter: blur(40px);
+    transform: rotate(180deg) translate(-40px, 45px) scale(1.1);
   }
   100% {
-    transform: rotate(360deg) translate(30px, -30px) scale(1);
-    filter: blur(45px);
+    transform: rotate(360deg) translate(40px, -40px) scale(1);
   }
 }
 
-@keyframes rotateAndFloatLightBubbles2 {
+@keyframes rotateAndFloatFiveColorBubbles2 {
   0% {
     transform: rotate(0deg) translate(0px, 0px) scale(1);
   }
   50% {
-    transform: rotate(180deg) translate(40px, -40px) scale(1.05);
+    transform: rotate(180deg) translate(45px, -45px) scale(1.06);
   }
   100% {
     transform: rotate(360deg) translate(0px, 0px) scale(1);
