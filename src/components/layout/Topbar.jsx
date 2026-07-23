@@ -1,127 +1,39 @@
 import React from 'react';
-import { useAuth } from '../../context/AuthContext';
-import { Search, Bell, Mail, ChevronDown } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { FaHome, FaSignOutAlt } from 'react-icons/fa';
+import { useAuth } from '../../hooks/useAuth';
 
-const Topbar = ({ title = 'Dashboard' }) => {
-  const { user } = useAuth();
+const Topbar = () => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   return (
-    <div className="glass-panel topbar" style={{
-      width: '100%',
-      padding: '16px 32px',
-      borderRadius: '20px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      marginBottom: '24px',
-      boxShadow: 'var(--shadow-sm)'
-    }}>
-      {/* Title / Search */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
-        <h2 style={{ fontSize: '1.4rem', fontWeight: '800' }}>{title}</h2>
-        
-        <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }} className="hide-mobile">
-          <Search size={18} style={{
-            position: 'absolute',
-            left: '12px',
-            color: 'var(--text-tertiary)'
-          }} />
-          <input 
-            type="text" 
-            placeholder="Search details..." 
-            style={{
-              padding: '10px 16px 10px 40px',
-              borderRadius: '30px',
-              border: '1.5px solid var(--glass-border)',
-              background: 'rgba(255,255,255,0.2)',
-              color: 'var(--text-primary)',
-              width: '280px',
-              outline: 'none',
-              fontSize: '0.9rem',
-              transition: 'border var(--transition-fast)'
-            }}
-            className="topbar-search-input"
-          />
-        </div>
+    <header className="h-16 border-b border-white/5 bg-primary-dark/80 backdrop-blur-md px-8 flex items-center justify-between z-10 shrink-0">
+      <div className="flex items-center gap-2">
+        <span className="text-sm text-gray-400">Welcome back,</span>
+        <span className="font-semibold text-white font-manrope">{user?.name || 'User'}</span>
       </div>
 
-      {/* User Actions */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-        <button className="topbar-icon-btn"><Mail size={18} /></button>
-        <button className="topbar-icon-btn" style={{ position: 'relative' }}>
-          <Bell size={18} />
-          <span style={{
-            position: 'absolute',
-            top: '2px',
-            right: '2px',
-            width: '8px',
-            height: '8px',
-            background: 'red',
-            borderRadius: '50%'
-          }} />
+      <div className="flex items-center gap-6">
+        <Link to="/" className="text-gray-400 hover:text-white flex items-center gap-1.5 text-sm transition-colors">
+          <FaHome />
+          <span>Home</span>
+        </Link>
+        <div className="h-4 w-[1px] bg-white/10"></div>
+        <button
+          onClick={handleLogout}
+          className="text-gray-400 hover:text-red-400 flex items-center gap-1.5 text-sm transition-colors"
+        >
+          <FaSignOutAlt />
+          <span>Logout</span>
         </button>
-
-        {/* User Info */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '12px',
-          borderLeft: '1px solid var(--glass-border)',
-          paddingLeft: '20px'
-        }}>
-          <div style={{
-            width: '40px',
-            height: '40px',
-            borderRadius: '50%',
-            background: 'var(--accent)',
-            color: 'var(--badge-text)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontWeight: '700',
-            fontSize: '1rem'
-          }}>
-            {user?.name ? user.name.charAt(0) : 'U'}
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }} className="hide-mobile">
-            <span style={{ fontSize: '0.9rem', fontWeight: '600' }}>{user?.name || 'Guest User'}</span>
-            <span style={{ 
-              fontSize: '0.75rem', 
-              color: 'var(--accent)', 
-              fontWeight: '700',
-              textTransform: 'uppercase'
-            }}>{user?.role || 'Guest'}</span>
-          </div>
-        </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{__html: `
-        .topbar-icon-btn {
-          width: 38px;
-          height: 38px;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.2);
-          border: 1px solid var(--glass-border);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--text-secondary);
-          transition: all var(--transition-fast);
-        }
-        .topbar-icon-btn:hover {
-          background: var(--btn-secondary-hover);
-          color: var(--text-primary);
-        }
-        .topbar-search-input:focus {
-          border-color: var(--accent);
-        }
-        @media (max-width: 768px) {
-          .topbar {
-            padding: 12px 16px;
-          }
-        }
-      `}} />
-    </div>
+    </header>
   );
 };
 

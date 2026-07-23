@@ -1,134 +1,61 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaQuoteLeft, FaArrowRight } from 'react-icons/fa';
+import { SUCCESS_STORIES } from '../../utils/constants';
+import SectionTitle from '../common/SectionTitle';
 import Card from '../common/Card';
 import Button from '../common/Button';
-import SectionTitle from '../common/SectionTitle';
-import { Sparkles, Briefcase, FileCheck, Landmark } from 'lucide-react';
 
 const Placements = () => {
   return (
-    <section style={{ padding: '80px 0' }}>
-      <div className="container">
-        <SectionTitle 
-          subtitle="PLACEMENT SUPPORT" 
-          title="Connect with 500+ Top Hiring Networks"
-          description="We guide you from training to your first salary. Track interview rounds directly inside the Edvanta placement tracker dashboard."
+    <section className="py-16 bg-primary-dark/20 border-y border-white/5 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto">
+        <SectionTitle
+          title="Our Placement Success Stories"
+          subtitle="REAL ACHIEVEMENTS BY REAL LEARNERS"
         />
 
-        <div className="grid-3" style={{ marginBottom: '48px' }}>
-          <Card className="glass-panel" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <div style={{
-              background: 'rgba(59, 130, 246, 0.1)',
-              color: 'var(--accent)',
-              padding: '12px',
-              borderRadius: '12px',
-              width: '48px',
-              height: '48px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-              <FileCheck size={24} />
-            </div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: '700' }}>AI-Powered Resume Builder</h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              Create ATS-friendly profiles, sync certifications and code repos with one click, and receive matching score feedbacks.
-            </p>
-          </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {SUCCESS_STORIES.map((story) => (
+            <Card key={story.id} className="bg-primary/25 border-white/5 p-8 flex flex-col md:flex-row gap-6 items-start">
+              {/* Avatar & Placement Badge */}
+              <div className="flex flex-col items-center gap-3 shrink-0">
+                <img
+                  src={story.avatar}
+                  alt={story.name}
+                  className="w-20 h-20 rounded-full object-cover border-2 border-accent"
+                />
+                <span className="bg-accent/15 text-accent text-xs font-bold px-2.5 py-1 rounded border border-accent/25">
+                  {story.package}
+                </span>
+              </div>
 
-          <Card className="glass-panel" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <div style={{
-              background: 'rgba(59, 130, 246, 0.1)',
-              color: 'var(--accent)',
-              padding: '12px',
-              borderRadius: '12px',
-              width: '48px',
-              height: '48px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-              <Briefcase size={24} />
-            </div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: '700' }}>Exclusive Job Board</h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              Gain direct access to junior, mid-level development and analyst roles posted by pre-verified corporate recruiters.
-            </p>
-          </Card>
-
-          <Card className="glass-panel" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <div style={{
-              background: 'rgba(59, 130, 246, 0.1)',
-              color: 'var(--accent)',
-              padding: '12px',
-              borderRadius: '12px',
-              width: '48px',
-              height: '48px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-              <Sparkles size={24} />
-            </div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: '700' }}>Mock Interview Prep</h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              Book 1-on-1 sessions with seasoned corporate mentors to simulate technical rounds and soft skills assessments.
-            </p>
-          </Card>
+              {/* Quote details */}
+              <div className="flex-grow">
+                <FaQuoteLeft className="text-secondary/20 mb-3" size={24} />
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 italic">
+                  "{story.quote}"
+                </p>
+                <div>
+                  <h4 className="text-white font-manrope font-bold text-base">{story.name}</h4>
+                  <p className="text-gray-500 text-xs mt-0.5">
+                    {story.course} — Placed at <span className="text-secondary font-semibold">{story.company}</span>
+                  </p>
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
 
-        {/* Dynamic visual dashboard teaser */}
-        <div className="placement-teaser-grid glass-panel" style={{
-          padding: '32px',
-          borderRadius: '24px',
-          display: 'grid',
-          gridTemplateColumns: '1.2fr 0.8fr',
-          gap: '40px',
-          alignItems: 'center'
-        }}>
-          <div>
-            <h4 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '12px' }}>Track Active Hiring Sprints</h4>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '20px' }}>
-              Recruiters track students in real-time based on live webinar attendance, module grading, and mock test scores. This transparent pipeline allows you to receive direct interview invites.
-            </p>
-            <Link to="/placements">
-              <Button variant="primary">Access Placement Tracker</Button>
-            </Link>
-          </div>
-
-          <div style={{
-            background: 'rgba(255,255,255,0.1)',
-            border: '1.5px solid var(--glass-border)',
-            padding: '20px',
-            borderRadius: '16px'
-          }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', color: 'var(--text-secondary)', display: 'block', marginBottom: '12px' }}>Hiring Status</span>
-            
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
-                <span style={{ fontWeight: '600' }}>Adobe Systems Inc.</span>
-                <span style={{ background: '#dcfce7', color: '#166534', padding: '2px 8px', borderRadius: '4px', fontSize: '0.75rem' }}>Shortlisted</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
-                <span style={{ fontWeight: '600' }}>Microsoft India</span>
-                <span style={{ background: '#eff6ff', color: '#1e40af', padding: '2px 8px', borderRadius: '4px', fontSize: '0.75rem' }}>HR Round Scheduled</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
-                <span style={{ fontWeight: '600' }}>Autodesk Engineering</span>
-                <span style={{ background: '#fef3c7', color: '#92400e', padding: '2px 8px', borderRadius: '4px', fontSize: '0.75rem' }}>Technical Round</span>
-              </div>
-            </div>
-          </div>
+        {/* CTA */}
+        <div className="text-center">
+          <Link to="/placements">
+            <Button variant="outline" className="inline-flex gap-2 mx-auto">
+              View All Placements <FaArrowRight size={12} />
+            </Button>
+          </Link>
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{__html: `
-        @media (max-width: 768px) {
-          .placement-teaser-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}} />
     </section>
   );
 };

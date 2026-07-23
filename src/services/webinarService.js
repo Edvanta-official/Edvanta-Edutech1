@@ -1,15 +1,19 @@
-import { request } from './api';
+import { apiRequest } from './api';
 
 export const webinarService = {
-  getWebinars: async () => {
-    return request('/webinars');
+  getAll: async () => {
+    return apiRequest('/webinars', 'GET');
   },
-
-  registerForWebinar: async (webinarId) => {
-    return request(`/webinars/${webinarId}/register`, {
-      method: 'POST',
-    });
+  register: async (webinarId) => {
+    return apiRequest(`/webinars/${webinarId}/register`, 'POST');
+  },
+  create: async (webinarData) => {
+    return apiRequest('/webinars', 'POST', webinarData);
+  },
+  update: async (id, webinarData) => {
+    return apiRequest(`/webinars/${id}`, 'PUT', webinarData);
+  },
+  delete: async (id) => {
+    return apiRequest(`/webinars/${id}`, 'DELETE');
   }
 };
-
-export default webinarService;

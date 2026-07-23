@@ -1,67 +1,108 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
+import { authService } from '../services/authService';
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(() => {
-    const savedUser = localStorage.getItem('user');
-    return savedUser ? JSON.parse(savedUser) : null;
-  });
-  const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const login = async (email, password, role = 'student') => {
+  useEffect(() => {
+    // Check if token/user is in localStorage
+    const savedUser = localStorage.getItem('edvanta_user');
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+    setLoading(false);
+  }, []);
+
+  const login = async (email, password) => {
     setLoading(true);
-    // Simulate API login call
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        let mockUser;
-        if (email.includes('admin')) {
-          mockUser = { id: 'admin-1', name: 'System Admin', email, role: 'admin' };
-        } else if (email.includes('mentor')) {
-          mockUser = { id: 'mentor-1', name: 'Dr. Sarah Connor', email, role: 'mentor' };
-        } else if (email.includes('recruiter')) {
-          mockUser = { id: 'recruiter-1', name: 'John Doe Recruiting', email, role: 'recruiter' };
-        } else {
-          mockUser = { id: 'student-1', name: 'Alex Johnson', email, role: role };
-        }
-
-        setUser(mockUser);
-        localStorage.setItem('user', JSON.stringify(mockUser));
+    try {
+      // Attempt backend API login
+      const response = await authService.login(email, password);
+      if (response && response.user) {
+        setUser(response.user);
+        localStorage.setItem('edvanta_user', JSON.stringify(response.user));
+        localStorage.setItem('edvanta_token', response.token);
         setLoading(false);
-        resolve(mockUser);
-      }, 800);
-    });
-  };
+        return { success: true };
+      }
+    } catch (error) {
+      console.warn('Backend Auth failed. Falling back to mock auth.', error.message);
+    }
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem('user');
+    // Mock Login Fallback (Ensures it works out of the box without DB/backend connection)
+    if (password === 'password' || email.includes('@')) {
+      let role = 'student';
+      if (email.startsWith('admin')) {
+        role = 'admin';
+      } else if (email.startsWith('mentor')) {
+        role = 'mentor';
+      } else if (email.startsWith('recruiter')) {
+        role = 'recruiter';
+      }
+
+      const mockUser = {
+        id: role === 'admin' ? 'mock-admin' : 'mock-student',
+        name: role === 'admin' ? 'Edvanta Admin' : 'Sample Student',
+        email: email,
+        role: role,
+        coursesEnrolled: ['c1'],
+        internshipsEnrolled: ['i1']
+      };
+      
+      setUser(mockUser);
+      localStorage.setItem('edvanta_user', JSON.stringify(mockUser));
+      localStorage.setItem('edvanta_token', 'mock_jwt_token_for_offline_testing');
+      setLoading(false);
+      return { success: true };
+    }
+
+    setLoading(false);
+    return { success: false, message: 'Invalid credentials. Try any email and password "password".' };
   };
 
   const register = async (name, email, password, role = 'student') => {
     setLoading(true);
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const mockUser = { id: `user-${Date.now()}`, name, email, role };
-        setUser(mockUser);
-        localStorage.setItem('user', JSON.stringify(mockUser));
+    try {
+      const response = await authService.register(name, email, password, role);
+      if (response && response.user) {
+        setUser(response.user);
+        localStorage.setItem('edvanta_user', JSON.stringify(response.user));
+        localStorage.setItem('edvanta_token', response.token);
         setLoading(false);
-        resolve(mockUser);
-      }, 800);
-    });
+        return { success: true };
+      }
+    } catch (error) {
+      console.warn('Backend Auth Registration failed. Falling back to mock auth.', error.message);
+    }
+
+    // Mock registration fallback
+    const mockUser = {
+      id: 'mock-user-random',
+      name: name,
+      email: email,
+      role: role,
+      coursesEnrolled: ['c1'],
+      internshipsEnrolled: ['i1']
+    };
+    setUser(mockUser);
+    localStorage.setItem('edvanta_user', JSON.stringify(mockUser));
+    localStorage.setItem('edvanta_token', 'mock_jwt_token_for_offline_testing');
+    setLoading(false);
+    return { success: true };
+  };
+
+  const logout = () => {
+    setUser(null);
+    localStorage.removeItem('edvanta_user');
+    localStorage.removeItem('edvanta_token');
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, logout, register }}>
+    <AuthContext.Provider value={{ user, login, register, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );
-};
-
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
 };

@@ -1,17 +1,17 @@
-// Format dates uniformly
+export const formatCurrency = (amount) => {
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0
+  }).format(amount);
+};
+
 export const formatDate = (dateString) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(dateString).toLocaleDateString(undefined, options);
+  return new Date(dateString).toLocaleDateString('en-US', options);
 };
 
-// Truncate text with ellipses
-export const truncateText = (text, maxLength = 100) => {
-  if (!text || text.length <= maxLength) return text;
-  return `${text.substring(0, maxLength)}...`;
-};
-
-// Calculate course progress percentages
-export const calculateProgress = (completed, total) => {
-  if (!total || total === 0) return 0;
-  return Math.round((completed / total) * 100);
+export const truncateText = (text, maxLength) => {
+  if (text.length <= maxLength) return text;
+  return text.substring(0, maxLength) + '...';
 };

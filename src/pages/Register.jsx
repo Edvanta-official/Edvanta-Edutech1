@@ -1,158 +1,114 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import useAuth from '../hooks/useAuth';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../hooks/useAuth';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
-import { Mail, Lock, User, UserPlus } from 'lucide-react';
 
-const RegisterPage = () => {
+const Register = () => {
+  const { register } = useAuth();
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('student');
-  const [localLoading, setLocalLoading] = useState(false);
-  const { register } = useAuth();
-  const navigate = useNavigate();
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLocalLoading(true);
-    try {
-      await register(name, email, password, role);
-      navigate('/dashboard');
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setLocalLoading(false);
+    setError('');
+    setLoading(true);
+
+    const res = await register(name, email, password, role);
+    setLoading(false);
+    if (res.success) {
+      if (role === 'admin') {
+        navigate('/dashboard/admin/analytics');
+      } else {
+        navigate('/dashboard/student/profile');
+      }
+    } else {
+      setError(res.message || 'Registration failed.');
     }
   };
 
   return (
-    <section style={{
-      minHeight: 'calc(100vh - 120px)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '40px 0'
-    }}>
-      <div className="container" style={{ maxWidth: '450px' }}>
-        <Card className="glass-panel" style={{ padding: '32px' }}>
-          
-          <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-            <h2 style={{ fontSize: '1.8rem', fontWeight: '800', marginBottom: '8px' }}>Create Workspace</h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Join the Edvanta learning & placement hub</p>
+    <div className="bg-bgDark min-h-[80vh] flex items-center justify-center px-4 py-12">
+      <Card className="w-full max-w-md bg-primary/30 border-white/5 p-8">
+        <h2 className="text-2xl font-manrope font-extrabold text-white text-center mb-1">Create Account</h2>
+        <p className="text-gray-400 text-xs text-center mb-6">
+          Get started with premium upskilling
+        </p>
+
+        {error && (
+          <div className="bg-red-500/10 border border-red-500/20 text-red-400 text-xs py-2 px-3 rounded-lg mb-4 text-center">
+            {error}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <div>
+            <label className="text-xs text-gray-500 font-semibold block mb-1">FULL NAME</label>
+            <input
+              type="text"
+              required
+              placeholder="e.g. John Doe"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full bg-primary-dark/80 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-accent"
+            />
           </div>
 
-          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Full Name</label>
-              <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                <User size={16} style={{ position: 'absolute', left: '12px', color: 'var(--text-tertiary)' }} />
-                <input
-                  type="text"
-                  required
-                  placeholder="John Doe"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  style={{
-                    width: '100%',
-                    padding: '10px 12px 10px 36px',
-                    borderRadius: '8px',
-                    border: '1.5px solid var(--glass-border)',
-                    background: 'rgba(255, 255, 255, 0.2)',
-                    color: 'var(--text-primary)',
-                    outline: 'none',
-                    fontSize: '0.95rem'
-                  }}
-                />
-              </div>
-            </div>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Email Address</label>
-              <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                <Mail size={16} style={{ position: 'absolute', left: '12px', color: 'var(--text-tertiary)' }} />
-                <input
-                  type="email"
-                  required
-                  placeholder="name@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  style={{
-                    width: '100%',
-                    padding: '10px 12px 10px 36px',
-                    borderRadius: '8px',
-                    border: '1.5px solid var(--glass-border)',
-                    background: 'rgba(255, 255, 255, 0.2)',
-                    color: 'var(--text-primary)',
-                    outline: 'none',
-                    fontSize: '0.95rem'
-                  }}
-                />
-              </div>
-            </div>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Password</label>
-              <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                <Lock size={16} style={{ position: 'absolute', left: '12px', color: 'var(--text-tertiary)' }} />
-                <input
-                  type="password"
-                  required
-                  placeholder="••••••••"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  style={{
-                    width: '100%',
-                    padding: '10px 12px 10px 36px',
-                    borderRadius: '8px',
-                    border: '1.5px solid var(--glass-border)',
-                    background: 'rgba(255, 255, 255, 0.2)',
-                    color: 'var(--text-primary)',
-                    outline: 'none',
-                    fontSize: '0.95rem'
-                  }}
-                />
-              </div>
-            </div>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <label style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Register As</label>
-              <select
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-                style={{
-                  width: '100%',
-                  padding: '10px 12px',
-                  borderRadius: '8px',
-                  border: '1.5px solid var(--glass-border)',
-                  background: 'var(--bg-app)',
-                  color: 'var(--text-primary)',
-                  outline: 'none',
-                  fontSize: '0.95rem'
-                }}
-              >
-                <option value="student">Student</option>
-                <option value="mentor">Mentor</option>
-                <option value="recruiter">Recruiter</option>
-              </select>
-            </div>
-
-            <Button type="submit" variant="primary" style={{ width: '100%', padding: '10px 0' }} disabled={localLoading} icon={UserPlus}>
-              {localLoading ? 'Registering...' : 'Sign Up'}
-            </Button>
-          </form>
-
-          <div style={{ textAlign: 'center', marginTop: '20px', fontSize: '0.85rem' }}>
-            <span style={{ color: 'var(--text-secondary)' }}>Already have an account? </span>
-            <Link to="/login" style={{ color: 'var(--accent)', fontWeight: '600' }}>Login</Link>
+          <div>
+            <label className="text-xs text-gray-500 font-semibold block mb-1">EMAIL ADDRESS</label>
+            <input
+              type="email"
+              required
+              placeholder="e.g. john@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full bg-primary-dark/80 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-accent"
+            />
           </div>
 
-        </Card>
-      </div>
-    </section>
+          <div>
+            <label className="text-xs text-gray-500 font-semibold block mb-1">ACCOUNT TYPE</label>
+            <select
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              className="w-full bg-primary-dark/80 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-accent"
+            >
+              <option value="student">Student / Learner</option>
+              <option value="admin">Administrator</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="text-xs text-gray-500 font-semibold block mb-1">PASSWORD</label>
+            <input
+              type="password"
+              required
+              placeholder="Choose password (min 6 characters)"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full bg-primary-dark/80 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-accent"
+            />
+          </div>
+
+          <Button type="submit" variant="accent" className="w-full py-3 mt-2" disabled={loading}>
+            {loading ? 'Creating account...' : 'Sign Up'}
+          </Button>
+        </form>
+
+        <p className="text-xs text-gray-500 text-center mt-6">
+          Already have an account?{' '}
+          <Link to="/login" className="text-secondary hover:text-accent font-semibold transition-colors">
+            Login here
+          </Link>
+        </p>
+      </Card>
+    </div>
   );
 };
 
-export default RegisterPage;
+export default Register;

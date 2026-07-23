@@ -1,144 +1,101 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaLaptopCode, FaCheckCircle, FaSearch } from 'react-icons/fa';
+import { MOCK_INTERNSHIPS } from '../utils/constants';
+import SectionTitle from '../components/common/SectionTitle';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
-import SectionTitle from '../components/common/SectionTitle';
-import { Calendar, Briefcase, Trophy, ChevronRight, Laptop } from 'lucide-react';
 
 const InternshipsPage = () => {
-  const internships = [
-    {
-      id: 'web-dev',
-      role: 'Frontend & Full-Stack Web Development',
-      cohort: 'August 2026 Batch',
-      duration: '8 Weeks',
-      tasks: '5 Milestones',
-      description: 'Build enterprise-grade SaaS user interfaces using React, state architectures, and robust API endpoints.',
-      projects: ['Responsive CRM Workspace', 'Dynamic Payments Integrations']
-    },
-    {
-      id: 'data-sci',
-      role: 'Data Science & Machine Learning Operations',
-      cohort: 'August 2026 Batch',
-      duration: '10 Weeks',
-      tasks: '6 Milestones',
-      description: 'Clean data pipelines, train prediction models, and deploy automated inference APIs inside cloud wrappers.',
-      projects: ['Customer Churn Predictions', 'API Model Endpoints Deployment']
-    },
-    {
-      id: 'cloud-eng',
-      role: 'Cloud Engineering & Continuous Integration',
-      cohort: 'September 2026 Batch',
-      duration: '8 Weeks',
-      tasks: '4 Milestones',
-      description: 'Deploy Kubernetes clusters, construct Docker files, configure GitHub Actions pipelines, and manage cloud clusters.',
-      projects: ['Automatic CI/CD Deployments', 'Secure VPS Cluster Configurations']
-    }
-  ];
+  const [searchTerm, setSearchTerm] = useState('');
+  
+  const filteredInternships = MOCK_INTERNSHIPS.filter((i) =>
+    i.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    i.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
 
   return (
-    <section style={{ padding: '60px 0' }}>
-      <div className="container">
-        <SectionTitle 
-          subtitle="INTERNSHIP OPPORTUNITIES" 
-          title="Certified Industry-Level Tasks"
-          description="Gain corporate experience by working on real-world backlogs under expert review. All programs are certified."
-        />
+    <div className="bg-bgDark min-h-screen py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <SectionTitle title="Available Internship Openings" subtitle="EARN CORPORATE EXPERIENCE" />
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '48px' }}>
-          {internships.map(intern => (
-            <Card key={intern.id} className="internship-page-card glass-panel" style={{
-              display: 'grid',
-              gridTemplateColumns: '1.5fr 1fr',
-              gap: '32px',
-              alignItems: 'center'
-            }}>
-              
-              {/* Core Details */}
-              <div>
-                <span style={{
-                  fontSize: '0.8rem',
-                  fontWeight: '700',
-                  color: 'var(--accent)',
-                  textTransform: 'uppercase',
-                  display: 'block',
-                  marginBottom: '10px'
-                }}>{intern.cohort}</span>
-
-                <h3 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '12px' }}>{intern.role}</h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '20px', lineHeight: '1.6' }}>
-                  {intern.description}
-                </p>
-
-                <div style={{ display: 'flex', gap: '24px', fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '16px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <Calendar size={16} />
-                    <span>Duration: {intern.duration}</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <Laptop size={16} />
-                    <span>Format: Remote Sprint</span>
-                  </div>
-                </div>
-
-                {/* Sub-projects list */}
-                <div>
-                  <span style={{ fontSize: '0.8rem', fontWeight: '700', color: 'var(--text-primary)', display: 'block', marginBottom: '8px' }}>Milestone Projects:</span>
-                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                    {intern.projects.map((proj, i) => (
-                      <span key={i} style={{
-                        background: 'var(--accent-light)',
-                        color: 'var(--accent)',
-                        fontSize: '0.78rem',
-                        fontWeight: '600',
-                        padding: '4px 10px',
-                        borderRadius: '6px'
-                      }}>{proj}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Action and Value Proposition */}
-              <div style={{
-                borderLeft: '1px solid var(--glass-border)',
-                paddingLeft: '32px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '16px'
-              }} className="internship-page-card-right">
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <Trophy size={20} style={{ color: '#fbbf24' }} />
-                  <span style={{ fontSize: '0.9rem', fontWeight: '600' }}>ISO 9001:2015 Certified Badge</span>
-                </div>
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <Briefcase size={20} style={{ color: 'var(--accent)' }} />
-                  <span style={{ fontSize: '0.9rem', fontWeight: '600' }}>Sync with Placement Tracker</span>
-                </div>
-                
-                <div style={{ marginTop: '10px' }}>
-                  <Button variant="primary" style={{ width: '100%' }}>Apply for Cohort <ChevronRight size={16} /></Button>
-                </div>
-              </div>
-
-            </Card>
-          ))}
+      {/* Search bar */}
+      <div className="mb-12 glass p-4 rounded-xl border border-white/5 flex items-center justify-between">
+        <div className="relative w-full md:w-80">
+          <FaSearch className="absolute left-4 top-3.5 text-gray-500" />
+          <input
+            type="text"
+            placeholder="Search domains or tech..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full bg-primary-dark/80 border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-accent transition-colors"
+          />
         </div>
       </div>
 
-      <style dangerouslySetInnerHTML={{__html: `
-        @media (max-width: 768px) {
-          .internship-page-card {
-            grid-template-columns: 1fr !important;
-          }
-          .internship-page-card-right {
-            border-left: none !important;
-            padding-left: 0 !important;
-            border-top: 1px solid var(--glass-border);
-            padding-top: 24px;
-          }
-        }
-      `}} />
-    </section>
+      {/* Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredInternships.map((internship) => (
+          <Card key={internship.id} className="flex flex-col h-full bg-primary/25 border-white/5">
+            {/* Header */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary border border-secondary/25">
+                <FaLaptopCode size={22} />
+              </div>
+              <div>
+                <span className="text-accent text-xs font-semibold tracking-wider uppercase block">{internship.domain}</span>
+                <h3 className="text-lg font-manrope font-bold text-white">{internship.title}</h3>
+              </div>
+            </div>
+
+            {/* Details */}
+            <div className="flex-grow flex flex-col gap-6">
+              <div className="bg-white/5 rounded-lg p-4 flex justify-between text-sm text-gray-300">
+                <div>
+                  <span className="text-gray-500 text-xs block mb-1">Duration</span>
+                  <span className="font-semibold text-white">{internship.duration}</span>
+                </div>
+                <div>
+                  <span className="text-gray-500 text-xs block mb-1">Stipend</span>
+                  <span className="font-semibold text-white text-gradient-accent">{internship.stipend}</span>
+                </div>
+              </div>
+
+              {/* Perks */}
+              <div>
+                <span className="text-white text-sm font-semibold block mb-3">Key Benefits & Perks</span>
+                <ul className="flex flex-col gap-2.5">
+                  {internship.perks.map((perk, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-sm text-gray-400">
+                      <FaCheckCircle className="text-accent shrink-0" size={14} />
+                      <span>{perk}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Skills */}
+              <div>
+                <span className="text-white text-sm font-semibold block mb-3">Technologies</span>
+                <div className="flex flex-wrap gap-2">
+                  {internship.skills.map((skill, idx) => (
+                    <span key={idx} className="text-xs bg-primary px-2.5 py-1 rounded text-gray-300 border border-white/5">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <Button
+              variant="accent"
+              className="mt-8 w-full text-sm"
+              onClick={() => alert(`Applying for ${internship.title}! (Lead form submitted)`)}
+            >
+              Apply Online
+            </Button>
+          </Card>
+        ))}
+      </div>
+    </div>
   );
 };
 

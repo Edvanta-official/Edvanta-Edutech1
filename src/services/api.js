@@ -1,28 +1,30 @@
-// Base API helper for fetching data
-const BASE_URL = import.meta.env.VITE_API_URL || 'https://api.edvanta.com';
+const BASE_URL = '/api';
 
-export const request = async (endpoint, options = {}) => {
+export const apiRequest = async (endpoint, method = 'GET', body = null, customHeaders = {}) => {
+  const token = localStorage.getItem('edvanta_token');
   const headers = {
     'Content-Type': 'application/json',
-    ...(options.headers || {}),
+    ...customHeaders,
   };
-
-  const token = localStorage.getItem('token');
   if (token) {
     headers['Authorization'] = `Bearer ${token}`;
   }
 
-  const response = await fetch(`${BASE_URL}${endpoint}`, {
-    ...options,
+  const config = {
+    method,
     headers,
-  });
+  };
 
+  if (body) {
+    config.body = JSON.stringify(body);
+  }
+
+  const response = await fetch(`${BASE_URL}${endpoint}`, config);
+  
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
-    throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+    throw new Error(errorData.message || `API error with status ${response.status}`);
   }
 
   return response.json();
 };
-
-export default { request };

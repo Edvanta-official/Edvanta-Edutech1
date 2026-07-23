@@ -1,6 +1,8 @@
 # Dependencies
 node_modules/
+node-portable/
 node-v20.11.1-win-x64/
+.vite/
 *.zip
 *.log
 

@@ -1,19 +1,19 @@
-import { request } from './api';
+import { apiRequest } from './api';
 
 export const courseService = {
-  getCourses: async () => {
-    return request('/courses');
+  getAll: async () => {
+    return apiRequest('/courses', 'GET');
   },
-
-  getCourseById: async (id) => {
-    return request(`/courses/${id}`);
+  getById: async (id) => {
+    return apiRequest(`/courses/${id}`, 'GET');
   },
-
-  enrollInCourse: async (courseId) => {
-    return request(`/courses/${courseId}/enroll`, {
-      method: 'POST',
-    });
+  create: async (courseData) => {
+    return apiRequest('/courses', 'POST', courseData);
+  },
+  update: async (id, courseData) => {
+    return apiRequest(`/courses/${id}`, 'PUT', courseData);
+  },
+  delete: async (id) => {
+    return apiRequest(`/courses/${id}`, 'DELETE');
   }
 };
-
-export default courseService;

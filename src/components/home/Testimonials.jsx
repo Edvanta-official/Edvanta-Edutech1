@@ -1,105 +1,36 @@
 import React from 'react';
-import Card from '../common/Card';
+import { FaUserCircle, FaQuoteRight } from 'react-icons/fa';
 import SectionTitle from '../common/SectionTitle';
-import { Star, Quote } from 'lucide-react';
+import Card from '../common/Card';
 
 const Testimonials = () => {
   const reviews = [
-    {
-      name: 'Rohan Mehta',
-      role: 'Full Stack Engineer at Microsoft',
-      review: 'The structured internship at Edvanta was exactly what I needed. Building production features under expert feedback gave me the confidence to ace my Microsoft interview rounds.',
-      rating: 5,
-      avatarBg: '#dbeafe'
-    },
-    {
-      name: 'Neha Roy',
-      role: 'Product Analyst at Adobe',
-      review: 'From live webinars to personalized resumes, Edvanta’s dashboard is extremely well structured. Being able to track recruiter interest and build verified profiles helped me land my dream role.',
-      rating: 5,
-      avatarBg: '#ffe4e6'
-    },
-    {
-      name: 'Aditya Sen',
-      role: 'Cloud Engineer at Autodesk',
-      review: 'I took the DevOps pathway. The hand-on labs, digital certification, and 1-on-1 mock interviews prepared me thoroughly. I recommend Edvanta to every graduating engineer.',
-      rating: 5,
-      avatarBg: '#fef3c7'
-    }
+    { name: 'Sameer Sen', text: 'The mentoring sessions were extremely helpful. Working on real-world projects helped me understand production code setups.', role: 'CSE Student' },
+    { name: 'Kriti Deshmukh', text: 'I completed the AI & ML internship and received a Letter of Recommendation. I strongly suggest Edvanta for upskilling.', role: 'ECE Student' },
+    { name: 'Amit Roy', text: 'Excellent platform for getting industry experience. The syllabus is up-to-date and the placement assistance team is active.', role: 'Developer' }
   ];
 
   return (
-    <section style={{ padding: '80px 0' }}>
-      <div className="container">
-        <SectionTitle 
-          subtitle="SUCCESS STORIES" 
-          title="Designed for Outcomes. Validated by Alumni."
-          description="Hear from Edvanta graduates who transitioned from academic environments into top global technology corporations."
-        />
-
-        <div className="grid-3">
-          {reviews.map((rev, idx) => (
-            <Card key={idx} className="glass-panel" style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              position: 'relative'
-            }}>
-              <Quote size={40} style={{
-                position: 'absolute',
-                top: '20px',
-                right: '24px',
-                color: 'var(--accent)',
-                opacity: 0.15
-              }} />
-
+    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <SectionTitle title="What Our Students Say" subtitle="TESTIMONIALS" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {reviews.map((r, idx) => (
+          <Card key={idx} className="bg-primary/25 border-white/5 flex flex-col justify-between p-6">
+            <div>
+              <FaQuoteRight className="text-secondary/15 mb-4 float-right" size={24} />
+              <p className="text-gray-300 text-sm leading-relaxed mb-6 italic">
+                "{r.text}"
+              </p>
+            </div>
+            <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+              <FaUserCircle className="text-accent" size={32} />
               <div>
-                {/* Rating stars */}
-                <div style={{ display: 'flex', gap: '4px', marginBottom: '16px' }}>
-                  {[...Array(rev.rating)].map((_, i) => (
-                    <Star key={i} size={16} fill="#fbbf24" stroke="#fbbf24" />
-                  ))}
-                </div>
-                
-                <p style={{
-                  color: 'var(--text-secondary)',
-                  fontStyle: 'italic',
-                  lineHeight: '1.6',
-                  marginBottom: '24px',
-                  fontSize: '0.98rem'
-                }}>
-                  "{rev.review}"
-                </p>
+                <h4 className="text-white font-semibold text-sm">{r.name}</h4>
+                <span className="text-gray-500 text-xs">{r.role}</span>
               </div>
-
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '12px',
-                borderTop: '1px solid var(--glass-border)',
-                paddingTop: '16px'
-              }}>
-                <div style={{
-                  width: '44px',
-                  height: '44px',
-                  borderRadius: '50%',
-                  background: rev.avatarBg,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontWeight: '800',
-                  color: 'var(--text-primary)'
-                }}>
-                  {rev.name.split(' ').map(n => n.charAt(0)).join('')}
-                </div>
-                <div>
-                  <h4 style={{ fontSize: '0.95rem', fontWeight: '700' }}>{rev.name}</h4>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: '600' }}>{rev.role}</p>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
+            </div>
+          </Card>
+        ))}
       </div>
     </section>
   );

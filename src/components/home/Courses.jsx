@@ -1,156 +1,78 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaStar, FaClock, FaBookReader } from 'react-icons/fa';
+import { MOCK_COURSES } from '../../utils/constants';
+import SectionTitle from '../common/SectionTitle';
 import Card from '../common/Card';
 import Button from '../common/Button';
-import SectionTitle from '../common/SectionTitle';
-import { Star, Clock, BookOpen, ArrowRight } from 'lucide-react';
+import { formatCurrency } from '../../utils/helper';
 
 const Courses = () => {
-  const featuredCourses = [
-    {
-      id: 'fs-web',
-      title: 'Full Stack Web Development (MERN)',
-      category: 'Software Engineering',
-      duration: '24 Weeks',
-      modules: '12 Modules',
-      rating: '4.9',
-      reviews: '1.2k',
-      price: '₹14,999',
-      popular: true
-    },
-    {
-      id: 'ai-ml',
-      title: 'Advanced AI & Machine Learning Specialization',
-      category: 'Data Science',
-      duration: '28 Weeks',
-      modules: '15 Modules',
-      rating: '4.8',
-      reviews: '980',
-      price: '₹18,999',
-      popular: false
-    },
-    {
-      id: 'cloud-devops',
-      title: 'Cloud Computing & DevOps Architect',
-      category: 'Cloud Engineering',
-      duration: '18 Weeks',
-      modules: '10 Modules',
-      rating: '4.7',
-      reviews: '640',
-      price: '₹16,999',
-      popular: false
-    }
-  ];
-
   return (
-    <section style={{ padding: '80px 0' }}>
-      <div className="container">
-        <SectionTitle 
-          subtitle="EXPLORE COURSES" 
-          title="Industry-Guided Professional Programs"
-          description="Learn from experts, work on active corporate pipelines, and earn verified certifications."
-        />
+    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <SectionTitle
+        title="Explore Trending Programs"
+        subtitle="UPSKILL WITH THE BEST"
+      />
 
-        <div className="grid-3" style={{ marginBottom: '40px' }}>
-          {featuredCourses.map(course => (
-            <Card key={course.id} className="glass-panel" style={{
-              position: 'relative',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              height: '100%'
-            }}>
-              {course.popular && (
-                <span style={{
-                  position: 'absolute',
-                  top: '16px',
-                  right: '16px',
-                  background: 'var(--accent)',
-                  color: 'var(--badge-text)',
-                  fontSize: '0.75rem',
-                  fontWeight: '700',
-                  padding: '4px 10px',
-                  borderRadius: '12px'
-                }}>POPULAR</span>
-              )}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {MOCK_COURSES.map((course) => (
+          <Card key={course.id} className="flex flex-col h-full bg-primary/25">
+            {/* Course Image */}
+            <div className="h-48 -mx-6 -mt-6 mb-6 overflow-hidden relative">
+              <img
+                src={course.thumbnail}
+                alt={course.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span className="absolute top-4 left-4 bg-secondary text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                {course.category}
+              </span>
+            </div>
 
-              <div>
-                <span style={{
-                  fontSize: '0.8rem',
-                  fontWeight: '600',
-                  color: 'var(--accent)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  display: 'block',
-                  marginBottom: '12px'
-                }}>{course.category}</span>
-
-                <h3 style={{
-                  fontSize: '1.3rem',
-                  fontWeight: '700',
-                  marginBottom: '16px',
-                  lineHeight: '1.4'
-                }}>{course.title}</h3>
-
-                {/* Specs */}
-                <div style={{
-                  display: 'flex',
-                  gap: '16px',
-                  fontSize: '0.85rem',
-                  color: 'var(--text-secondary)',
-                  marginBottom: '20px'
-                }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <Clock size={16} />
-                    <span>{course.duration}</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <BookOpen size={16} />
-                    <span>{course.modules}</span>
-                  </div>
-                </div>
+            {/* Title & Description */}
+            <div className="flex-grow flex flex-col gap-3">
+              <div className="flex items-center gap-1.5 text-yellow-500 text-sm font-semibold">
+                <FaStar />
+                <span>{course.rating}</span>
+                <span className="text-gray-500">({course.reviews} reviews)</span>
               </div>
+              
+              <h3 className="text-xl font-manrope font-bold text-white group-hover:text-accent transition-colors">
+                {course.title}
+              </h3>
+              
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {course.description}
+              </p>
+            </div>
 
+            {/* Course Meta Info */}
+            <div className="flex items-center justify-between border-y border-white/5 py-4 my-6 text-gray-400 text-xs font-medium">
+              <span className="flex items-center gap-1.5">
+                <FaClock className="text-accent" /> {course.duration}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <FaBookReader className="text-accent" /> Live Mentorship
+              </span>
+            </div>
+
+            {/* Price & Action */}
+            <div className="flex items-center justify-between">
               <div>
-                {/* Rating */}
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  marginBottom: '20px',
-                  fontSize: '0.9rem'
-                }}>
-                  <Star size={16} fill="#fbbf24" stroke="#fbbf24" />
-                  <span style={{ fontWeight: '700' }}>{course.rating}</span>
-                  <span style={{ color: 'var(--text-tertiary)' }}>({course.reviews} reviews)</span>
-                </div>
-
-                {/* Pricing / CTA */}
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  borderTop: '1px solid var(--glass-border)',
-                  paddingTop: '20px'
-                }}>
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <span style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)' }}>Course Fee</span>
-                    <span style={{ fontSize: '1.3rem', fontWeight: '800', color: 'var(--text-primary)' }}>{course.price}</span>
-                  </div>
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" style={{ padding: '8px 16px', fontSize: '0.85rem' }}>Enroll Now</Button>
-                  </a>
-                </div>
+                <span className="text-gray-500 text-xs block font-semibold uppercase">Course Fee</span>
+                <span className="text-2xl font-extrabold text-white font-manrope">
+                  {formatCurrency(course.price)}
+                </span>
               </div>
-            </Card>
-          ))}
-        </div>
-
-        <div style={{ textAlign: 'center' }}>
-          <Link to="/courses">
-            <Button variant="secondary">View All Courses <ArrowRight size={16} /></Button>
-          </Link>
-        </div>
+              <Link to="/courses">
+                <Button variant="primary" className="py-2 px-4 text-sm">
+                  View Syllabus
+                </Button>
+              </Link>
+            </div>
+          </Card>
+        ))}
       </div>
     </section>
   );

@@ -1,36 +1,24 @@
 import React from 'react';
 import Hero from '../components/home/Hero';
 import Partners from '../components/home/Partners';
+import Statistics from '../components/home/Statistics';
 import Courses from '../components/home/Courses';
 import Internship from '../components/home/Internship';
 import Placements from '../components/home/Placements';
-import Testimonials from '../components/home/Testimonials';
 import Webinar from '../components/home/Webinar';
-import Statistics from '../components/home/Statistics';
+import Testimonials from '../components/home/Testimonials';
 import FAQ from '../components/home/FAQ';
 
 const Home = () => {
   return (
-    <div style={{ position: 'relative', overflow: 'hidden' }}>
-      {/* Decorative light meshes in background */}
-      <div style={{
-        position: 'absolute',
-        top: '5%',
-        left: '-15%',
-        width: '600px',
-        height: '600px',
-        background: 'radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 60%)',
-        zIndex: 0,
-        pointerEvents: 'none'
-      }} />
-
+    <div className="bg-bgDark min-h-screen">
       <Hero />
       <Partners />
       <Statistics />
       <Courses />
       <Internship />
-      <Webinar />
       <Placements />
+      <Webinar />
       <Testimonials />
       <FAQ />
     </div>

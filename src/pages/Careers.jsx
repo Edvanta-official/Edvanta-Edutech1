@@ -1,105 +1,72 @@
 import React from 'react';
+import SectionTitle from '../components/common/SectionTitle';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
-import SectionTitle from '../components/common/SectionTitle';
-import { Briefcase, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { FaUserGraduate, FaHandshake, FaBullseye } from 'react-icons/fa';
 
-const CareersPage = () => {
-  const jobs = [
-    {
-      title: 'Business Development Associate',
-      dept: 'Sales & Growth',
-      location: 'Hyderabad / Remote',
-      type: 'Full-time',
-      desc: 'Drive corporate partnerships, institutional relationships, and lead conversion strategy for Edvanta programs.'
-    },
-    {
-      title: 'Data Extraction / Lead Generation',
-      dept: 'Data & Operations',
-      location: 'Hyderabad / Remote',
-      type: 'Full-time',
-      desc: 'Extract, verify, and organize high-quality student and hiring partner database pipelines using automated data tools.'
-    },
-    {
-      title: 'Digital Marketing',
-      dept: 'Marketing & Media',
-      location: 'Hyderabad / Remote',
-      type: 'Full-time',
-      desc: 'Manage performance marketing, social media campaigns, SEO/SEM channels, and brand reach across educational communities.'
-    },
-    {
-      title: 'Marketing Specialist',
-      dept: 'Marketing & Strategy',
-      location: 'Hyderabad / Remote',
-      type: 'Full-time',
-      desc: 'Formulate go-to-market campaigns, content strategies, and student engagement initiatives to elevate Edvanta brand awareness.'
-    }
-  ];
-
+const Careers = () => {
   return (
-    <section style={{ padding: '60px 0' }}>
-      <div className="container">
-        <SectionTitle 
-          subtitle="JOIN OUR TEAM" 
-          title="We Are Hiring Active Builders"
-          description="Help us restructure global computer science education. We are always looking for mentors, developers, and placement leaders."
-        />
+    <div className="bg-bgDark min-h-screen py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <SectionTitle title="Career Guidance & Mentorship" subtitle="ACCELERATE YOUR GROWTH" />
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '800px', margin: '0 auto' }}>
-          {jobs.map((job, idx) => (
-            <Card key={idx} className="career-job-card glass-panel" style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              flexWrap: 'wrap',
-              gap: '20px'
-            }}>
-              
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxWidth: '500px' }}>
-                <span style={{
-                  color: 'var(--accent)',
-                  fontWeight: '700',
-                  fontSize: '0.8rem',
-                  textTransform: 'uppercase'
-                }}>{job.dept}</span>
-                
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '800' }}>{job.title}</h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.5' }}>{job.desc}</p>
-                
-                <div style={{ display: 'flex', gap: '16px', fontSize: '0.8rem', color: 'var(--text-tertiary)', marginTop: '8px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <MapPin size={14} />
-                    <span>{job.location}</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <Clock size={14} />
-                    <span>{job.type}</span>
-                  </div>
-                </div>
-              </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <Card className="bg-primary/25 border-white/5 text-center flex flex-col items-center p-8">
+          <FaUserGraduate className="text-secondary mb-4" size={42} />
+          <h4 className="text-white font-bold text-lg mb-3">1-on-1 Mentorship</h4>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            Get personalized reviews on code quality, projects, and career milestones from veteran professionals.
+          </p>
+        </Card>
 
-              <div>
-                <Button variant="primary">Apply Now <ArrowRight size={16} /></Button>
-              </div>
+        <Card className="bg-primary/25 border-white/5 text-center flex flex-col items-center p-8">
+          <FaHandshake className="text-secondary mb-4" size={42} />
+          <h4 className="text-white font-bold text-lg mb-3">Mock Interviews</h4>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            Simulate standard HR and Technical rounds. Receive specific tips on resolving design queries and problem solving.
+          </p>
+        </Card>
 
-            </Card>
-          ))}
-        </div>
+        <Card className="bg-primary/25 border-white/5 text-center flex flex-col items-center p-8">
+          <FaBullseye className="text-secondary mb-4" size={42} />
+          <h4 className="text-white font-bold text-lg mb-3">Direct Referrals</h4>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            Get your profile pushed directly to technical hiring managers and corporate recruiters in our partner network.
+          </p>
+        </Card>
       </div>
 
-      <style dangerouslySetInnerHTML={{__html: `
-        @media (max-width: 600px) {
-          .career-job-card {
-            flex-direction: column !important;
-            align-items: flex-start !important;
-          }
-          .career-job-card button {
-            width: 100% !important;
-          }
-        }
-      `}} />
-    </section>
+      {/* Booking Form */}
+      <Card className="bg-primary/30 max-w-2xl mx-auto border-white/5 p-8">
+        <h3 className="text-2xl font-manrope font-bold text-white text-center mb-2">Book a Career Mentoring Session</h3>
+        <p className="text-gray-400 text-sm text-center mb-8">Select your convenient slot and speak to an industry professional.</p>
+        
+        <form className="flex flex-col gap-4" onSubmit={(e) => { e.preventDefault(); alert('Guidance session requested! Our team will contact you shortly.'); }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs text-gray-500 font-semibold block mb-1">YOUR NAME</label>
+              <input type="text" required className="w-full bg-primary-dark/80 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-accent" />
+            </div>
+            <div>
+              <label className="text-xs text-gray-500 font-semibold block mb-1">EMAIL ADDRESS</label>
+              <input type="email" required className="w-full bg-primary-dark/80 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-accent" />
+            </div>
+          </div>
+          <div>
+            <label className="text-xs text-gray-500 font-semibold block mb-1">INTERESTED DOMAIN</label>
+            <select className="w-full bg-primary-dark/80 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-accent">
+              <option>Full Stack Web Dev (React/Node)</option>
+              <option>Artificial Intelligence & ML</option>
+              <option>Cyber Security & Cryptography</option>
+              <option>Embedded Systems / IoT</option>
+            </select>
+          </div>
+          <Button variant="accent" type="submit" className="w-full py-3 mt-4">
+            Schedule Session
+          </Button>
+        </form>
+      </Card>
+    </div>
   );
 };
 
-export default CareersPage;
+export default Careers;

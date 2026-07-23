@@ -1,113 +1,66 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaCalendarAlt, FaClock, FaUserTie, FaArrowRight } from 'react-icons/fa';
+import SectionTitle from '../common/SectionTitle';
 import Card from '../common/Card';
 import Button from '../common/Button';
-import SectionTitle from '../common/SectionTitle';
-import { Video, Calendar, User, ArrowRight } from 'lucide-react';
 
 const Webinar = () => {
-  const webinars = [
-    {
-      title: 'Decentralized Apps & Web3.0 Architecture',
-      host: 'Vikash Kumar (Senior Engineer, Adobe)',
-      date: 'July 24, 2026 at 6:00 PM',
-      duration: '90 Mins',
-      status: 'upcoming'
-    },
-    {
-      title: 'Navigating AI Engineering in Enterprise Cloud',
-      host: 'Srinivas Murthy (Principal Architect, Microsoft)',
-      date: 'July 28, 2026 at 5:30 PM',
-      duration: '120 Mins',
-      status: 'upcoming'
-    }
-  ];
-
   return (
-    <section style={{ padding: '80px 0' }}>
-      <div className="container">
-        <SectionTitle 
-          subtitle="LIVE WEBINARS" 
-          title="Interactive Guidance Sessions"
-          description="Attend direct mentorship panels, project architectural reviews, and resume bootcamps."
-        />
+    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <SectionTitle title="Attend Our Live Webinars" subtitle="LEARN IN REAL TIME" />
 
-        <div className="grid-2" style={{ marginBottom: '32px' }}>
-          {webinars.map((web, idx) => (
-            <Card key={idx} className="glass-panel" style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              height: '100%'
-            }}>
-              <div>
-                <div style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  background: 'rgba(239, 68, 68, 0.1)',
-                  color: '#ef4444',
-                  fontSize: '0.75rem',
-                  fontWeight: '700',
-                  padding: '4px 10px',
-                  borderRadius: '20px',
-                  marginBottom: '16px',
-                  textTransform: 'uppercase'
-                }}>
-                  <span style={{
-                    width: '6px',
-                    height: '6px',
-                    borderRadius: '50%',
-                    background: '#ef4444',
-                    animation: 'pulse 1.5s infinite'
-                  }} />
-                  Live Webinar
-                </div>
+      <Card className="bg-gradient-to-r from-primary/65 to-primary-dark/80 border-secondary/25 p-8 md:p-12 flex flex-col lg:flex-row gap-8 items-center justify-between">
+        {/* Detail text */}
+        <div className="flex flex-col gap-4 max-w-xl">
+          <span className="bg-red-500/10 text-red-500 font-bold text-xs uppercase px-3 py-1 rounded border border-red-500/20 self-start tracking-wider animate-pulse">
+            Next Session Live
+          </span>
+          <h3 className="text-2xl sm:text-3xl font-manrope font-extrabold text-white">
+            Generative AI: The Future of Software Development
+          </h3>
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+            Join Dr. Akash Sharma, former Google AI researcher, as he talks about artificial intelligence systems, LLM prompts, and how software engineers can stay competitive.
+          </p>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '800', marginBottom: '12px' }}>{web.title}</h3>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                    <User size={16} />
-                    <span>Host: {web.host}</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                    <Calendar size={16} />
-                    <span>Time: {web.date} ({web.duration})</span>
-                  </div>
-                </div>
-              </div>
-
-              <div style={{
-                borderTop: '1px solid var(--glass-border)',
-                paddingTop: '20px',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-              }}>
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-tertiary)' }}>Platform: Teams Live</span>
-                <Link to="/webinars">
-                  <Button variant="primary" style={{ padding: '8px 16px', fontSize: '0.85rem' }}>Register Free</Button>
-                </Link>
-              </div>
-            </Card>
-          ))}
+          <div className="grid grid-cols-2 gap-4 mt-2">
+            <div className="flex items-center gap-2 text-sm text-gray-300">
+              <FaCalendarAlt className="text-accent" />
+              <span>July 28, 2026</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-gray-300">
+              <FaClock className="text-accent" />
+              <span>06:00 PM IST</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-gray-300 col-span-2">
+              <FaUserTie className="text-accent" />
+              <span>Dr. Akash Sharma (Ex-Google Scientist)</span>
+            </div>
+          </div>
         </div>
 
-        <div style={{ textAlign: 'center' }}>
-          <Link to="/webinars">
-            <Button variant="secondary">View Webinar Recordings <ArrowRight size={16} /></Button>
-          </Link>
+        {/* CTA Form / Button */}
+        <div className="w-full lg:w-auto shrink-0 flex flex-col gap-4 bg-primary/45 p-6 rounded-xl border border-white/5">
+          <h4 className="text-white font-manrope font-bold text-lg text-center">Reserve Your Free Spot</h4>
+          <form className="flex flex-col gap-3 min-w-[280px]" onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="text"
+              placeholder="Your Full Name"
+              required
+              className="bg-primary-dark/80 border border-white/10 rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none focus:border-accent transition-colors"
+            />
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              required
+              className="bg-primary-dark/80 border border-white/10 rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none focus:border-accent transition-colors"
+            />
+            <Button variant="accent" type="submit" className="text-sm">
+              Register Free <FaArrowRight size={12} />
+            </Button>
+          </form>
         </div>
-      </div>
-
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes pulse {
-          0% { opacity: 0.4; }
-          50% { opacity: 1; }
-          100% { opacity: 0.4; }
-        }
-      `}} />
+      </Card>
     </section>
   );
 };

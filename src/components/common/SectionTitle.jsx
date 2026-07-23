@@ -1,51 +1,17 @@
 import React from 'react';
 
-const SectionTitle = ({
-  title,
-  subtitle,
-  description,
-  align = 'center',
-  className = ''
-}) => {
-  const alignStyle = {
-    textAlign: align,
-    maxWidth: align === 'center' ? '700px' : '100%',
-    margin: align === 'center' ? '0 auto 40px auto' : '0 0 32px 0'
-  };
-
+const SectionTitle = ({ title, subtitle, align = 'center', className = '' }) => {
   return (
-    <div style={alignStyle} className={`section-header ${className}`}>
+    <div className={`mb-12 ${align === 'center' ? 'text-center' : 'text-left'} ${className}`}>
       {subtitle && (
-        <span style={{
-          textTransform: 'uppercase',
-          fontSize: '0.85rem',
-          letterSpacing: '0.15em',
-          fontWeight: '700',
-          color: 'var(--accent)',
-          display: 'block',
-          marginBottom: '10px'
-        }}>
+        <span className="text-secondary uppercase tracking-[0.2em] font-semibold text-xs md:text-sm block mb-2">
           {subtitle}
         </span>
       )}
-      <h2 style={{
-        fontSize: '2.5rem',
-        fontWeight: '800',
-        marginBottom: description ? '16px' : '0',
-        letterSpacing: '-0.02em',
-        fontFamily: 'var(--font-heading)'
-      }}>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-manrope font-bold text-gradient inline-block">
         {title}
       </h2>
-      {description && (
-        <p style={{
-          fontSize: '1.1rem',
-          color: 'var(--text-secondary)',
-          lineHeight: '1.6'
-        }}>
-          {description}
-        </p>
-      )}
+      <div className={`h-[3px] w-24 bg-gradient-to-r from-secondary to-accent mt-4 ${align === 'center' ? 'mx-auto' : 'mr-auto'}`}></div>
     </div>
   );
 };

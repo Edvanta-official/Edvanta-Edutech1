@@ -1,23 +1,16 @@
-import { request } from './api';
+import { apiRequest } from './api';
 
 export const authService = {
   login: async (email, password) => {
-    return request('/auth/login', {
-      method: 'POST',
-      body: JSON.stringify({ email, password }),
-    });
+    return apiRequest('/auth/login', 'POST', { email, password });
   },
-
   register: async (name, email, password, role) => {
-    return request('/auth/register', {
-      method: 'POST',
-      body: JSON.stringify({ name, email, password, role }),
-    });
+    return apiRequest('/auth/register', 'POST', { name, email, password, role });
   },
-
-  getCurrentUser: async () => {
-    return request('/auth/me');
+  getProfile: async () => {
+    return apiRequest('/auth/profile', 'GET');
+  },
+  updateProfile: async (profileData) => {
+    return apiRequest('/auth/profile', 'PUT', profileData);
   }
 };
-
-export default authService;

@@ -1,62 +1,27 @@
 import React from 'react';
 import Card from '../common/Card';
-import SectionTitle from '../common/SectionTitle';
-import { Users, GraduationCap, Building2, BookOpen } from 'lucide-react';
 
 const Statistics = () => {
   const stats = [
-    { label: 'Active Students', value: '15,000+', icon: Users, color: '#3b82f6' },
-    { label: 'Hiring Partners', value: '500+', icon: Building2, color: '#10b981' },
-    { label: 'Courses & Programs', value: '120+', icon: BookOpen, color: '#f59e0b' },
-    { label: 'Placement Success', value: '94%', icon: GraduationCap, color: '#8b5cf6' }
+    { value: '15,000+', label: 'Students Enrolled' },
+    { value: '94%', label: 'Placement Success Rate' },
+    { value: '12 LPA', label: 'Average Salary Package' },
+    { value: '150+', label: 'Corporate Hiring Partners' }
   ];
 
   return (
-    <section style={{ padding: '60px 0', position: 'relative' }}>
-      <div className="container">
-        <div className="grid-4">
-          {stats.map((stat, idx) => {
-            const Icon = stat.icon;
-            return (
-              <Card key={idx} className="glass-panel" style={{
-                textAlign: 'center',
-                padding: '32px 24px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: '16px'
-              }}>
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  borderRadius: '50%',
-                  background: 'var(--accent-light)',
-                  color: 'var(--accent)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  boxShadow: 'var(--shadow-sm)'
-                }}>
-                  <Icon size={24} />
-                </div>
-                <div>
-                  <h3 style={{
-                    fontSize: '2.5rem',
-                    fontWeight: '900',
-                    lineHeight: '1',
-                    marginBottom: '8px',
-                    fontFamily: 'var(--font-heading)'
-                  }}>{stat.value}</h3>
-                  <span style={{
-                    fontSize: '0.9rem',
-                    fontWeight: '600',
-                    color: 'var(--text-secondary)'
-                  }}>{stat.label}</span>
-                </div>
-              </Card>
-            );
-          })}
-        </div>
+    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        {stats.map((stat, idx) => (
+          <Card key={idx} className="text-center flex flex-col items-center justify-center p-8 bg-primary/45 border-white/5">
+            <span className="text-4xl md:text-5xl font-extrabold font-manrope text-gradient-accent mb-2">
+              {stat.value}
+            </span>
+            <span className="text-gray-400 text-sm md:text-base font-medium tracking-wide">
+              {stat.label}
+            </span>
+          </Card>
+        ))}
       </div>
     </section>
   );

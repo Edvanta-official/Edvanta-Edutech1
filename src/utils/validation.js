@@ -1,19 +1,13 @@
-// Validate email address format
 export const validateEmail = (email) => {
-  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return re.test(String(email).toLowerCase());
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
 };
 
-// Validate password requirements (min 6 characters)
 export const validatePassword = (password) => {
-  return password && password.length >= 6;
+  return password.length >= 6;
 };
 
-// Validate basic contact inputs
-export const validateContactForm = (name, email, message) => {
-  const errors = {};
-  if (!name.trim()) errors.name = 'Name is required';
-  if (!validateEmail(email)) errors.email = 'Valid email is required';
-  if (!message.trim()) errors.message = 'Message cannot be empty';
-  return errors;
+export const validatePhone = (phone) => {
+  const re = /^\+?[0-9]{10,14}$/;
+  return re.test(phone);
 };

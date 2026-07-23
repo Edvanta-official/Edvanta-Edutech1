@@ -1,205 +1,72 @@
-import React, { useState } from 'react';
-import Card from '../components/common/Card';
-import Button from '../components/common/Button';
+import React from 'react';
 import SectionTitle from '../components/common/SectionTitle';
-import { Award, ShieldCheck, Search, Download, Printer } from 'lucide-react';
+import { FaAward, FaQrcode, FaCheckDouble } from 'react-icons/fa';
 
-const CertificationsPage = () => {
-  const [certId, setCertId] = useState('');
-  const [searchedCert, setSearchedCert] = useState(null);
-  const [error, setError] = useState('');
-
-  const mockCerts = {
-    'ED-WEB-982': {
-      id: 'ED-WEB-982',
-      name: 'Alex Johnson',
-      program: 'Full Stack Web Development (MERN)',
-      date: 'June 18, 2026',
-      grade: 'Distinction (A+)',
-      type: 'Course Completion'
-    },
-    'ED-DATA-743': {
-      id: 'ED-DATA-743',
-      name: 'Priya Sharma',
-      program: 'Data Science & Machine Learning Operations',
-      date: 'July 04, 2026',
-      grade: 'First Class (A)',
-      type: 'Internship completion'
-    }
-  };
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setError('');
-    setSearchedCert(null);
-
-    const found = mockCerts[certId.trim().toUpperCase()];
-    if (found) {
-      setSearchedCert(found);
-    } else {
-      setError('Certificate ID not found. Try searching "ED-WEB-982" or "ED-DATA-743".');
-    }
-  };
-
+const Certifications = () => {
   return (
-    <section style={{ padding: '60px 0' }}>
-      <div className="container" style={{ maxWidth: '900px' }}>
-        <SectionTitle 
-          subtitle="CREDENTIAL VERIFICATION" 
-          title="Verifiable Digital Certifications"
-          description="Edvanta certificates are backed by direct industry partnerships. Enter your credential ID below to verify authenticity."
-        />
+    <div className="bg-bgDark min-h-screen py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <SectionTitle title="Verify Your Achievement" subtitle="EDVANTA CERTIFICATE PORTAL" />
 
-        {/* Search Credential */}
-        <Card className="glass-panel" style={{ padding: '32px', marginBottom: '40px' }}>
-          <form onSubmit={handleSearch} style={{
-            display: 'flex',
-            gap: '16px',
-            alignItems: 'center',
-            flexWrap: 'wrap'
-          }}>
-            <div style={{ position: 'relative', flex: 1, minWidth: '280px' }}>
-              <Search size={18} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-tertiary)' }} />
-              <input
-                type="text"
-                placeholder="Enter Certificate ID (e.g. ED-WEB-982)"
-                value={certId}
-                onChange={(e) => setCertId(e.target.value)}
-                style={{
-                  width: '100%',
-                  padding: '14px 16px 14px 48px',
-                  borderRadius: '30px',
-                  border: '1.5px solid var(--glass-border)',
-                  background: 'rgba(255,255,255,0.2)',
-                  color: 'var(--text-primary)',
-                  outline: 'none',
-                  fontSize: '1rem'
-                }}
-              />
-            </div>
-            <Button type="submit" variant="primary" style={{ padding: '14px 28px' }}>Verify Credential</Button>
-          </form>
-          {error && <p style={{ color: 'red', fontSize: '0.85rem', marginTop: '12px', paddingLeft: '16px' }}>{error}</p>}
-        </Card>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h3 className="text-2xl md:text-3xl font-manrope font-bold text-white mb-6">
+            Industry Recognized & Verifiable Credentials
+          </h3>
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+            Every student who successfully completes a program or internship at Edvanta receives a unique certificate. This contains an encrypted certificate ID and a QR code for direct verification by HR and recruitment teams.
+          </p>
+          <ul className="flex flex-col gap-4 mb-6">
+            <li className="flex items-center gap-3 text-sm text-gray-300">
+              <FaCheckDouble className="text-accent" />
+              <span>Co-validated by corporate training partners.</span>
+            </li>
+            <li className="flex items-center gap-3 text-sm text-gray-300">
+              <FaCheckDouble className="text-accent" />
+              <span>Verifiable ID hosted on Edvanta public portal.</span>
+            </li>
+            <li className="flex items-center gap-3 text-sm text-gray-300">
+              <FaCheckDouble className="text-accent" />
+              <span>Integrate directly with LinkedIn Profile credentials.</span>
+            </li>
+          </ul>
+        </div>
 
-        {/* Certificate Display */}
-        {searchedCert ? (
-          <div className="fade-in">
-            <Card className="certificate-layout glass-panel" style={{
-              padding: '40px',
-              border: '2px solid var(--accent)',
-              boxShadow: 'var(--shadow-lg)',
-              background: '#ffffff',
-              color: '#0f172a',
-              borderRadius: '24px',
-              position: 'relative',
-              overflow: 'hidden',
-              marginBottom: '32px'
-            }}>
-              
-              {/* Decorative Frame */}
-              <div style={{
-                border: '4px double rgba(37, 99, 235, 0.2)',
-                padding: '30px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                textAlign: 'center'
-              }}>
-                <Award size={64} style={{ color: '#2563eb', marginBottom: '20px' }} />
-                
-                <h2 style={{ fontFamily: 'var(--font-heading)', fontWeight: '800', fontSize: '2.2rem', color: '#1e3a8a', marginBottom: '8px' }}>
-                  EDVANTA ACADEMY
-                </h2>
-                <span style={{ fontSize: '0.8rem', letterSpacing: '0.2em', fontWeight: '800', color: '#64748b', textTransform: 'uppercase', marginBottom: '24px' }}>
-                  CERTIFICATE OF COMPLETION
-                </span>
-
-                <p style={{ fontSize: '1rem', color: '#475569', fontStyle: 'italic', marginBottom: '8px' }}>
-                  This credential is proudly presented to
-                </p>
-                <h3 style={{ fontSize: '2rem', fontWeight: '800', color: '#0f172a', marginBottom: '16px', borderBottom: '2px solid #e2e8f0', paddingBottom: '8px', minWidth: '300px' }}>
-                  {searchedCert.name}
-                </h3>
-
-                <p style={{ fontSize: '1rem', color: '#475569', maxWidth: '600px', lineHeight: '1.6', marginBottom: '24px' }}>
-                  for successfully completing all milestones and assessments in the certified program <br />
-                  <strong>{searchedCert.program}</strong> <br />
-                  with an overall grade of <strong>{searchedCert.grade}</strong>.
-                </p>
-
-                <div style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                  marginTop: '20px',
-                  borderTop: '1px solid #e2e8f0',
-                  paddingTop: '20px'
-                }} className="cert-signature-strip">
-                  <div style={{ textAlign: 'left' }}>
-                    <span style={{ fontSize: '0.8rem', color: '#94a3b8', display: 'block' }}>Date of Issue</span>
-                    <span style={{ fontSize: '0.9rem', fontWeight: '700', color: '#334155' }}>{searchedCert.date}</span>
-                  </div>
-                  <div>
-                    <span style={{ fontSize: '0.8rem', color: '#94a3b8', display: 'block' }}>Credential ID</span>
-                    <span style={{ fontSize: '0.9rem', fontWeight: '700', color: '#2563eb' }}>{searchedCert.id}</span>
-                  </div>
-                  <div style={{ textAlign: 'right' }}>
-                    <span style={{ fontSize: '0.8rem', color: '#94a3b8', display: 'block' }}>Authorized Signature</span>
-                    <span style={{ fontSize: '0.95rem', fontWeight: '800', fontStyle: 'italic', color: '#1e3a8a' }}>Amit Sharma</span>
-                  </div>
-                </div>
-              </div>
-
-            </Card>
-
-            {/* Print/Download actions */}
-            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-              <Button variant="primary" onClick={() => window.print()}><Printer size={16} /> Print Certificate</Button>
-              <Button variant="secondary"><Download size={16} /> Download PDF</Button>
-            </div>
+        {/* Mock Certificate Preview */}
+        <div className="border border-white/10 rounded-2xl p-8 bg-gradient-to-br from-primary/80 to-primary-dark/95 shadow-glow-lg relative overflow-hidden">
+          {/* Watermarks */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none">
+            <FaAward size={250} />
           </div>
-        ) : (
-          <div className="glass-panel" style={{
-            padding: '40px',
-            borderRadius: '24px',
-            textAlign: 'center',
-            border: '1.5px dashed var(--glass-border)'
-          }}>
-            <ShieldCheck size={48} style={{ color: 'var(--text-tertiary)', marginBottom: '16px' }} />
-            <p style={{ color: 'var(--text-secondary)' }}>
-              No credential active in view. Enter a valid ID in the box above to generate and inspect.
+          
+          {/* Certificate Content */}
+          <div className="border border-yellow-600/30 p-6 rounded-lg text-center flex flex-col gap-6 relative z-10">
+            <span className="text-xs uppercase tracking-[0.2em] font-semibold text-yellow-500">Certificate of Completion</span>
+            <div>
+              <h4 className="text-white font-manrope font-extrabold text-2xl mb-1">EDVANTA TECHNOLOGIES</h4>
+              <p className="text-gray-400 text-[10px] uppercase tracking-widest">Skills Transformation Academy</p>
+            </div>
+            
+            <p className="text-gray-300 text-xs italic my-2">
+              This is to certify that a student has completed all coursework and projects for the program
             </p>
+            
+            <h5 className="text-gradient-accent font-manrope font-bold text-lg">Full Stack Web Development (MERN)</h5>
+            
+            <div className="flex justify-between items-end mt-8 border-t border-white/5 pt-6 text-left">
+              <div>
+                <span className="text-[10px] text-gray-500 block">VERIFIABLE ID</span>
+                <span className="text-xs text-gray-300 font-mono">ED-MERN-2026-984</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <FaQrcode size={38} className="text-white mb-1" />
+                <span className="text-[8px] text-gray-500 font-mono">SCAN TO VERIFY</span>
+              </div>
+            </div>
           </div>
-        )}
+        </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{__html: `
-        @media print {
-          body * {
-            visibility: hidden;
-          }
-          .certificate-layout, .certificate-layout * {
-            visibility: visible;
-          }
-          .certificate-layout {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-          }
-        }
-        @media (max-width: 600px) {
-          .cert-signature-strip {
-            flex-direction: column;
-            gap: 16px;
-            align-items: center;
-            text-align: center !important;
-          }
-        }
-      `}} />
-    </section>
+    </div>
   );
 };
 
-export default CertificationsPage;
+export default Certifications;

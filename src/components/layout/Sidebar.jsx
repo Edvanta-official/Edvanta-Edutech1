@@ -1,110 +1,63 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { 
-  Users, BookOpen, Briefcase, Video, Award, BarChart2, DollarSign, FileText, Bell, 
-  User, CheckSquare, BookOpen as BookIcon, FolderGit, LayoutDashboard, Globe
-} from 'lucide-react';
+import { FaGraduationCap, FaUser, FaLaptopCode, FaAward, FaCalendarAlt, FaFileAlt, FaBriefcase, FaChartBar, FaCreditCard, FaTasks } from 'react-icons/fa';
 
-const Sidebar = ({ role = 'student', activeTab, setActiveTab }) => {
-  // Define menu items for student role
-  const studentItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'profile', label: 'Profile', icon: User },
-    { id: 'courses', label: 'My Courses', icon: BookOpen },
-    { id: 'internship', label: 'Internship Progress', icon: FolderGit },
-    { id: 'certificates', label: 'Certificates', icon: Award },
-    { id: 'webinars', label: 'Webinar Recordings', icon: Video },
-    { id: 'assignments', label: 'Assignments', icon: CheckSquare },
-    { id: 'resume', label: 'Resume Builder', icon: FileText },
-    { id: 'jobs', label: 'Job Portal', icon: Briefcase },
+const Sidebar = ({ role = 'student' }) => {
+  const studentLinks = [
+    { label: 'Profile', path: '/dashboard/student/profile', icon: <FaUser /> },
+    { label: 'My Courses', path: '/dashboard/student/courses', icon: <FaGraduationCap /> },
+    { label: 'Internships', path: '/dashboard/student/internship', icon: <FaLaptopCode /> },
+    { label: 'Certificates', path: '/dashboard/student/certificates', icon: <FaAward /> },
+    { label: 'Webinar Recordings', path: '/dashboard/student/webinars', icon: <FaCalendarAlt /> },
+    { label: 'Resume Builder', path: '/dashboard/student/resume-builder', icon: <FaFileAlt /> },
+    { label: 'Job Portal', path: '/dashboard/student/jobs', icon: <FaBriefcase /> }
   ];
 
-  // Define menu items for admin role
-  const adminItems = [
-    { id: 'dashboard', label: 'Analytics Dashboard', icon: BarChart2 },
-    { id: 'students', label: 'Students Management', icon: Users },
-    { id: 'courses', label: 'Courses Management', icon: BookOpen },
-    { id: 'internships', label: 'Internship Management', icon: FolderGit },
-    { id: 'webinars', label: 'Webinar Management', icon: Video },
-    { id: 'certificates', label: 'Certificate Generator', icon: Award },
-    { id: 'placements', label: 'Placement Tracker', icon: Briefcase },
-    { id: 'leads', label: 'Leads Management', icon: Globe },
-    { id: 'payments', label: 'Payment Management', icon: DollarSign },
-    { id: 'blogs', label: 'Blog Management', icon: FileText },
-    { id: 'notifications', label: 'Notifications', icon: Bell },
+  const adminLinks = [
+    { label: 'Analytics', path: '/dashboard/admin/analytics', icon: <FaChartBar /> },
+    { label: 'Students', path: '/dashboard/admin/students', icon: <FaUser /> },
+    { label: 'Courses', path: '/dashboard/admin/courses', icon: <FaGraduationCap /> },
+    { label: 'Internships', path: '/dashboard/admin/internships', icon: <FaLaptopCode /> },
+    { label: 'Webinars', path: '/dashboard/admin/webinars', icon: <FaCalendarAlt /> },
+    { label: 'Payments', path: '/dashboard/admin/payments', icon: <FaCreditCard /> },
+    { label: 'Leads', path: '/dashboard/admin/leads', icon: <FaTasks /> }
   ];
 
-  const items = role === 'admin' ? adminItems : studentItems;
+  const links = role === 'admin' ? adminLinks : studentLinks;
 
   return (
-    <aside className="glass-panel sidebar" style={{
-      width: '280px',
-      height: 'calc(100vh - 100px)',
-      position: 'sticky',
-      top: '90px',
-      borderRadius: '24px',
-      padding: '24px 16px',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '8px',
-      overflowY: 'auto'
-    }}>
-      <div style={{
-        padding: '0 12px 16px 12px',
-        borderBottom: '1px solid var(--glass-border)',
-        marginBottom: '16px'
-      }}>
-        <span style={{
-          textTransform: 'uppercase',
-          fontSize: '0.75rem',
-          letterSpacing: '0.1em',
-          fontWeight: '700',
-          color: 'var(--text-tertiary)'
-        }}>
-          {role === 'admin' ? 'Admin Panel' : 'Student Workspace'}
+    <aside className="w-64 bg-primary-dark border-r border-white/5 flex flex-col min-h-screen shrink-0">
+      {/* Sidebar Header */}
+      <div className="h-16 flex items-center px-6 border-b border-white/5">
+        <span className="font-manrope font-extrabold text-xl tracking-wider text-gradient-accent">
+          {role === 'admin' ? 'ADMIN PANEL' : 'STUDENT HUB'}
         </span>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-        {items.map((item) => {
-          const IconComponent = item.icon;
-          const isActive = activeTab === item.id;
-          return (
-            <button
-              key={item.id}
-              onClick={() => setActiveTab(item.id)}
-              className={`sidebar-link ${isActive ? 'active' : ''}`}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '12px',
-                width: '100%',
-                padding: '12px 16px',
-                borderRadius: '12px',
-                fontSize: '0.95rem',
-                fontWeight: '500',
-                color: isActive ? 'var(--accent)' : 'var(--text-secondary)',
-                background: isActive ? 'var(--accent-light)' : 'transparent',
-                transition: 'all var(--transition-fast)',
-                textAlign: 'left'
-              }}
-            >
-              <IconComponent size={18} style={{ color: isActive ? 'var(--accent)' : 'var(--text-tertiary)' }} />
-              {item.label}
-            </button>
-          );
-        })}
-      </div>
+      {/* Navigation Links */}
+      <nav className="flex-1 px-4 py-6 flex flex-col gap-2">
+        {links.map((link, idx) => (
+          <NavLink
+            key={idx}
+            to={link.path}
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-4 py-3 rounded-lg font-medium text-sm transition-all duration-200 ${
+                isActive
+                  ? 'bg-secondary text-white shadow-glow'
+                  : 'text-gray-400 hover:bg-primary hover:text-white'
+              }`
+            }
+          >
+            <span className="text-base shrink-0">{link.icon}</span>
+            <span>{link.label}</span>
+          </NavLink>
+        ))}
+      </nav>
 
-      <style dangerouslySetInnerHTML={{__html: `
-        .sidebar-link:hover {
-          background-color: var(--accent-light);
-          color: var(--accent) !important;
-        }
-        .sidebar-link:hover svg {
-          color: var(--accent) !important;
-        }
-      `}} />
+      {/* Sidebar Footer */}
+      <div className="p-4 border-t border-white/5 text-xs text-gray-500 text-center">
+        Powered by Edvanta
+      </div>
     </aside>
   );
 };
