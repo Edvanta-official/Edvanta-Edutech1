@@ -319,32 +319,11 @@ function initNavbarScroll() {
   let isScrolling;
 
   const handleScroll = () => {
-    // 1. Manage navbar sizing and logo base state based on vertical scroll offset
+    // Manage navbar glass style on scroll
     if (window.scrollY > 20) {
       container.classList.add('scrolled');
-      if (logoImg && !logoImg.dataset.activeScrolling) {
-        logoImg.style.transform = 'scale(0.9)';
-      }
     } else {
       container.classList.remove('scrolled');
-      if (logoImg && !logoImg.dataset.activeScrolling) {
-        logoImg.style.transform = 'scale(1)';
-      }
-    }
-
-    // 2. Manage active scrolling micro-scale (scale down during scroll activity)
-    if (logoImg) {
-      logoImg.dataset.activeScrolling = "true";
-      window.clearTimeout(isScrolling);
-      
-      const targetScrollingScale = window.scrollY > 20 ? 0.83 : 0.92;
-      logoImg.style.transform = `scale(${targetScrollingScale})`;
-
-      isScrolling = setTimeout(() => {
-        delete logoImg.dataset.activeScrolling;
-        const targetBaseScale = window.scrollY > 20 ? 0.9 : 1.0;
-        logoImg.style.transform = `scale(${targetBaseScale})`;
-      }, 150);
     }
   };
 
@@ -420,28 +399,9 @@ function initStatsCountUp() {
 /* 8. Premium Interactive 3D Logo Tilt and Glow */
 function initLogoInteractivity() {
   const logoWrappers = document.querySelectorAll('.logo');
-
   logoWrappers.forEach(logo => {
-    logo.addEventListener('mousemove', (e) => {
-      const rect = logo.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      // Calculate gentle 3D tilt (max 10 degrees)
-      const rotateX = ((centerY - y) / centerY) * 10;
-      const rotateY = ((x - centerX) / centerX) * 10;
-      
-      logo.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-      logo.style.filter = 'drop-shadow(0 0 16px rgba(56, 189, 248, 0.45)) drop-shadow(0 0 4px rgba(34, 197, 94, 0.25))';
-    });
-
-    logo.addEventListener('mouseleave', () => {
-      logo.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-      logo.style.filter = '';
-    });
+    logo.style.transform = 'none';
+    logo.style.filter = 'none';
   });
 }
 
