@@ -90,16 +90,115 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #f8fafc;
+}
+
 body {
   font-family: var(--font-body);
-  background-color: var(--bg-app);
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.6;
-  transition: background-color var(--transition-normal), color var(--transition-normal);
-  background-image: var(--bg-gradient);
-  background-attachment: fixed;
+  transition: color var(--transition-normal);
+  background: transparent !important;
+  position: relative;
+}
+
+/* Animated Rotating Mesh Color Gradient Layer 1 */
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -10;
+  background: 
+    radial-gradient(circle at 18% 22%, rgba(192, 132, 252, 0.7) 0%, transparent 45%),
+    radial-gradient(circle at 45% 45%, rgba(250, 204, 21, 0.7) 0%, transparent 40%),
+    radial-gradient(circle at 20% 75%, rgba(56, 189, 248, 0.65) 0%, transparent 45%),
+    radial-gradient(circle at 82% 35%, rgba(244, 114, 182, 0.6) 0%, transparent 45%),
+    radial-gradient(circle at 75% 75%, rgba(251, 146, 60, 0.55) 0%, transparent 45%);
+  animation: colorRotateMeshBackground 14s ease-in-out infinite alternate;
+  pointer-events: none;
+  filter: blur(30px);
+}
+
+/* Animated Floating Orbit Color Gradient Layer 2 */
+body::after {
+  content: '';
+  position: fixed;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  z-index: -9;
+  background: 
+    radial-gradient(circle at 70% 20%, rgba(244, 114, 182, 0.5) 0%, transparent 50%),
+    radial-gradient(circle at 30% 70%, rgba(192, 132, 252, 0.5) 0%, transparent 50%),
+    radial-gradient(circle at 60% 80%, rgba(250, 204, 21, 0.5) 0%, transparent 50%);
+  animation: orbitFloatingColors 18s linear infinite;
+  pointer-events: none;
+  filter: blur(35px);
+  mix-blend-mode: multiply;
+}
+
+@keyframes colorRotateMeshBackground {
+  0% {
+    transform: rotate(0deg) scale(1) translateY(0);
+    filter: blur(30px) hue-rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.12) translateY(-30px);
+    filter: blur(22px) hue-rotate(90deg);
+  }
+  100% {
+    transform: rotate(360deg) scale(1) translateY(0);
+    filter: blur(30px) hue-rotate(180deg);
+  }
+}
+
+@keyframes orbitFloatingColors {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: rotate(120deg) translate(40px, -40px) scale(1.08);
+  }
+  66% {
+    transform: rotate(240deg) translate(-40px, 40px) scale(0.95);
+  }
+  100% {
+    transform: rotate(360deg) translate(0px, 0px) scale(1);
+  }
+}
+
+/* Floating Badge Animations for Google Reviews & Certifications */
+.floating-badge-animate {
+  animation: floatBadgeUpDown 4s ease-in-out infinite alternate !important;
+}
+
+.floating-badge-animate-slow {
+  animation: floatBadgeUpDownSlow 5s ease-in-out infinite alternate !important;
+}
+
+@keyframes floatBadgeUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes floatBadgeUpDownSlow {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
 
 body {
@@ -3385,8 +3484,8 @@ html {
 }
 
 .logo img {
-  height: 44px !important;
-  max-height: 46px !important;
+  height: 48px !important;
+  max-height: 50px !important;
   width: auto !important;
   display: block !important;
   object-fit: contain !important;
