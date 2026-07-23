@@ -5,12 +5,22 @@ on:
     branches:
       - main
       - master
+  workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -27,8 +37,17 @@ jobs:
       - name: Build Production Dist
         run: npm run build
 
-      - name: Deploy to GitHub Pages Branch
+      - name: Deploy to gh-pages Branch
         uses: PeaceIris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages Direct
+        id: deployment
+        uses: actions/deploy-pages@v4
