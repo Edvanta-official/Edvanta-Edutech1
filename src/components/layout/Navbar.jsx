@@ -20,11 +20,27 @@ const Navbar = () => {
   return (
     <nav className="glass sticky top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/5 py-4 px-4 md:px-8">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-manrope font-extrabold tracking-wider text-gradient-accent">
-            EDVANTA
-          </span>
+        {/* Logo (Exact Calligraphic E + EDVANTA Green Badge Matching Screenshot) */}
+        <Link to="/" className="flex items-center text-decoration-none">
+          <svg className="logo-svg" viewBox="0 0 420 95" width="150" height="38" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <style>
+                {`
+                @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@500;600;700&display=swap');
+                .l-box-bg { fill: #ffffff; stroke: #94a3b8; stroke-width: 2.5; rx: 6px; }
+                .l-name-bg { fill: #8ba895; rx: 6px; }
+                .l-script-e { font-family: 'Great Vibes', 'Playfair Display', cursive, serif; font-size: 68px; font-weight: 700; font-style: italic; fill: #0f172a; }
+                .l-text-edvanta { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; fill: #ffffff; letter-spacing: 6.5px; }
+                [data-theme="dark"] .l-box-bg { fill: #1e293b; stroke: #cbd5e1; }
+                [data-theme="dark"] .l-script-e { fill: #ffffff; }
+                `}
+              </style>
+            </defs>
+            <rect x="4" y="4" width="85" height="85" rx="8" className="l-box-bg" />
+            <text x="46.5" y="67" textAnchor="middle" className="l-script-e">E</text>
+            <rect x="98" y="4" width="318" height="85" rx="8" className="l-name-bg" />
+            <text x="257" y="56" textAnchor="middle" className="l-text-edvanta">EDVANTA</text>
+          </svg>
         </Link>
 
         {/* Desktop Menu */}
