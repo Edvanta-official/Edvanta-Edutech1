@@ -75,16 +75,11 @@ const Navbar = () => {
               </Button>
             </div>
           ) : (
-            <>
-              <Link to="/login" className="text-gray-300 hover:text-white font-medium transition-colors">
-                Login
-              </Link>
-              <Link to="/register">
-                <Button variant="primary" className="py-2 px-5 text-sm">
-                  Register <FaArrowRight size={12} />
-                </Button>
-              </Link>
-            </>
+            <Link to="/register">
+              <Button variant="primary" className="py-2 px-5 text-sm">
+                Sign Up <FaArrowRight size={12} />
+              </Button>
+            </Link>
           )}
         </div>
 
