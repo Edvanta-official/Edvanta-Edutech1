@@ -165,19 +165,174 @@ export const FAQS = [
 
 export const MOCK_BLOGS = [
   {
-    id: 'b1',
-    title: 'Top 5 AI Skills to Learn in 2026',
-    excerpt: 'Discover the machine learning and deep learning trends taking over the tech industry.',
-    author: 'Admin Team',
-    date: 'July 10, 2026',
-    thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80'
+    id: 'ai-ml',
+    title: 'Artificial Intelligence: Shaping Next-Gen Tech Careers',
+    excerpt: 'Explore generative AI architectures, neural networks, and computer vision frameworks.',
+    author: 'Edvanta AI Lab',
+    date: 'Jun 10, 2025',
+    link: 'blog-ai.html',
+    thumbnail: 'images/blog_ai.jpg'
   },
   {
-    id: 'b2',
-    title: 'How to Build a Modern Tech Portfolio',
-    excerpt: 'A complete step-by-step walkthrough of what recruiters look for in a developer portfolio.',
-    author: 'Mentor Team',
-    date: 'June 25, 2026',
-    thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80'
+    id: 'cybersec',
+    title: 'Cyber Security Essentials: Defending Systems Against Threat Vectors',
+    excerpt: 'Understand network security, penetration testing, threat hunting, and security auditing.',
+    author: 'Security Team',
+    date: 'Jun 12, 2025',
+    link: 'blog-cyber.html',
+    thumbnail: 'images/blog_cyber.jpg'
+  },
+  {
+    id: 'ev-eng',
+    title: 'Electric Vehicle Mobility: Battery Tech & Powertrain Innovations',
+    excerpt: 'Study battery thermal control modules, battery management systems, and electric motors.',
+    author: 'EV Innovations',
+    date: 'Jun 14, 2025',
+    link: 'blog-ev.html',
+    thumbnail: 'images/blog_ev.jpg'
+  },
+  {
+    id: 'iot',
+    title: 'The Internet of Things (IoT): Connecting Smart Devices & Automation',
+    excerpt: 'Build sensor node meshes, configure microcontrollers, and design automated robotics assemblies.',
+    author: 'IoT & Robotics Team',
+    date: 'Jun 09, 2025',
+    link: 'blog-iot.html',
+    thumbnail: 'images/blog_iot.jpg'
+  },
+  {
+    id: 'ml',
+    title: 'Unlocking Machine Learning: The Future of Intelligent Automation',
+    excerpt: 'Master predictive modeling, pandas, scikit-learn, regression algorithms, and deep learning.',
+    author: 'Data Science Faculty',
+    date: 'Jun 08, 2025',
+    link: 'blog-ml.html',
+    thumbnail: 'images/blog_ml.jpg'
+  },
+  {
+    id: 'vlsi',
+    title: 'VLSI Chip Architecture: Designing Next-Gen Semiconductor Logic',
+    excerpt: 'Design hardware systems, configure logic gates, test integrated circuits, and build silicon layouts.',
+    author: 'VLSI Semiconductor Core',
+    date: 'Jun 15, 2025',
+    link: 'blog-vlsi.html',
+    thumbnail: 'images/blog_vlsi.jpg'
+  },
+  {
+    id: 'fullstack',
+    title: 'Full Stack Web Development: Mastering MERN, React & Server Scalability',
+    excerpt: 'Build scalable web applications with MongoDB, Express, React, Node.js, and cloud APIs.',
+    author: 'Web Dev Mentors',
+    date: 'Jun 16, 2025',
+    link: 'blog-fullstack.html',
+    thumbnail: 'images/about_inspiration_1.jpg'
+  },
+  {
+    id: 'cloud',
+    title: 'Cloud Computing & DevOps: Kubernetes, Docker & AWS Orchestration',
+    excerpt: 'Automate CI/CD pipelines, containerize microservices, and manage AWS cloud infra.',
+    author: 'DevOps Guild',
+    date: 'Jun 18, 2025',
+    link: 'blog-cloud.html',
+    thumbnail: 'images/about_inspiration_2.jpg'
+  },
+  {
+    id: 'data-science',
+    title: 'Data Science & Predictive Analytics: Transforming Big Data into Insights',
+    excerpt: 'Clean big data arrays, build neural networks, and deploy AI models for enterprise intelligence.',
+    author: 'Analytics Core',
+    date: 'Jun 20, 2025',
+    link: 'blog-data-science.html',
+    thumbnail: 'images/about_inspiration_3.jpg'
+  },
+  {
+    id: 'autocad',
+    title: 'AutoCAD 2D/3D Engineering Drafting: Precision Blueprint & Model Design',
+    excerpt: 'Learn architectural elevation drafting, GD&T standards, and CAD 3D assemblies.',
+    author: 'CAD Engineering Team',
+    date: 'Jun 22, 2025',
+    link: 'blog-autocad.html',
+    thumbnail: 'images/about_inspiration_4.jpg'
+  },
+  {
+    id: 'revit',
+    title: 'Revit Architecture & BIM: Modern Structural Modeling & Digital Building',
+    excerpt: 'Master Building Information Modeling (BIM), structural frames, and 3D architectural plans.',
+    author: 'BIM Specialists',
+    date: 'Jun 24, 2025',
+    link: 'blog-revit.html',
+    thumbnail: 'images/about_inspiration_5.jpg'
+  },
+  {
+    id: 'solidworks',
+    title: 'SolidWorks Mechanical Design: 3D Product Simulation & CAD Modeling',
+    excerpt: 'Run thermal stress simulations, design industrial mockups, and model sheet metal parts.',
+    author: 'Mechanical Design Lab',
+    date: 'Jun 26, 2025',
+    link: 'blog-solidworks.html',
+    thumbnail: 'images/about_inspiration_6.jpg'
+  },
+  {
+    id: 'ansys',
+    title: 'ANSYS Structural Analysis: Finite Element Simulation & Stress Auditing',
+    excerpt: 'Run finite element analysis (FEA), stress-thermal simulation meshes, and fatigue testing.',
+    author: 'FEA Simulation Lead',
+    date: 'Jun 28, 2025',
+    link: 'blog-ansys.html',
+    thumbnail: 'images/about_inspiration_1.jpg'
+  },
+  {
+    id: 'embedded',
+    title: 'Embedded Systems Engineering: Microcontrollers & Firmware Programming',
+    excerpt: 'Program ARM Cortex boards, configure real-time OS (RTOS), and build IoT hardware drivers.',
+    author: 'Firmware Engineering Group',
+    date: 'Jun 30, 2025',
+    link: 'blog-embedded.html',
+    thumbnail: 'images/about_inspiration_2.jpg'
+  },
+  {
+    id: 'rtl',
+    title: 'RTL Design & Verilog Hardware Verification: Silicon Chip Prototyping',
+    excerpt: 'Synthesize Verilog code, optimize state machines, and verify digital chip assertions.',
+    author: 'Silicon Prototyping Group',
+    date: 'Jul 02, 2025',
+    link: 'blog-rtl.html',
+    thumbnail: 'images/about_inspiration_3.jpg'
+  },
+  {
+    id: 'catia',
+    title: 'CATIA 3D Product Design: Aerospace & Automotive Surface Engineering',
+    excerpt: 'Develop parametric shapes, surface design models, and complex aerospace mechanical parts.',
+    author: 'Aerospace Design Lead',
+    date: 'Jul 04, 2025',
+    link: 'blog-catia.html',
+    thumbnail: 'images/about_inspiration_4.jpg'
+  },
+  {
+    id: 'matlab',
+    title: 'MATLAB & Simulink: Signal Processing & Control Loop Systems',
+    excerpt: 'Model feedback loops, simulate signal grids, and program mathematical control systems.',
+    author: 'Control Systems Lab',
+    date: 'Jul 06, 2025',
+    link: 'blog-matlab.html',
+    thumbnail: 'images/about_inspiration_5.jpg'
+  },
+  {
+    id: 'business',
+    title: 'Business Analytics & Intelligence: Product Strategy & Market Modeling',
+    excerpt: 'Build interactive Power BI dashboards, model business logic, and drive product discovery.',
+    author: 'Business Strategy Lead',
+    date: 'Jul 08, 2025',
+    link: 'blog-business.html',
+    thumbnail: 'images/about_inspiration_6.jpg'
+  },
+  {
+    id: 'sixsigma',
+    title: 'Lean Six Sigma Green Belt: Quality Operations & Agile Optimization',
+    excerpt: 'Master DMAIC error reduction models, quality process audits, and industrial workflow checks.',
+    author: 'Quality Audit Team',
+    date: 'Jul 10, 2025',
+    link: 'blog-sixsigma.html',
+    thumbnail: 'images/about_inspiration_1.jpg'
   }
 ];
