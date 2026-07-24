@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edvanta Knowledge Center - Course Blogs & Insights</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <script>(function(){var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}})();</script>
+    <style>
+      .tab-btn {
+        padding: 10px 20px;
+        border-radius: 999px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        background: transparent;
+        color: #ffffff !important;
+        border: 1px solid rgba(255,255,255,0.2);
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .tab-btn:hover { border-color: #0284c7; }
+      .tab-btn.active {
+        background: #0284c7;
+        color: #ffffff !important;
+        border-color: #0284c7;
+      }
+      .search-input-blogs {
+        padding: 12px 20px 12px 44px;
+        border-radius: 999px;
+        border: 1px solid rgba(0,0,0,0.1);
+        background: rgba(255,255,255,0.9);
+        color: #0f172a;
+        width: 320px;
+        outline: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+      }
+      [data-theme="dark"] .search-input-blogs {
+        background: rgba(15,23,42,0.8);
+        color: #f8fafc;
+        border-color: rgba(255,255,255,0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="bg3dCanvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header style="position: fixed; top: 0; left: 0; width: 100%; z-index: 999; padding: 24px 0; background: transparent;">
+      <div class="container navbar-inner" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+        <div class="nav-pill-container glass-panel" style="display: flex; align-items: center; height: 56px; border-radius: 50px; background: rgba(255, 255, 255, 0.92); border: 1px solid rgba(255, 255, 255, 0.55); backdrop-filter: blur(22px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08); padding: 0 32px 0 20px; gap: 36px;">
+          <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="company-logo.png" alt="Edvanta Logo" style="height: 52px; width: auto; display: block; object-fit: contain; border-radius: 6px;" />
+          </a>
+          <nav class="nav-links-new" style="display: flex; align-items: center; gap: 28px;">
+            <a href="about.html" class="nav-item-new">About</a>
+            <a href="courses.html" class="nav-item-new">Programs</a>
+            <a href="careers.html" class="nav-item-new" style="display: flex; align-items: center; gap: 6px;">Career <span class="badge-new" style="background: #000; color: #fff; font-size: 8px; font-weight: 800; padding: 2px 6px; border-radius: 999px;">WE ARE HIRING</span></a>
+            <a href="blogs.html" class="nav-item-new active">Blogs</a>
+            <a href="dashboard.html" class="nav-item-new">LMS Portal</a>
+          </nav>
+        </div>
+        <div class="navbar-actions-new" style="display: flex; align-items: center; gap: 16px;">
+          <a href="https://pages.razorpay.com/pl_SdJ5dj1B5ko03b/view" target="_blank" rel="noopener noreferrer" class="btn-signup-new">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Floating Theme Switcher -->
+    <div class="floating-theme-switch" id="themeToggler">
+      <button class="theme-btn active" data-mode="light" title="Light Mode">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <div class="theme-divider"></div>
+      <button class="theme-btn" data-mode="dark" title="Dark Mode">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+
+    <!-- Main Content -->
+    <main style="padding: 130px 0 80px 0;">
+      <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+        
+        <!-- Header Title -->
+        <div style="text-align: center; margin-bottom: 48px;">
+          <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 3px; color: #0284c7; text-transform: uppercase; display: block; margin-bottom: 12px;">KNOWLEDGE CENTER</span>
+          <h1 style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 3.5rem; color: #0f172a; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 16px 0;">Course Insights & Technical Articles</h1>
+          <p style="font-family: 'Inter', sans-serif; font-size: 1.1rem; color: #475569; max-width: 720px; margin: 0 auto; line-height: 1.7;">Explore industry-led articles and career guides for every certified engineering track offered at Edvanta.</p>
+        </div>
+
+        <!-- Search and Category Filters Bar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; background: rgba(255,255,255,0.4); backdrop-filter: blur(16px); padding: 20px 28px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.06);">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;" id="blogCategoryTabs">
+            <button class="tab-btn active" data-cat="All">All Articles (19)</button>
+            <button class="tab-btn" data-cat="Computer Science">Computer Science</button>
+            <button class="tab-btn" data-cat="Electronics & EEE">Electronics & EEE</button>
+            <button class="tab-btn" data-cat="Mechanical & Civil">Mechanical & Civil</button>
+            <button class="tab-btn" data-cat="Management">Management</button>
+          </div>
+
+          <div style="position: relative;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="position: absolute; left: 16px; top: 14px; color: #94a3b8;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="blogSearchInput" class="search-input-blogs" placeholder="Search blog articles..." />
+          </div>
+        </div>
+
+        <!-- All Blogs Grid (19 Articles) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px;" id="allBlogsGrid">
+          
+          <a href="blog-ai.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Computer Science">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="images/blog_ai.jpg" alt="Artificial Intelligence: Shaping Next-Gen Tech Careers" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">AI & ML</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Artificial Intelligence: Shaping Next-Gen Tech Careers</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Artificial Intelligence is transforming diagnostics, autonomous mobility, and generative tech. Learn core neural networks and LLMs.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 10 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-cyber.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Computer Science">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="images/blog_cyber.jpg" alt="Cyber Security Essentials: Defending Systems Against Threat Vectors" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">CYBER SECURITY</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Cyber Security Essentials: Defending Systems Against Threat Vectors</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Understand network defense, penetration testing, threat hunting, vulnerability assessments, and secure application designs.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 12 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-ev.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Electronics & EEE">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="images/blog_ev.jpg" alt="Electric Vehicle Mobility: Battery Tech & Powertrain Innovations" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">EV ENGINEERING</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Electric Vehicle Mobility: Battery Tech & Powertrain Innovations</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Study battery thermal control modules, battery management systems (BMS), regenerative braking, and electric motor designs.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 14 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-iot.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Electronics & EEE">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="images/blog_iot.jpg" alt="The Internet of Things (IoT): Connecting Smart Devices & Automation" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">IOT & ROBOTICS</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">The Internet of Things (IoT): Connecting Smart Devices & Automation</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Build sensor node meshes, configure microcontrollers, and design automated robotics assemblies with real-time telemetry.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 09 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-ml.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Computer Science">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="images/blog_ml.jpg" alt="Unlocking Machine Learning: The Future of Intelligent Automation" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">MACHINE LEARNING</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Unlocking Machine Learning: The Future of Intelligent Automation</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Master predictive modeling, pandas dataframes, scikit-learn algorithms, regression models, and deep neural networks.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 08 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-vlsi.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Electronics & EEE">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="images/blog_vlsi.jpg" alt="VLSI Chip Architecture: Designing Next-Gen Semiconductor Logic" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">VLSI CHIP DESIGN</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">VLSI Chip Architecture: Designing Next-Gen Semiconductor Logic</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Design hardware logic systems, configure logic gates, test integrated circuits, and build custom silicon wafer layouts.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 15 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-fullstack.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Computer Science">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Full Stack Web Development: Mastering MERN, React & Server Scalability" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">WEB DEVELOPMENT</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Full Stack Web Development: Mastering MERN, React & Server Scalability</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Explore modern full stack architecture using React, Node.js, Express, MongoDB, microservices, and serverless deployments.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 16 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-cloud.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Computer Science">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Cloud Computing & DevOps: Kubernetes, Docker & AWS Orchestration" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">CLOUD & DEVOPS</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Cloud Computing & DevOps: Kubernetes, Docker & AWS Orchestration</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Master containerization with Docker, Kubernetes orchestration, CI/CD automated deployment pipelines, and cloud security on AWS.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 18 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-data-science.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Computer Science">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data Science & Predictive Analytics: Transforming Big Data into Insights" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">DATA SCIENCE</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Data Science & Predictive Analytics: Transforming Big Data into Insights</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Learn how data scientists leverage Python, pandas, machine learning models, statistical inference, and deep neural networks.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 20 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-autocad.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Mechanical & Civil">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="AutoCAD 2D/3D Engineering Drafting: Precision Blueprint & Model Design" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">AUTOCAD DRAFTING</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">AutoCAD 2D/3D Engineering Drafting: Precision Blueprint & Model Design</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Discover essential drafting workflows, geometric dimensioning and tolerancing (GD&T), and 3D modeling tricks for civil & mechanical engineers.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 22 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-revit.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Mechanical & Civil">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Revit Architecture & BIM: Modern Structural Modeling & Digital Building" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">REVIT ARCHITECTURE</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Revit Architecture & BIM: Modern Structural Modeling & Digital Building</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Understand Building Information Modeling (BIM), architectural elevations, clash detection, and structural parametric families in Revit.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 24 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-solidworks.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Mechanical & Civil">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="SolidWorks Mechanical Design: 3D Product Simulation & CAD Modeling" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">SOLIDWORKS DESIGN</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">SolidWorks Mechanical Design: 3D Product Simulation & CAD Modeling</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Master parametric part modeling, assembly mating, motion simulation, and sheet metal fabrication workflows in SolidWorks.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 26 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-ansys.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Mechanical & Civil">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80" alt="ANSYS Structural Analysis: Finite Element Simulation & Stress Auditing" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">ANSYS FEA</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">ANSYS Structural Analysis: Finite Element Simulation & Stress Auditing</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Learn how finite element analysis (FEA) aids structural reliability, thermal stress modeling, and aerodynamic CFD simulations in ANSYS.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 28 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-embedded.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Electronics & EEE">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=800&q=80" alt="Embedded Systems Engineering: Microcontrollers & Firmware Programming" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">EMBEDDED SYSTEMS</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Embedded Systems Engineering: Microcontrollers & Firmware Programming</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Dive into ARM Cortex microcontrollers, RTOS scheduling, peripheral device drivers (SPI/I2C/UART), and hardware-software co-design.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 30 Jun, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-rtl.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Electronics & EEE">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="RTL Design & Verilog Hardware Verification: Silicon Chip Prototyping" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">RTL & VERILOG</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">RTL Design & Verilog Hardware Verification: Silicon Chip Prototyping</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Explore Register-Transfer Level (RTL) synthesis, finite state machine (FSM) optimization, and SystemVerilog testbenches for ASIC design.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 02 Jul, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-catia.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Mechanical & Civil">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&w=800&q=80" alt="CATIA 3D Product Design: Aerospace & Automotive Surface Engineering" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">CATIA 3D DESIGN</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">CATIA 3D Product Design: Aerospace & Automotive Surface Engineering</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Learn complex generative shape design, parametric surfacing, and automotive body-in-white (BIW) modeling techniques using CATIA V5/V6.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 04 Jul, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-matlab.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Electronics & EEE">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="MATLAB & Simulink: Signal Processing & Control Loop Systems" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">MATLAB & SIMULINK</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">MATLAB & Simulink: Signal Processing & Control Loop Systems</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Simulate dynamic electrical grids, model feedback control loops, and analyze discrete Fourier transforms using MATLAB & Simulink.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 06 Jul, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-business.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Management">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Business Analytics & Intelligence: Product Strategy & Market Modeling" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">BUSINESS ANALYTICS</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Business Analytics & Intelligence: Product Strategy & Market Modeling</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Bridge technical engineering with strategic decisions through SQL data extraction, Power BI dashboards, and market modeling.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 08 Jul, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+
+          <a href="blog-sixsigma.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;" class="card-3d-effect blog-card-item" data-category="Management">
+            <div style="background: #ffffff; border-radius: 28px; border: 1px solid rgba(0,0,0,0.07); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); padding: 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="width: 100%; height: 210px; border-radius: 20px; overflow: hidden; position: relative;">
+                  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Lean Six Sigma Green Belt: Quality Operations & Agile Optimization" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <span style="position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 999px;">LEAN SIX SIGMA</span>
+                </div>
+                <div style="padding: 20px 10px 10px 10px;">
+                  <h3 class="blog-card-title" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: #0f172a; margin: 0 0 10px 0; line-height: 1.35;">Lean Six Sigma Green Belt: Quality Operations & Agile Optimization</h3>
+                  <p class="blog-card-excerpt" style="font-family: 'Inter', sans-serif; font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.6;">Apply DMAIC methodology, root-cause statistical analysis, process capability ratios, and waste reduction frameworks to industrial workflows.</p>
+                </div>
+              </div>
+              <div style="padding: 0 10px 10px 10px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12px; color: #94a3b8;">Edvanta · 10 Jul, 2025</span>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #0284c7; display: flex; align-items: center; gap: 4px;">Read Article →</span>
+              </div>
+            </div>
+          </a>
+  
+        </div>
+
+        <!-- No Search Results Box -->
+        <div id="noBlogResults" style="display: none; text-align: center; padding: 60px 20px;">
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; color: #0f172a; margin-bottom: 8px;">No matching articles found</h3>
+          <p style="color: #64748b; font-size: 0.95rem;">Try searching for different keywords or select a different category filter.</p>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-master-section" style="background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(24px); border-top: 1px solid rgba(0, 0, 0, 0.05); padding-top: 60px; padding-bottom: 40px;">
+      <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+        <div style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(16px); border-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.08); padding: 18px 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 40px; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+          <span style="font-family: 'Poppins', sans-serif; font-size: 13px; color: #0f172a; font-weight: 700;">©Edvanta 2020 · 2026</span>
+          <div style="display: flex; gap: 24px; align-items: center;">
+            <a href="dashboard.html" style="font-family: 'Poppins', sans-serif; font-size: 13px; color: #475569; text-decoration: none; font-weight: 600;">Verified Certification</a>
+            <a href="terms.html" style="font-family: 'Poppins', sans-serif; font-size: 13px; color: #475569; text-decoration: none; font-weight: 600;">Terms and Condition</a>
+            <a href="privacy.html" style="font-family: 'Poppins', sans-serif; font-size: 13px; color: #475569; text-decoration: none; font-weight: 600;">Privacy policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+    <script>
+      const cards = document.querySelectorAll('.blog-card-item');
+      const searchInput = document.getElementById('blogSearchInput');
+      const tabs = document.querySelectorAll('#blogCategoryTabs .tab-btn');
+      const noResults = document.getElementById('noBlogResults');
+      const grid = document.getElementById('allBlogsGrid');
+
+      let currentCat = 'All';
+      let searchQ = '';
+
+      function filterArticles() {
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const cat = card.getAttribute('data-category');
+          const title = card.querySelector('.blog-card-title').innerText.toLowerCase();
+          const excerpt = card.querySelector('.blog-card-excerpt').innerText.toLowerCase();
+          
+          const matchCat = currentCat === 'All' || cat === currentCat;
+          const matchSearch = title.includes(searchQ) || excerpt.includes(searchQ);
+
+          if (matchCat && matchSearch) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (visibleCount === 0) {
+          grid.style.display = 'none';
+          noResults.style.display = 'block';
+        } else {
+          grid.style.display = 'grid';
+          noResults.style.display = 'none';
+        }
+      }
+
+      tabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabs.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCat = btn.getAttribute('data-cat');
+          filterArticles();
+        });
+      });
+
+      searchInput.addEventListener('input', (e) => {
+        searchQ = e.target.value.toLowerCase();
+        filterArticles();
+      });
+    </script>
+    <a href="https://wa.me/917075854314" target="_blank" class="whatsapp-widget" aria-label="Chat on WhatsApp">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.8.978 3.81 1.492 5.867 1.493H12.05c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+  </body>
+</html>
