@@ -4934,3 +4934,44 @@ footer, .sitemap-footer {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
+
+
+/* --- Strict Fix for Page Ending Whitespace (All Pages) --- */
+html, body {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+footer, .sitemap-footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: hidden !important;
+}
+
+.footer-giant-watermark-container {
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  padding-top: 12px !important;
+  padding-bottom: 0 !important;
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+  text-align: center !important;
+}
+
+.giant-edvanta-watermark {
+  display: block !important;
+  width: 100% !important;
+  max-height: 110px !important;
+  height: auto !important;
+  opacity: 0.12 !important;
+  fill: #0f172a !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  transition: opacity 0.3s ease, fill 0.3s ease;
+}
+
+[data-theme="dark"] .giant-edvanta-watermark {
+  fill: #ffffff !important;
+  opacity: 0.18 !important;
+}
