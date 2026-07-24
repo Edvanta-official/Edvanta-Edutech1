@@ -4975,3 +4975,35 @@ footer, .sitemap-footer {
   fill: #ffffff !important;
   opacity: 0.18 !important;
 }
+
+
+/* --- Tightened Section Spacings & Zero Extra Gap Fix --- */
+section {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+section:last-of-type {
+  padding-bottom: 10px !important;
+  margin-bottom: 0 !important;
+}
+
+.sitemap-footer {
+  margin-top: 20px !important;
+  padding-top: 20px !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.footer-giant-watermark-container {
+  margin-top: 10px !important;
+  padding-top: 10px !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  max-height: 100px !important;
+}
+
+.giant-edvanta-watermark {
+  max-height: 95px !important;
+  margin-bottom: 0 !important;
+}
