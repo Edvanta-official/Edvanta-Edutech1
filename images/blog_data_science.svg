@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+      <defs>
+        <linearGradient id="bg_ds" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#4c1d95"/>
+          <stop offset="100%" stop-color="#0f172a"/>
+        </linearGradient>
+      </defs>
+      <rect width="800" height="450" fill="url(#bg_ds)"/>
+      <!-- Grid Lines -->
+      <line x1="100" y1="350" x2="700" y2="350" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+      <line x1="100" y1="100" x2="100" y2="350" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+      <!-- Analytics Bars -->
+      <rect x="150" y="240" width="50" height="110" rx="6" fill="#a855f7"/>
+      <rect x="230" y="180" width="50" height="170" rx="6" fill="#38bdf8"/>
+      <rect x="310" y="130" width="50" height="220" rx="6" fill="#f43f5e"/>
+      <rect x="390" y="200" width="50" height="150" rx="6" fill="#10b981"/>
+      <rect x="470" y="90" width="50" height="260" rx="6" fill="#f59e0b"/>
+      <!-- Trend Curve -->
+      <path d="M 175 220 Q 255 150 335 110 T 495 70 T 650 140" fill="none" stroke="#facc15" stroke-width="5"/>
+      <circle cx="495" cy="70" r="8" fill="#facc15"/>
+      <text x="400" y="50" text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="900" font-size="28" fill="#ffffff">DATA SCIENCE & PREDICTIVE ANALYTICS</text>
+    </svg>

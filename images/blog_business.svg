@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+      <rect width="800" height="450" fill="#0f172a"/>
+      <!-- Dashboard Cards -->
+      <rect x="120" y="100" width="260" height="130" rx="14" fill="#1e293b" stroke="rgba(255,255,255,0.1)"/>
+      <text x="140" y="135" font-family="'Poppins', sans-serif" font-weight="800" font-size="14" fill="#94a3b8">REVENUE MODELING</text>
+      <text x="140" y="180" font-family="'Outfit', sans-serif" font-weight="900" font-size="32" fill="#38bdf8">$4,280,000</text>
+
+      <rect x="420" y="100" width="260" height="130" rx="14" fill="#1e293b" stroke="rgba(255,255,255,0.1)"/>
+      <text x="440" y="135" font-family="'Poppins', sans-serif" font-weight="800" font-size="14" fill="#94a3b8">MARKET CONVERSION</text>
+      <text x="440" y="180" font-family="'Outfit', sans-serif" font-weight="900" font-size="32" fill="#10b981">+28.4% YoY</text>
+
+      <text x="400" y="360" text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="900" font-size="28" fill="#ffffff">BUSINESS ANALYTICS & PRODUCT STRATEGY</text>
+    </svg>

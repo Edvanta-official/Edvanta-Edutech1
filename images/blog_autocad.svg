@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+      <rect width="800" height="450" fill="#1e3a8a"/>
+      <!-- Blueprint Grid -->
+      <pattern id="grid_ac" width="30" height="30" patternUnits="userSpaceOnUse">
+        <rect width="30" height="30" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      </pattern>
+      <rect width="800" height="450" fill="url(#grid_ac)"/>
+      <!-- Blueprint Drafting Drawing -->
+      <rect x="150" y="100" width="500" height="250" fill="none" stroke="#60a5fa" stroke-width="3" stroke-dasharray="8 4"/>
+      <circle cx="280" cy="225" r="70" fill="none" stroke="#ffffff" stroke-width="3"/>
+      <polygon points="450,150 580,150 580,300 450,300" fill="none" stroke="#ffffff" stroke-width="3"/>
+      <line x1="150" y1="225" x2="650" y2="225" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text x="400" y="60" text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="900" font-size="26" fill="#ffffff">AUTOCAD 2D/3D ENGINEERING DRAFTING</text>
+      <text x="400" y="390" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="700" font-size="14" fill="#93c5fd">SCALE: 1:50 | BLUEPRINT SPECIFICATION</text>
+    </svg>
