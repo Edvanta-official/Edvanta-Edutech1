@@ -13,6 +13,8 @@ import Contact from '../pages/Contact';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Dashboard from '../pages/Dashboard';
+import Terms from '../pages/Terms';
+import Privacy from '../pages/Privacy';
 
 // Student Dashboard Components
 import StudentProfile from '../dashboard/student/Profile';
@@ -59,6 +61,8 @@ const AppRoutes = () => {
       <Route path="/contact" element={<MainLayout><Contact /></MainLayout>} />
       <Route path="/login" element={<MainLayout><Login /></MainLayout>} />
       <Route path="/register" element={<MainLayout><Register /></MainLayout>} />
+      <Route path="/terms" element={<MainLayout><Terms /></MainLayout>} />
+      <Route path="/privacy" element={<MainLayout><Privacy /></MainLayout>} />
 
       {/* Protected Dashboards (Handles student & admin layouts nested) */}
       <Route path="/dashboard" element={<Dashboard />}>

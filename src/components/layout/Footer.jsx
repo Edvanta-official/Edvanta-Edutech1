@@ -86,8 +86,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto border-t border-white/5 pt-8 mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
         <span>© 2026 Edvanta Technologies Private Limited. All rights reserved.</span>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-gray-400 transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-gray-400 transition-colors">Terms of Service</a>
+          <Link to="/dashboard" className="hover:text-gray-400 transition-colors">Verified Certification</Link>
+          <Link to="/terms" className="hover:text-gray-400 transition-colors">Terms & Conditions</Link>
+          <Link to="/privacy" className="hover:text-gray-400 transition-colors">Privacy Policy</Link>
         </div>
       </div>
     </footer>
