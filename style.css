@@ -4971,3 +4971,24 @@ footer, .sitemap-footer {
   fill: #ffffff !important;
   opacity: 0.22 !important;
 }
+
+
+/* --- Zero Bottom Space Fix (Home Page & Site Wide) --- */
+html, body {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+footer, .sitemap-footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.footer-giant-watermark-container {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.giant-edvanta-watermark {
+  margin-bottom: 0 !important;
+}
