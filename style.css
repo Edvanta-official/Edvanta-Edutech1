@@ -5034,3 +5034,22 @@ footer, .sitemap-footer {
   margin-bottom: 0 !important;
   display: block !important;
 }
+
+
+/* --- Fixed Ambient Background Mesh & Blob Container (Viewport Lock) --- */
+.ambient-mesh-bg, .blob-container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  pointer-events: none !important;
+  z-index: -2 !important;
+  overflow: hidden !important;
+  clip-path: inset(0) !important;
+}
+
+.blob {
+  position: absolute !important;
+  pointer-events: none !important;
+}
