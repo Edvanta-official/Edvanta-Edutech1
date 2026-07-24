@@ -4936,25 +4936,20 @@ footer, .sitemap-footer {
 }
 
 
-/* --- Strict Fix for Page Ending Whitespace (All Pages) --- */
-html, body {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
 
-footer, .sitemap-footer {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  overflow: hidden !important;
-}
 
+
+
+
+
+/* --- Complete Uncropped Footer Logo Watermark Rules --- */
 .footer-giant-watermark-container {
   position: relative !important;
   width: 100% !important;
-  overflow: hidden !important;
-  padding-top: 12px !important;
-  padding-bottom: 0 !important;
-  margin-top: 10px !important;
+  overflow: visible !important;
+  padding-top: 16px !important;
+  padding-bottom: 24px !important;
+  margin-top: 20px !important;
   margin-bottom: 0 !important;
   text-align: center !important;
 }
@@ -4962,48 +4957,17 @@ footer, .sitemap-footer {
 .giant-edvanta-watermark {
   display: block !important;
   width: 100% !important;
-  max-height: 110px !important;
+  max-width: 850px !important;
   height: auto !important;
-  opacity: 0.12 !important;
+  max-height: 180px !important;
+  opacity: 0.14 !important;
   fill: #0f172a !important;
   margin: 0 auto !important;
-  object-fit: contain !important;
+  overflow: visible !important;
   transition: opacity 0.3s ease, fill 0.3s ease;
 }
 
 [data-theme="dark"] .giant-edvanta-watermark {
   fill: #ffffff !important;
-  opacity: 0.18 !important;
-}
-
-
-/* --- Tightened Section Spacings & Zero Extra Gap Fix --- */
-section {
-  padding-top: 24px !important;
-  padding-bottom: 24px !important;
-}
-
-section:last-of-type {
-  padding-bottom: 10px !important;
-  margin-bottom: 0 !important;
-}
-
-.sitemap-footer {
-  margin-top: 20px !important;
-  padding-top: 20px !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.footer-giant-watermark-container {
-  margin-top: 10px !important;
-  padding-top: 10px !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-  max-height: 100px !important;
-}
-
-.giant-edvanta-watermark {
-  max-height: 95px !important;
-  margin-bottom: 0 !important;
+  opacity: 0.22 !important;
 }
