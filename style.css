@@ -4519,27 +4519,29 @@ header .hiring-badge,
 .dropdown-toggle-btn span,
 .nav-item-new,
 .nav-pill-container a,
-.nav-pill-container span:not(.badge):not(.badge-new),
+.nav-pill-container span:not(.badge):not(.badge-new):not([style*="background"]),
 [data-theme="dark"] .dropdown-toggle-btn,
 [data-theme="dark"] .dropdown-toggle-btn span,
 [data-theme="dark"] .nav-item-new,
 [data-theme="dark"] .nav-pill-container a,
-[data-theme="dark"] .nav-pill-container span:not(.badge):not(.badge-new) {
+[data-theme="dark"] .nav-pill-container span:not(.badge):not(.badge-new):not([style*="background"]) {
   color: #05080e !important;
   opacity: 1 !important;
   font-weight: 700 !important;
   fill: #05080e !important;
 }
 
-/* Ensure WE ARE HIRING badge remains crisp black pill with white text */
+/* Ensure WE ARE HIRING badge remains crisp black pill with bright white text */
 .badge,
 .badge-new,
 .hiring-badge,
 header .badge-new,
 header .badge,
+.nav-pill-container span[style*="background"],
 [data-theme="dark"] .badge,
 [data-theme="dark"] .badge-new,
-[data-theme="dark"] header .badge-new {
+[data-theme="dark"] header .badge-new,
+[data-theme="dark"] .nav-pill-container span[style*="background"] {
   background: #000000 !important;
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
