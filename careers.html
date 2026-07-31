@@ -82,8 +82,8 @@
     </div>
           <header style="position: fixed; top: 0; left: 0; width: 100%; z-index: 999; padding: 18px 0; background: transparent;">
    <div class="container navbar-inner" style="display: flex; justify-content: flex-start; align-items: center; max-width: 100%; margin: 0 auto; padding: 0 40px; gap: 20px;">
-    <button id="mobileMenuOpenBtn" class="mobile-hamburger-btn" aria-label="Open Navigation Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <button id="mobileMenuOpenBtn" class="mobile-hamburger-btn" aria-label="Open Navigation Menu" onclick="document.getElementById('mobileMenuPanel').classList.add('open')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <div class="logo-card-container">
       <a class="logo" href="index.html" style="display: flex; align-items: center; text-decoration: none;">
@@ -139,27 +139,22 @@
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
     </div>
-    <div class="mobile-menu-panel glass-panel" id="mobileMenuPanel">
-      <div>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
-          <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;"><img src="images/logo_white_background.jpg.jpeg" alt="Edvanta Logo" style="height: 48px; width: auto; display: block; object-fit: contain; border-radius: 6px;" />
-          </a>
-          <button class="mobile-menu-btn" id="mobileMenuCloseBtn" style="display: block;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          </button>
-        </div>
-        <nav style="display: flex; flex-direction: column; gap: 16px;">
-          <a href="index.html" class="mobile-nav-link">Home</a>
-          <a href="about.html" class="mobile-nav-link">About</a>
-          <div style="margin-bottom: 10px;">
-            <span style="font-weight: 700; font-size: 1.1rem; color: var(--text-primary); display: block; margin-bottom: 8px;">Programs</span>
-            <div style="padding-left: 16px; display: flex; flex-direction: column; gap: 8px;">
-              <a href="courses.html" class="mobile-nav-link-sub">Courses</a>
-              <a href="internships.html" class="mobile-nav-link-sub">Internships</a>
-              <a href="dashboard.html" class="mobile-nav-link-sub">Certifications</a>
-              <a href="placements.html" class="mobile-nav-link-sub">Placement Assistance</a>
-            </div>
-          </div>
+      <div id="mobileMenuPanel" class="mobile-menu-drawer">
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-logo" style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 22px; color: #16a34a;">EDVANTA</span>
+      <button id="mobileMenuCloseBtn" class="mobile-close-btn" aria-label="Close Menu" onclick="document.getElementById('mobileMenuPanel').classList.remove('open')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="about.html" class="mobile-nav-link">📌 About</a>
+      <a href="courses.html" class="mobile-nav-link">🎓 Programs</a>
+      <a href="blogs.html" class="mobile-nav-link">✍️ Blogs</a>
+      <a href="https://lms.edvanta-edu.com/" target="_blank" class="mobile-nav-link">💻 LMS Portal</a>
+      <a href="careers.html" class="mobile-nav-link">🚀 Career</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" class="mobile-nav-signup-btn">🟢 Sign Up</a>
+    </div>
+  </div>
           <a href="careers.html" class="mobile-nav-link" style="display: flex; align-items: center; gap: 8px;">
             Career 
           </a>

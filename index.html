@@ -26,8 +26,8 @@
   </div>
         <header style="position: fixed; top: 0; left: 0; width: 100%; z-index: 999; padding: 18px 0; background: transparent;">
    <div class="container navbar-inner" style="display: flex; justify-content: flex-start; align-items: center; max-width: 100%; margin: 0 auto; padding: 0 40px; gap: 20px;">
-    <button id="mobileMenuOpenBtn" class="mobile-hamburger-btn" aria-label="Open Navigation Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <button id="mobileMenuOpenBtn" class="mobile-hamburger-btn" aria-label="Open Navigation Menu" onclick="document.getElementById('mobileMenuPanel').classList.add('open')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <div class="logo-card-container">
       <a class="logo" href="index.html" style="display: flex; align-items: center; text-decoration: none;">
@@ -1627,20 +1627,20 @@
   </a>
   <script src="./main.js" type="module">
   </script>
-   <div id="mobileMenuPanel" class="mobile-menu-drawer">
+     <div id="mobileMenuPanel" class="mobile-menu-drawer">
     <div class="mobile-menu-header">
-      <span class="mobile-menu-logo">EDVANTA</span>
-      <button id="mobileMenuCloseBtn" class="mobile-close-btn" aria-label="Close Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      <span class="mobile-menu-logo" style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 22px; color: #16a34a;">EDVANTA</span>
+      <button id="mobileMenuCloseBtn" class="mobile-close-btn" aria-label="Close Menu" onclick="document.getElementById('mobileMenuPanel').classList.remove('open')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
     <div class="mobile-menu-links">
-      <a href="about.html" class="mobile-nav-link">About</a>
-      <a href="courses.html" class="mobile-nav-link">Programs</a>
-      <a href="blogs.html" class="mobile-nav-link">Blogs</a>
-      <a href="https://lms.edvanta-edu.com/" target="_blank" class="mobile-nav-link">LMS Portal</a>
-      <a href="careers.html" class="mobile-nav-link">Career</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" class="mobile-nav-signup-btn">Sign Up</a>
+      <a href="about.html" class="mobile-nav-link">📌 About</a>
+      <a href="courses.html" class="mobile-nav-link">🎓 Programs</a>
+      <a href="blogs.html" class="mobile-nav-link">✍️ Blogs</a>
+      <a href="https://lms.edvanta-edu.com/" target="_blank" class="mobile-nav-link">💻 LMS Portal</a>
+      <a href="careers.html" class="mobile-nav-link">🚀 Career</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" class="mobile-nav-signup-btn">🟢 Sign Up</a>
     </div>
   </div>
 </body>
