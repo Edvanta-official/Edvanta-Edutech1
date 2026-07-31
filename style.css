@@ -7051,75 +7051,21 @@ button.btn-signup-new:hover {
 }
 
 
-/* PERFECTLY CENTERED 3-LINES HAMBURGER ICON IN CIRCLE BUTTON */
-.mobile-hamburger-btn {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 44px !important;
-  height: 44px !important;
-  min-width: 44px !important;
-  min-height: 44px !important;
-  background: #ffffff !important;
-  border: 1.5px solid #cbd5e1 !important;
-  border-radius: 50% !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
-  cursor: pointer !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  line-height: 0 !important;
-  position: relative !important;
-  z-index: 100 !important;
-}
-
-.mobile-hamburger-btn svg {
-  display: block !important;
-  margin: auto !important;
-  width: 20px !important;
-  height: 20px !important;
-  pointer-events: none !important;
-}
-
-
 /* ==========================================================================
-   STANDARDIZED CLEAN TOP SPACING ON ALL PAGES FOR MOBILE VIEW (MATCHING ABOUT.HTML)
+   STRICT HAMBURGER BUTTON ISOLATION: HIDDEN ON DESKTOP, VISIBLE ON MOBILE
    ========================================================================== */
-@media screen and (max-width: 768px) {
-  body,
-  .hero-skill-hub,
-  section.hero-skill-hub,
-  .about-hero-section,
-  .courses-section,
-  .careers-container,
-  .page-hero,
-  .course-hero-banner,
-  .blogs-hero-section,
-  .contact-hero-section,
-  .placements-hero-section,
-  main {
-    padding-top: 100px !important;
-  }
-}
-
-
-/* ==========================================================================
-   STRICT DESKTOP PILL CONTAINER HIDE ON MOBILE VIEW (PREVENT ANY SPILLOVER)
-   ========================================================================== */
-@media screen and (max-width: 768px) {
-  .nav-pill-container,
-  .desktop-only-nav-pill,
-  header .nav-pill-container {
+@media screen and (min-width: 769px) {
+  .mobile-hamburger-btn,
+  #mobileMenuOpenBtn,
+  .mobile-menu-drawer,
+  .mobile-menu-backdrop {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
-    height: 0 !important;
-    width: 0 !important;
-    max-height: 0 !important;
-    max-width: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
     pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
     position: absolute !important;
     left: -9999px !important;
   }
