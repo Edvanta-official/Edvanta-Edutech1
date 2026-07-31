@@ -6559,9 +6559,7 @@ button.btn-signup-new:hover {
     font-size: 0.9rem !important;
   }
 
-  .nav-pill-container {
-    display: none !important;
-  }
+  
 }
 
 /* --- Hero Main Grid Desktop & Mobile Responsiveness --- */
@@ -6670,5 +6668,81 @@ button.btn-signup-new:hover {
     left: -10px !important;
     transform: scale(0.82) !important;
     z-index: 30 !important;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP LAPTOP VIEW: ZERO OVERLAP HERO TOP PADDING (MIN-WIDTH: 769PX)
+   ========================================================================== */
+@media screen and (min-width: 769px) {
+  body,
+  .hero-skill-hub,
+  section.hero-skill-hub,
+  .about-hero-section,
+  .courses-section,
+  .careers-container,
+  .page-hero,
+  .course-hero-banner {
+    padding-top: 220px !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE VIEW: FULL NAVBAR 4+ OPTIONS FLOATING PILL (MAX-WIDTH: 768PX)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 8px 0 !important;
+  }
+
+  .navbar-inner {
+    padding: 0 10px !important;
+    gap: 6px !important;
+  }
+
+  .logo-card-container {
+    height: 44px !important;
+    padding: 0 10px !important;
+    border-radius: 12px !important;
+  }
+
+  .logo-card-container img.site-logo-img {
+    height: 36px !important;
+    max-height: 36px !important;
+  }
+
+  .nav-pill-container {
+    display: flex !important;
+    height: 42px !important;
+    padding: 0 8px !important;
+    gap: 2px !important;
+    overflow-x: auto !important;
+    max-width: 58vw !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .nav-pill-container::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .nav-links-new {
+    display: flex !important;
+    align-items: center !important;
+    gap: 2px !important;
+  }
+
+  .nav-item-new {
+    padding: 4px 8px !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+
+  .btn-signup-new {
+    height: 40px !important;
+    padding: 0 14px !important;
+    font-size: 0.75rem !important;
   }
 }
