@@ -6671,10 +6671,12 @@ button.btn-signup-new:hover {
   }
 }
 
+
 /* ==========================================================================
-   DESKTOP LAPTOP VIEW: ZERO OVERLAP HERO TOP PADDING (MIN-WIDTH: 769PX)
+   100% SEPARATED DESKTOP LAPTOP VIEW (MIN-WIDTH: 769PX)
    ========================================================================== */
 @media screen and (min-width: 769px) {
+  /* 1. Page Top Offset for 100px Logo Height (Zero Overlap) */
   body,
   .hero-skill-hub,
   section.hero-skill-hub,
@@ -6683,76 +6685,73 @@ button.btn-signup-new:hover {
   .careers-container,
   .page-hero,
   .course-hero-banner {
-    padding-top: 220px !important;
-  }
-}
-
-/* ==========================================================================
-   MOBILE VIEW: FULL NAVBAR 4+ OPTIONS FLOATING PILL (MAX-WIDTH: 768PX)
-   ========================================================================== */
-@media screen and (max-width: 768px) {
-  header {
-    padding: 8px 0 !important;
+    padding-top: 230px !important;
   }
 
+  /* 2. Original Desktop Header Layout */
   .navbar-inner {
-    padding: 0 10px !important;
-    gap: 6px !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+    gap: 20px !important;
+    position: relative !important;
   }
 
   .logo-card-container {
-    height: 44px !important;
-    padding: 0 10px !important;
-    border-radius: 12px !important;
+    position: relative !important;
+    left: auto !important;
+    transform: none !important;
+    height: 100px !important;
+    padding: 0 28px !important;
+    margin: 0 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
   }
 
   .logo-card-container img.site-logo-img {
-    height: 36px !important;
-    max-height: 36px !important;
+    height: 100px !important;
+    max-height: 160px !important;
   }
 
   .nav-pill-container {
     display: flex !important;
-    height: 42px !important;
-    padding: 0 8px !important;
-    gap: 2px !important;
-    overflow-x: auto !important;
-    max-width: 58vw !important;
-    white-space: nowrap !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-  }
-
-  .nav-pill-container::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  .nav-links-new {
-    display: flex !important;
     align-items: center !important;
-    gap: 2px !important;
+    height: 56px !important;
+    border-radius: 50px !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: 1px solid rgba(226, 232, 240, 0.9) !important;
+    backdrop-filter: blur(22px) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important;
+    padding: 0 28px !important;
+    gap: 16px !important;
+    max-width: none !important;
   }
 
-  .nav-item-new {
-    padding: 4px 8px !important;
-    font-size: 0.7rem !important;
-    font-weight: 700 !important;
-    white-space: nowrap !important;
+  .navbar-actions-new {
+    margin-left: auto !important;
   }
 
   .btn-signup-new {
-    height: 40px !important;
-    padding: 0 14px !important;
-    font-size: 0.75rem !important;
+    height: 56px !important;
+    padding: 0 32px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Hide Mobile Drawer Elements on Desktop */
+  .mobile-hamburger-btn,
+  .mobile-menu-drawer,
+  .mobile-menu-backdrop {
+    display: none !important;
   }
 }
 
-
 /* ==========================================================================
-   MOBILE HEADER: 3-LINES LEFT + CENTER LOGO + SIGNUP RIGHT + TOP DROPDOWN
+   100% SEPARATED MOBILE VIEW (MAX-WIDTH: 768PX)
    ========================================================================== */
-
 @media screen and (max-width: 768px) {
+  /* 1. Header Layout: 3-Lines Left, Center Logo, Sign Up Right */
   header {
     padding: 10px 0 !important;
     z-index: 9999 !important;
@@ -6771,9 +6770,19 @@ button.btn-signup-new:hover {
     display: flex !important;
     position: relative !important;
     z-index: 100 !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: #ffffff !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1) !important;
+    cursor: pointer !important;
   }
 
-  /* Exact Center Logo Alignment on Mobile */
+  .mobile-hamburger-btn svg {
+    pointer-events: none !important;
+  }
+
   .logo-card-container {
     position: absolute !important;
     left: 50% !important;
@@ -6782,6 +6791,7 @@ button.btn-signup-new:hover {
     padding: 0 10px !important;
     margin: 0 !important;
     z-index: 90 !important;
+    box-shadow: none !important;
   }
 
   .logo-card-container img.site-logo-img {
@@ -6804,9 +6814,40 @@ button.btn-signup-new:hover {
     padding: 0 16px !important;
     font-size: 0.78rem !important;
   }
+
+  /* 2. Hero Section Mobile Layout & Padding */
+  .hero-skill-hub,
+  section.hero-skill-hub {
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .hero-main-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 30px !important;
+  }
+
+  .hero-skill-hub h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  .hero-skill-hub p {
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  .hero-skill-hub div[style*="display: flex"] {
+    justify-content: center !important;
+  }
 }
 
-/* TOP SLIDE-DOWN MOBILE MENU DRAWER WITH CENTER LOGO IN DRAWER HEADER */
+/* 3. Top Slide-Down Mobile Drawer & Backdrop */
 .mobile-menu-backdrop {
   position: fixed !important;
   top: 0 !important;
@@ -6857,88 +6898,4 @@ button.btn-signup-new:hover {
   top: 0 !important;
   opacity: 1 !important;
   visibility: visible !important;
-}
-
-.mobile-menu-header {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  position: relative !important;
-  padding-bottom: 16px !important;
-  border-bottom: 2px solid #f1f5f9 !important;
-}
-
-.mobile-menu-logo-center {
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  text-align: center !important;
-}
-
-.mobile-menu-logo {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 22px !important;
-  color: #16a34a !important;
-  letter-spacing: 2px !important;
-}
-
-.mobile-close-btn {
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 50% !important;
-  background: #f1f5f9 !important;
-  border: 1px solid #cbd5e1 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  cursor: pointer !important;
-  margin-left: auto !important;
-}
-
-.mobile-menu-links {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 12px !important;
-  margin-top: 20px !important;
-}
-
-.mobile-nav-link {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 17px !important;
-  color: #0f172a !important;
-  text-decoration: none !important;
-  padding: 14px 20px !important;
-  border-radius: 16px !important;
-  background: #f8fafc !important;
-  border: 1.5px solid #e2e8f0 !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  transition: all 0.2s ease !important;
-}
-
-.mobile-nav-link:hover,
-.mobile-nav-link.active {
-  background: rgba(34, 197, 94, 0.15) !important;
-  color: #16a34a !important;
-  border-color: #22c55e !important;
-  transform: translateX(4px) !important;
-}
-
-.mobile-nav-signup-btn {
-  margin-top: 10px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: 50px !important;
-  background: #16a34a !important;
-  color: #ffffff !important;
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 800 !important;
-  font-size: 15px !important;
-  border-radius: 999px !important;
-  text-decoration: none !important;
-  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4) !important;
 }
