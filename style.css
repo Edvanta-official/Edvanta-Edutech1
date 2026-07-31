@@ -7089,3 +7089,34 @@ button.btn-signup-new:hover {
   height: 0 !important;
   pointer-events: none !important;
 }
+
+
+/* ==========================================================================
+   PERMANENT REMOVAL OF ALL DECORATIVE BACKGROUND LINES & FLOATING CAPSULES
+   ========================================================================== */
+
+.floating-pills-container,
+.floating-pill,
+.pill-1,
+.pill-2,
+.pill-3,
+.pill-4,
+.pill-5,
+div[class*="floating-pill"],
+div[class*="pill-"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* Ensure clean background without canvas line grid artifacts */
+#bg3dCanvas {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
