@@ -7100,3 +7100,27 @@ button.btn-signup-new:hover {
     padding-top: 100px !important;
   }
 }
+
+
+/* ==========================================================================
+   STRICT DESKTOP PILL CONTAINER HIDE ON MOBILE VIEW (PREVENT ANY SPILLOVER)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .nav-pill-container,
+  .desktop-only-nav-pill,
+  header .nav-pill-container {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    max-height: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+}
