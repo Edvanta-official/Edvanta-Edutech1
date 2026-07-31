@@ -7049,3 +7049,33 @@ button.btn-signup-new:hover {
     gap: 20px !important;
   }
 }
+
+
+/* PERFECTLY CENTERED 3-LINES HAMBURGER ICON IN CIRCLE BUTTON */
+.mobile-hamburger-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 0 !important;
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+.mobile-hamburger-btn svg {
+  display: block !important;
+  margin: auto !important;
+  width: 20px !important;
+  height: 20px !important;
+  pointer-events: none !important;
+}
