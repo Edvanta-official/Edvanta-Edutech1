@@ -7079,3 +7079,24 @@ button.btn-signup-new:hover {
   height: 20px !important;
   pointer-events: none !important;
 }
+
+
+/* ==========================================================================
+   STANDARDIZED CLEAN TOP SPACING ON ALL PAGES FOR MOBILE VIEW (MATCHING ABOUT.HTML)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  body,
+  .hero-skill-hub,
+  section.hero-skill-hub,
+  .about-hero-section,
+  .courses-section,
+  .careers-container,
+  .page-hero,
+  .course-hero-banner,
+  .blogs-hero-section,
+  .contact-hero-section,
+  .placements-hero-section,
+  main {
+    padding-top: 100px !important;
+  }
+}
