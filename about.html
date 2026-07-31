@@ -13,6 +13,40 @@
   <script>(function(){var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}})();</script>
 </head>
 <body>
+
+  <!-- TOP FIXED MOBILE NAVIGATION MENU DRAWER -->
+  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" onclick="closeMobileDrawer()"></div>
+  <div id="mobileMenuPanel" class="mobile-menu-drawer">
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-logo" style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 22px; color: #16a34a;">EDVANTA</span>
+      <button id="mobileMenuCloseBtn" class="mobile-close-btn" aria-label="Close Menu" onclick="closeMobileDrawer()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="about.html" class="mobile-nav-link" onclick="closeMobileDrawer()">📌 About</a>
+      <a href="courses.html" class="mobile-nav-link" onclick="closeMobileDrawer()">🎓 Programs</a>
+      <a href="blogs.html" class="mobile-nav-link" onclick="closeMobileDrawer()">✍️ Blogs</a>
+      <a href="https://lms.edvanta-edu.com/" target="_blank" class="mobile-nav-link" onclick="closeMobileDrawer()">💻 LMS Portal</a>
+      <a href="careers.html" class="mobile-nav-link" onclick="closeMobileDrawer()">🚀 Career</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" class="mobile-nav-signup-btn" onclick="closeMobileDrawer()">🟢 Sign Up</a>
+    </div>
+  </div>
+  <script>
+    function openMobileDrawer() {
+      var panel = document.getElementById('mobileMenuPanel');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      if (panel) panel.classList.add('open');
+      if (backdrop) backdrop.classList.add('open');
+    }
+    function closeMobileDrawer() {
+      var panel = document.getElementById('mobileMenuPanel');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      if (panel) panel.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('open');
+    }
+  </script>
+
   <canvas id="bg3dCanvas"></canvas>
   <div class="floating-pills-container">
     <div class="floating-pill pill-1"></div>
@@ -381,36 +415,8 @@
   
   
   
-  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" onclick="closeMobileDrawer()"></div>
-  <div id="mobileMenuPanel" class="mobile-menu-drawer">
-    <div class="mobile-menu-header">
-      <span class="mobile-menu-logo" style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 22px; color: #16a34a;">EDVANTA</span>
-      <button id="mobileMenuCloseBtn" class="mobile-close-btn" aria-label="Close Menu" onclick="closeMobileDrawer()">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-    <div class="mobile-menu-links">
-      <a href="about.html" class="mobile-nav-link" onclick="closeMobileDrawer()">📌 About</a>
-      <a href="courses.html" class="mobile-nav-link" onclick="closeMobileDrawer()">🎓 Programs</a>
-      <a href="blogs.html" class="mobile-nav-link" onclick="closeMobileDrawer()">✍️ Blogs</a>
-      <a href="https://lms.edvanta-edu.com/" target="_blank" class="mobile-nav-link" onclick="closeMobileDrawer()">💻 LMS Portal</a>
-      <a href="careers.html" class="mobile-nav-link" onclick="closeMobileDrawer()">🚀 Career</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" class="mobile-nav-signup-btn" onclick="closeMobileDrawer()">🟢 Sign Up</a>
-    </div>
-  </div>
-  <script>
-    function openMobileDrawer() {
-      var panel = document.getElementById('mobileMenuPanel');
-      var backdrop = document.getElementById('mobileMenuBackdrop');
-      if (panel) panel.classList.add('open');
-      if (backdrop) backdrop.classList.add('open');
-    }
-    function closeMobileDrawer() {
-      var panel = document.getElementById('mobileMenuPanel');
-      var backdrop = document.getElementById('mobileMenuBackdrop');
-      if (panel) panel.classList.remove('open');
-      if (backdrop) backdrop.classList.remove('open');
-    }
-  </script>
+  
+  
+  
 </body>
 </html>
