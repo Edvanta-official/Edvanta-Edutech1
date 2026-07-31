@@ -7120,3 +7120,27 @@ div[class*="pill-"] {
   opacity: 0 !important;
   visibility: hidden !important;
 }
+
+
+/* ==========================================================================
+   STRICT NO-LINE BACKGROUND OVERRIDE (ENSURES PURE CLEAN BACKGROUND SITEWIDE)
+   ========================================================================== */
+
+body,
+html,
+.home-page,
+main,
+section,
+.hero-skill-hub,
+.courses-section,
+.about-hero-section,
+.careers-container,
+.blogs-hero-section {
+  background-image: none !important;
+}
+
+/* Remove SVG noise filters and pattern lines */
+div[style*="noiseFilter"],
+svg filter#noiseFilter {
+  display: none !important;
+}
