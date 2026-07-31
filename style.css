@@ -6616,3 +6616,59 @@ button.btn-signup-new:hover {
     overflow-x: hidden !important;
   }
 }
+
+/* --- Hero Student Card Container: Laptop & Mobile Perfection --- */
+.hero-student-card-container {
+  position: relative;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-student-card-container {
+    height: 400px !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 10px auto 0 auto !important;
+    position: relative !important;
+  }
+
+  .hero-student-card-container > div[style*="transform: rotate"] {
+    transform: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    right: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+    border-radius: 28px !important;
+    opacity: 0.9 !important;
+  }
+
+  .hero-student-card-container > div[style*="position: relative; z-index: 10"] {
+    height: 360px !important;
+  }
+
+  .hero-student-card-container img {
+    height: 100% !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+
+  .hero-student-card-container .floating-badge-animate-slow {
+    position: absolute !important;
+    top: 15px !important;
+    right: -10px !important;
+    transform: scale(0.82) !important;
+    z-index: 30 !important;
+  }
+
+  .hero-student-card-container .floating-badge-animate {
+    position: absolute !important;
+    bottom: 20px !important;
+    left: -10px !important;
+    transform: scale(0.82) !important;
+    z-index: 30 !important;
+  }
+}
