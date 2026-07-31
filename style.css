@@ -6992,3 +6992,60 @@ button.btn-signup-new:hover {
   box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4) !important;
   box-sizing: border-box !important;
 }
+
+/* ==========================================================================
+   PROGRAMS & CAREERS RESPONSIVE FIXES FOR MOBILE VIEW (MAX-WIDTH: 768PX)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* Programs (courses.html) Section Spacing & Grid */
+  .courses-section,
+  section.courses-section {
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .courses-hero-banner,
+  .page-hero-banner {
+    padding-top: 110px !important;
+    text-align: center !important;
+  }
+
+  #coursesGrid,
+  .courses-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .filter-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 16px !important;
+  }
+
+  .filter-tabs {
+    justify-content: center !important;
+    overflow-x: auto !important;
+    padding-bottom: 6px !important;
+  }
+
+  .search-input {
+    width: 100% !important;
+  }
+
+  /* Careers (careers.html) Section Spacing & Grid */
+  .careers-container,
+  section.careers-container,
+  .careers-section {
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .careers-grid,
+  .jobs-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
