@@ -7070,3 +7070,22 @@ button.btn-signup-new:hover {
     left: -9999px !important;
   }
 }
+
+
+/* ==========================================================================
+   PERMANENT REMOVAL OF ALL BLUE FLOATING BACKGROUND PILL LINES
+   ========================================================================== */
+.floating-pills-container,
+.floating-pill,
+.pill-1,
+.pill-2,
+.pill-3,
+.pill-4,
+.pill-5 {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+}
