@@ -53,26 +53,23 @@ function initMobileMenu() {
   const closeBtn = document.getElementById('mobileMenuCloseBtn');
   const panel = document.getElementById('mobileMenuPanel');
   if (!openBtn || !panel) return;
-  const togglePanel = () => {
-    panel.classList.toggle('open');
-    if (panel.classList.contains('open')) {
-      openBtn.style.display = 'none';
-      if (closeBtn) closeBtn.style.display = 'block';
-    } else {
-      openBtn.style.display = 'block';
-      if (closeBtn) closeBtn.style.display = 'none';
-    }
-  };
-  openBtn.addEventListener('click', togglePanel);
+
+  openBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    panel.classList.add('open');
+  });
+
   if (closeBtn) {
-    closeBtn.addEventListener('click', togglePanel);
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      panel.classList.remove('open');
+    });
   }
+
   const links = panel.querySelectorAll('a');
   links.forEach(link => {
     link.addEventListener('click', () => {
       panel.classList.remove('open');
-      openBtn.style.display = 'block';
-      if (closeBtn) closeBtn.style.display = 'none';
     });
   });
 }
