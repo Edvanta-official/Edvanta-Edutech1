@@ -6,12 +6,14 @@
     <title>Redirecting...</title>
   </head>
   <body>
-
   <!-- TOP FIXED MOBILE NAVIGATION MENU DRAWER -->
   <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" onclick="closeMobileDrawer()"></div>
   <div id="mobileMenuPanel" class="mobile-menu-drawer">
     <div class="mobile-menu-header">
-      <span class="mobile-menu-logo" style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 22px; color: #16a34a;">EDVANTA</span>
+      <div style="width: 40px;"></div>
+      <div class="mobile-menu-logo-center">
+        <span class="mobile-menu-logo">EDVANTA</span>
+      </div>
       <button id="mobileMenuCloseBtn" class="mobile-close-btn" aria-label="Close Menu" onclick="closeMobileDrawer()">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
@@ -39,6 +41,8 @@
       if (backdrop) backdrop.classList.remove('open');
     }
   </script>
+
+  
 
     <script>window.location.href = "course-embedded-systems.html";</script>
     <a href="https://wa.me/917075854314" target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chat on WhatsApp">
