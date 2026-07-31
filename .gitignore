@@ -17,3 +17,6 @@ Thumbs.db
 
 # Temporary python scripts
 *.py
+
+# Flutter app project (local only, do not push to GitHub)
+flutter_app/

@@ -6563,3 +6563,56 @@ button.btn-signup-new:hover {
     display: none !important;
   }
 }
+
+/* --- Hero Main Grid Desktop & Mobile Responsiveness --- */
+.hero-main-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-main-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 30px !important;
+  }
+
+  .hero-skill-hub {
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .hero-skill-hub h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  .hero-skill-hub p {
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  .hero-skill-hub div[style*="display: flex"] {
+    justify-content: center !important;
+  }
+
+  .floating-badge-animate-slow {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 12px auto !important;
+    display: inline-flex !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+}
