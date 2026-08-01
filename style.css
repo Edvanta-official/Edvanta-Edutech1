@@ -7208,16 +7208,18 @@ svg filter#noiseFilter {
 @media screen and (max-width: 768px) {
   /* Header & Navbar Inner Padding */
   header {
-    padding: 10px 0 !important;
+    padding: 8px 0 !important;
   }
 
   .navbar-inner {
-    padding: 0 16px !important;
-    gap: 10px !important;
+    padding: 0 14px !important;
+    gap: 8px !important;
     justify-content: space-between !important;
   }
 
-  .logo-card-container {
+  .logo-card-container,
+  header .logo-card-container,
+  div.logo-card-container {
     position: absolute !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
@@ -7225,21 +7227,24 @@ svg filter#noiseFilter {
     padding: 0 !important;
     margin: 0 !important;
     background: transparent !important;
+    background-color: transparent !important;
     box-shadow: none !important;
     border: none !important;
     z-index: 90 !important;
   }
 
-  .logo-card-container img.site-logo-img {
+  .logo-card-container img.site-logo-img,
+  header .logo-card-container img.site-logo-img {
     height: 32px !important;
     max-height: 32px !important;
     width: auto !important;
     background: transparent !important;
+    box-shadow: none !important;
   }
 
   .btn-signup-new {
-    height: 42px !important;
-    padding: 0 16px !important;
+    height: 40px !important;
+    padding: 0 14px !important;
     font-size: 0.8rem !important;
   }
 
@@ -7252,18 +7257,55 @@ svg filter#noiseFilter {
     box-sizing: border-box !important;
   }
 
+  /* Strict Mobile Section Padding Override (Eliminates 135px inline gaps) */
   section,
   main section,
+  section[style],
   .hero-skill-hub,
+  #programs,
   .partner-marquee-section,
+  #testimonials,
+  #community,
+  #support,
+  #blogs,
   .courses-section,
   .careers-container,
   .blogs-hero-section,
   .about-hero-section {
+    padding-top: 36px !important;
+    padding-bottom: 24px !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
+    margin-top: 0 !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  /* Hero Section Top Spacing */
+  .hero-skill-hub,
+  section.hero-skill-hub,
+  section.hero-skill-hub[style] {
+    padding-top: 85px !important;
+    padding-bottom: 24px !important;
+  }
+
+  /* Programs Section Top Spacing */
+  #programs,
+  section#programs,
+  section#programs[style] {
+    padding-top: 36px !important;
+    padding-bottom: 24px !important;
+    scroll-margin-top: 70px !important;
+  }
+
+  /* Footer Margin & Padding Override */
+  footer,
+  footer.sitemap-footer,
+  footer[style],
+  .sitemap-footer[style] {
+    margin-top: 36px !important;
+    padding-top: 30px !important;
+    padding-bottom: 20px !important;
   }
 
   .hero-skill-hub,
