@@ -7226,15 +7226,21 @@ svg filter#noiseFilter {
    MASTER COMPREHENSIVE MOBILE RESPONSIVE SYSTEM (MAX-WIDTH: 768PX)
    ========================================================================== */
 @media screen and (max-width: 768px) {
-  /* 1. Header & Navigation Bar */
+  /* 1. Header & Navigation Bar (Exact Dead-Center Vertical Alignment) */
   header {
     padding: 8px 0 !important;
+    height: 56px !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
   .navbar-inner {
-    padding: 0 14px !important;
+    padding: 0 16px !important;
     gap: 8px !important;
     justify-content: space-between !important;
+    align-items: center !important;
+    height: 100% !important;
+    position: relative !important;
   }
 
   .mobile-hamburger-btn,
@@ -7244,16 +7250,17 @@ svg filter#noiseFilter {
     justify-content: center !important;
     position: relative !important;
     z-index: 100 !important;
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px !important;
-    min-height: 44px !important;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
     background: #ffffff !important;
     border: 1.5px solid rgba(34, 197, 94, 0.4) !important;
     border-radius: 50% !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
     cursor: pointer !important;
     padding: 0 !important;
+    margin: 0 !important;
     transition: all 0.25s ease !important;
   }
 
@@ -7262,8 +7269,8 @@ svg filter#noiseFilter {
     display: block !important;
     margin: 0 auto !important;
     pointer-events: none !important;
-    width: 20px !important;
-    height: 20px !important;
+    width: 18px !important;
+    height: 18px !important;
     stroke: #16a34a !important;
   }
 
@@ -7271,9 +7278,10 @@ svg filter#noiseFilter {
   header .logo-card-container,
   div.logo-card-container {
     position: absolute !important;
+    top: 50% !important;
     left: 50% !important;
-    transform: translateX(-50%) !important;
-    height: 38px !important;
+    transform: translate(-50%, -50%) !important;
+    height: 34px !important;
     padding: 0 !important;
     margin: 0 !important;
     background: transparent !important;
@@ -7281,21 +7289,37 @@ svg filter#noiseFilter {
     box-shadow: none !important;
     border: none !important;
     z-index: 90 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .logo-card-container img.site-logo-img,
   header .logo-card-container img.site-logo-img {
-    height: 32px !important;
-    max-height: 32px !important;
+    height: 30px !important;
+    max-height: 30px !important;
     width: auto !important;
     background: transparent !important;
     box-shadow: none !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+
+  .navbar-actions-new {
+    margin-left: auto !important;
+    position: relative !important;
+    z-index: 100 !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
   .btn-signup-new {
-    height: 40px !important;
-    padding: 0 14px !important;
+    height: 38px !important;
+    padding: 0 16px !important;
     font-size: 0.8rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   /* 2. Container & Section Boundaries */
