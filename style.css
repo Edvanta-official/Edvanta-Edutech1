@@ -6795,21 +6795,41 @@ button.btn-signup-new:hover {
     padding: 0 16px !important;
   }
 
-  .mobile-hamburger-btn {
+  .mobile-hamburger-btn,
+  #mobileMenuOpenBtn {
     display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     position: relative !important;
     z-index: 100 !important;
     width: 44px !important;
     height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
     background: #ffffff !important;
-    border: 1.5px solid #cbd5e1 !important;
+    border: 1.5px solid rgba(34, 197, 94, 0.4) !important;
     border-radius: 50% !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1) !important;
     cursor: pointer !important;
+    padding: 0 !important;
+    transition: all 0.25s ease !important;
   }
 
-  .mobile-hamburger-btn svg {
+  .mobile-hamburger-btn:hover,
+  #mobileMenuOpenBtn:hover {
+    background: rgba(34, 197, 94, 0.1) !important;
+    border-color: #16a34a !important;
+    transform: scale(1.05) !important;
+  }
+
+  .mobile-hamburger-btn svg,
+  #mobileMenuOpenBtn svg {
+    display: block !important;
+    margin: 0 auto !important;
     pointer-events: none !important;
+    width: 20px !important;
+    height: 20px !important;
+    stroke: #16a34a !important;
   }
 
   .logo-card-container {
