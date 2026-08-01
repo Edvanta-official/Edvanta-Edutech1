@@ -7223,10 +7223,10 @@ svg filter#noiseFilter {
 }
 
 /* ==========================================================================
-   COMPREHENSIVE MOBILE RESPONSIVE LAYOUT SYSTEM (MAX-WIDTH: 768PX)
+   MASTER COMPREHENSIVE MOBILE RESPONSIVE SYSTEM (MAX-WIDTH: 768PX)
    ========================================================================== */
 @media screen and (max-width: 768px) {
-  /* Header & Navbar Inner Padding */
+  /* 1. Header & Navigation Bar */
   header {
     padding: 8px 0 !important;
   }
@@ -7235,6 +7235,36 @@ svg filter#noiseFilter {
     padding: 0 14px !important;
     gap: 8px !important;
     justify-content: space-between !important;
+  }
+
+  .mobile-hamburger-btn,
+  #mobileMenuOpenBtn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    z-index: 100 !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    background: #ffffff !important;
+    border: 1.5px solid rgba(34, 197, 94, 0.4) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1) !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    transition: all 0.25s ease !important;
+  }
+
+  .mobile-hamburger-btn svg,
+  #mobileMenuOpenBtn svg {
+    display: block !important;
+    margin: 0 auto !important;
+    pointer-events: none !important;
+    width: 20px !important;
+    height: 20px !important;
+    stroke: #16a34a !important;
   }
 
   .logo-card-container,
@@ -7268,7 +7298,7 @@ svg filter#noiseFilter {
     font-size: 0.8rem !important;
   }
 
-  /* Universal Container & Section Boundaries */
+  /* 2. Container & Section Boundaries */
   .container {
     padding-left: 16px !important;
     padding-right: 16px !important;
@@ -7277,7 +7307,7 @@ svg filter#noiseFilter {
     box-sizing: border-box !important;
   }
 
-  /* Strict Mobile Section Padding Override (Eliminates 135px inline gaps) */
+  /* Strict Mobile Section Padding Override */
   section,
   main section,
   section[style],
@@ -7301,7 +7331,7 @@ svg filter#noiseFilter {
     box-sizing: border-box !important;
   }
 
-  /* Hero Section Top Spacing */
+  /* 3. Hero Section Typography & Spacing */
   .hero-skill-hub,
   section.hero-skill-hub,
   section.hero-skill-hub[style] {
@@ -7309,16 +7339,57 @@ svg filter#noiseFilter {
     padding-bottom: 24px !important;
   }
 
-  /* Programs Section Top Spacing */
-  #programs,
-  section#programs,
-  section#programs[style] {
-    padding-top: 36px !important;
-    padding-bottom: 24px !important;
-    scroll-margin-top: 70px !important;
+  .hero-main-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 24px !important;
   }
 
-  /* Footer Margin & Padding Override */
+  .hero-skill-hub h1 {
+    font-size: 1.85rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  .hero-skill-hub p {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    text-align: center !important;
+  }
+
+  .hero-skill-hub div[style*="display: flex"] {
+    justify-content: center !important;
+  }
+
+  /* 4. Programs & Careers Grid Stacking */
+  #coursesGrid,
+  .courses-grid,
+  .careers-grid,
+  .jobs-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .filter-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 16px !important;
+  }
+
+  .filter-tabs {
+    justify-content: center !important;
+    overflow-x: auto !important;
+    padding-bottom: 6px !important;
+  }
+
+  .search-input {
+    width: 100% !important;
+  }
+
+  /* 5. Sitemap Footer & Cards */
   footer,
   footer.sitemap-footer,
   footer[style],
@@ -7326,27 +7397,6 @@ svg filter#noiseFilter {
     margin-top: 36px !important;
     padding-top: 30px !important;
     padding-bottom: 20px !important;
-  }
-
-  .hero-skill-hub,
-  section.hero-skill-hub {
-    padding-top: 90px !important;
-    padding-bottom: 30px !important;
-  }
-
-  .hero-skill-hub h1 {
-    font-size: 1.85rem !important;
-    line-height: 1.2 !important;
-  }
-
-  .hero-skill-hub p {
-    font-size: 0.9rem !important;
-    line-height: 1.55 !important;
-  }
-
-  /* Responsive Footer Layout for Mobile */
-  .sitemap-footer {
-    padding: 40px 0 20px 0 !important;
   }
 
   .sitemap-footer .container {
@@ -7370,7 +7420,7 @@ svg filter#noiseFilter {
     max-width: 100% !important;
   }
 
-  /* Social Media Card on Mobile */
+  /* Social Media Card */
   .sitemap-footer div[style*="justify-content: space-between"] {
     flex-direction: column !important;
     align-items: stretch !important;
@@ -7395,7 +7445,7 @@ svg filter#noiseFilter {
     box-sizing: border-box !important;
   }
 
-  /* Watermark SVG on Mobile */
+  /* Watermark SVG */
   .giant-edvanta-watermark {
     max-height: 70px !important;
   }
@@ -7405,7 +7455,7 @@ svg filter#noiseFilter {
     letter-spacing: 2px !important;
   }
 
-  /* Bottom Legal Links Row on Mobile */
+  /* Bottom Legal Links Row */
   .sitemap-footer div[style*="justify-content: space-between"]:last-child {
     flex-direction: column !important;
     text-align: center !important;
@@ -7413,7 +7463,7 @@ svg filter#noiseFilter {
     justify-content: center !important;
   }
 
-  /* Mobile WhatsApp Widget */
+  /* Floating WhatsApp Widget */
   .whatsapp-widget {
     bottom: 20px !important;
     right: 20px !important;
