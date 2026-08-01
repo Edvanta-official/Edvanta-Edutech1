@@ -7208,7 +7208,7 @@ svg filter#noiseFilter {
 @media screen and (max-width: 768px) {
   /* Header & Navbar Inner Padding */
   header {
-    padding: 12px 0 !important;
+    padding: 10px 0 !important;
   }
 
   .navbar-inner {
@@ -7217,10 +7217,30 @@ svg filter#noiseFilter {
     justify-content: space-between !important;
   }
 
+  .logo-card-container {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    height: 38px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    z-index: 90 !important;
+  }
+
+  .logo-card-container img.site-logo-img {
+    height: 32px !important;
+    max-height: 32px !important;
+    width: auto !important;
+    background: transparent !important;
+  }
+
   .btn-signup-new {
-    height: 44px !important;
-    padding: 0 18px !important;
-    font-size: 0.82rem !important;
+    height: 42px !important;
+    padding: 0 16px !important;
+    font-size: 0.8rem !important;
   }
 
   /* Universal Container & Section Boundaries */
@@ -7244,6 +7264,22 @@ svg filter#noiseFilter {
     padding-right: 16px !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  .hero-skill-hub,
+  section.hero-skill-hub {
+    padding-top: 90px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .hero-skill-hub h1 {
+    font-size: 1.85rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-skill-hub p {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
   }
 
   /* Responsive Footer Layout for Mobile */
