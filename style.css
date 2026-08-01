@@ -7201,3 +7201,125 @@ svg filter#noiseFilter {
     gap: 16px !important;
   }
 }
+
+/* ==========================================================================
+   COMPREHENSIVE MOBILE RESPONSIVE LAYOUT SYSTEM (MAX-WIDTH: 768PX)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* Header & Navbar Inner Padding */
+  header {
+    padding: 12px 0 !important;
+  }
+
+  .navbar-inner {
+    padding: 0 16px !important;
+    gap: 10px !important;
+    justify-content: space-between !important;
+  }
+
+  .btn-signup-new {
+    height: 44px !important;
+    padding: 0 18px !important;
+    font-size: 0.82rem !important;
+  }
+
+  /* Universal Container & Section Boundaries */
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  section,
+  main section,
+  .hero-skill-hub,
+  .partner-marquee-section,
+  .courses-section,
+  .careers-container,
+  .blogs-hero-section,
+  .about-hero-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Responsive Footer Layout for Mobile */
+  .sitemap-footer {
+    padding: 40px 0 20px 0 !important;
+  }
+
+  .sitemap-footer .container {
+    padding: 0 16px !important;
+  }
+
+  .footer-sitemap-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .footer-sitemap-grid > div {
+    width: 100% !important;
+  }
+
+  .footer-sitemap-grid h3 {
+    font-size: 26px !important;
+  }
+
+  .sitemap-address {
+    max-width: 100% !important;
+  }
+
+  /* Social Media Card on Mobile */
+  .sitemap-footer div[style*="justify-content: space-between"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    padding: 24px 20px !important;
+    gap: 16px !important;
+  }
+
+  .sitemap-footer .social-media-title {
+    font-size: 20px !important;
+    text-align: center !important;
+  }
+
+  .sitemap-footer div[style*="display: flex"][style*="gap: 12px"] {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .sitemap-footer div[style*="display: flex"][style*="gap: 12px"] a {
+    width: 100% !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Watermark SVG on Mobile */
+  .giant-edvanta-watermark {
+    max-height: 70px !important;
+  }
+
+  .footer-giant-watermark-container span {
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+  }
+
+  /* Bottom Legal Links Row on Mobile */
+  .sitemap-footer div[style*="justify-content: space-between"]:last-child {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px !important;
+    justify-content: center !important;
+  }
+
+  /* Mobile WhatsApp Widget */
+  .whatsapp-widget {
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 52px !important;
+    height: 52px !important;
+  }
+}
