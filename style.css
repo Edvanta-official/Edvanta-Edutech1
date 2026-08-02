@@ -26,16 +26,6 @@
   transition: height 0.3s ease !important;
 }
 
-/* Page Hero Top Offset Fix for 180px Logo Height (Prevents Overlap) */
-body,
-.hero-hub-section,
-.careers-container,
-.about-hero-section,
-.premium-courses-section,
-.page-hero,
-.course-hero-banner {
-  padding-top: 230px !important;
-}
 
 :root {
   /* Font Families */
@@ -7351,11 +7341,14 @@ svg filter#noiseFilter {
     box-sizing: border-box !important;
   }
 
+  body {
+    padding-top: 0 !important;
+  }
+
   /* Strict Mobile Section Padding Override */
   section,
   main section,
   section[style],
-  .hero-skill-hub,
   #programs,
   .partner-marquee-section,
   #testimonials,
@@ -7378,8 +7371,9 @@ svg filter#noiseFilter {
   /* 3. Hero Section Typography & Spacing */
   .hero-skill-hub,
   section.hero-skill-hub,
-  section.hero-skill-hub[style] {
-    padding-top: 105px !important;
+  section.hero-skill-hub[style],
+  body.home-page section.hero-skill-hub {
+    padding-top: 90px !important;
     padding-bottom: 24px !important;
   }
 
