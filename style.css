@@ -10684,3 +10684,32 @@ svg filter#noiseFilter {
   stroke: #ffffff !important;
 }
 
+/* Continuous Seamless Marquee Track Animation */
+.marquee-infinite-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.marquee-infinite-track {
+  display: inline-flex;
+  gap: 28px;
+  animation: marqueeContinuous 25s linear infinite;
+}
+
+.marquee-infinite-container:hover .marquee-infinite-track {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeContinuous {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 14px));
+  }
+}
+
+
