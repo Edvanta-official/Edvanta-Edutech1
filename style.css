@@ -10713,18 +10713,23 @@ svg filter#noiseFilter {
 }
 
 /* Footer Box Background & Text Color Overrides (White Background) */
-footer.sitemap-footer div[style*="background: rgba(15, 23, 42"],
-footer.sitemap-footer div[style*="background:#0f172a"],
-.sitemap-footer div[style*="background: rgba(15, 23, 42"],
-.sitemap-footer div[style*="background:#0f172a"] {
+footer.sitemap-footer div[style*="background"],
+.sitemap-footer div[style*="background"],
+.sitemap-footer .container > div,
+.sitemap-footer .footer-sitemap-grid,
+.sitemap-footer .social-media-title {
   background: #ffffff !important;
   color: #0f172a !important;
+}
+
+.sitemap-footer .container > div {
   border: 2px solid rgba(34, 197, 94, 0.4) !important;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08) !important;
 }
 
 /* Ensure text inside footer white cards is dark and readable */
 .sitemap-footer h3,
+.sitemap-footer h4,
 .sitemap-footer h4.social-media-title {
   color: #0f172a !important;
 }
@@ -10740,6 +10745,7 @@ footer.sitemap-footer div[style*="background:#0f172a"],
 .sitemap-footer .sitemap-link:hover {
   color: #16a34a !important;
 }
+
 
 
 
