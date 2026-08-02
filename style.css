@@ -6421,6 +6421,39 @@ button.btn-signup-new:hover {
     box-sizing: border-box !important;
   }
 
+  /* ⚡ ULTRA-FAST MOBILE PERFORMANCE & ZERO-LAG OPTIMIZATION ⚡ */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Disable heavy GPU-taxing backdrop filters on mobile for silky smooth scrolling */
+  header,
+  .glass-panel,
+  .glass-card,
+  .course-bucket-animated-card,
+  .nav-pill-container,
+  .card-3d-effect,
+  .mobile-menu-backdrop,
+  .mobile-menu-drawer,
+  div[style*="backdrop-filter"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Disable continuous canvas/blur animations on mobile */
+  #bg3dCanvas,
+  .floating-pills-container {
+    display: none !important;
+  }
+
+  /* Hardware acceleration for scroll containers */
+  body, html {
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
+    will-change: scroll-position;
+  }
+
+
 
   /* 4. Footer Sitemap Grid Mobile Alignment */
   .footer-sitemap-grid {

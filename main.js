@@ -374,6 +374,9 @@ function init3DBackgroundCanvas() {
     mouse.targetY = (e.clientY / height - 0.5) * 40;
   });
   function render() {
+    if (window.innerWidth <= 768) {
+      return; // Skip continuous heavy 3D particle rendering on mobile for 60fps scrolling
+    }
     ctx.clearRect(0, 0, width, height);
     time += 0.02;
     mouse.x += (mouse.targetX - mouse.x) * 0.05;
