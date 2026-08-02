@@ -8,62 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./style.css" />
-    <style>
-      .contact-section {
-        padding: 30px 0 20px 0;
-      }
-      .details-list {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
-      .contact-info-card {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        padding: 20px 24px;
-      }
-      .contact-icon {
-        background: var(--accent-light);
-        color: var(--accent);
-        padding: 12px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-      }
-      .map-mock-container {
-        border-radius: 20px;
-        overflow: hidden;
-        height: 250px;
-        border: 1px solid var(--glass-border);
-        margin-top: 24px;
-        position: relative;
-        background: radial-gradient(circle at 50% 50%, #eff6ff 0%, #dbeafe 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-      [data-theme="dark"] .map-mock-container {
-        background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
-      }
-      .map-dot {
-        width: 14px;
-        height: 14px;
-        background: var(--accent);
-        border: 3px solid white;
-        border-radius: 50%;
-        position: absolute;
-        animation: pulseMap 2s infinite;
-      }
-      @keyframes pulseMap {
-        0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
-        70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.0); }
-        100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
-      }
-    </style>
     <link rel="icon" type="image/png" href="images/favicon.png"/>
   <script>(function(){var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}})();</script>
 </head>

@@ -7500,3 +7500,3060 @@ svg filter#noiseFilter {
     height: 52px !important;
   }
 }
+
+/* ==========================================================================
+   CONSOLIDATED INLINE STYLES FROM HTML PAGES
+   ========================================================================== */
+
+/* Extracted from: blogs.html */
+.tab-btn {
+        padding: 10px 22px;
+        border-radius: 999px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        background: rgba(34, 197, 94, 0.1);
+        color: #000000 !important;
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .tab-btn:hover { border-color: #16a34a; }
+      .tab-btn.active {
+        background: #16a34a !important;
+        color: #ffffff !important;
+        border-color: #16a34a !important;
+        box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
+      }
+      .search-input-blogs {
+        padding: 12px 20px 12px 44px;
+        border-radius: 999px;
+        border: 1px solid rgba(0,0,0,0.1);
+        background: rgba(255,255,255,0.9);
+        color: #0f172a;
+        width: 320px;
+        outline: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+      }
+      [data-theme="dark"] .search-input-blogs {
+        background: rgba(15,23,42,0.8);
+        color: #f8fafc;
+        border-color: rgba(255,255,255,0.15);
+      }
+
+/* Extracted from: careers.html */
+.careers-container {
+        padding: 30px 0 20px 0;
+      }
+      .job-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .job-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .job-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-width: 500px;
+      }
+      .job-dept {
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .job-title {
+        font-size: 1.25rem;
+        font-weight: 800;
+      }
+      .job-desc {
+        color: #ffffff !important;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      .job-meta {
+        display: flex;
+        gap: 16px;
+        font-size: 0.8rem;
+        color: var(--text-tertiary);
+        margin-top: 8px;
+      }
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      @media (max-width: 600px) {
+        .job-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .job-card .btn {
+          width: 100%;
+        }
+      }
+
+/* Extracted from: contact.html */
+.contact-section {
+        padding: 30px 0 20px 0;
+      }
+      .details-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .contact-info-card {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        padding: 20px 24px;
+      }
+      .contact-icon {
+        background: var(--accent-light);
+        color: var(--accent);
+        padding: 12px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .map-mock-container {
+        border-radius: 20px;
+        overflow: hidden;
+        height: 250px;
+        border: 1px solid var(--glass-border);
+        margin-top: 24px;
+        position: relative;
+        background: radial-gradient(circle at 50% 50%, #eff6ff 0%, #dbeafe 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      [data-theme="dark"] .map-mock-container {
+        background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+      }
+      .map-dot {
+        width: 14px;
+        height: 14px;
+        background: var(--accent);
+        border: 3px solid white;
+        border-radius: 50%;
+        position: absolute;
+        animation: pulseMap 2s infinite;
+      }
+      @keyframes pulseMap {
+        0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.0); }
+        100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+      }
+
+/* Extracted from: courses.html */
+.courses-section {
+        padding: 30px 0 20px 0;
+      }
+      .filter-bar {
+        padding: 20px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+      .filter-tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .tab-btn {
+        padding: 8px 22px;
+        border-radius: 999px;
+        font-size: 0.88rem;
+        font-weight: 800;
+        background: rgba(34, 197, 94, 0.12);
+        color: #000000 !important;
+        border: 1px solid rgba(34, 197, 94, 0.35);
+        cursor: pointer;
+        transition: all var(--transition-fast);
+      }
+      .tab-btn:hover {
+        color: #000000 !important;
+        border-color: #16a34a !important;
+        background: rgba(34, 197, 94, 0.22);
+      }
+      .tab-btn.active {
+        background: #16a34a !important;
+        color: #ffffff !important;
+        border-color: #16a34a !important;
+        box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
+      }
+      .search-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .search-box svg {
+        position: absolute;
+        left: 14px;
+        color: var(--text-tertiary);
+      }
+      .search-input {
+        padding: 10px 16px 10px 42px;
+        border-radius: 30px;
+        border: 1.5px solid var(--glass-border);
+        background: rgba(255, 255, 255, 0.2);
+        color: var(--text-primary);
+        width: 280px;
+        outline: none;
+        font-family: var(--font-body);
+        font-size: 0.9rem;
+        transition: all var(--transition-fast);
+      }
+      .search-input:focus {
+        border-color: var(--accent);
+        background: rgba(255, 255, 255, 0.4);
+      }
+      [data-theme="dark"] .search-input {
+        background: rgba(0, 0, 0, 0.2);
+      }
+      .course-card-tag {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .course-card-title {
+        font-size: 1.25rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        line-height: 1.35;
+      }
+      .course-desc {
+        font-size: 0.9rem;
+        color: #ffffff !important;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        min-height: 54px;
+      }
+      .course-meta {
+        display: flex;
+        gap: 16px;
+        font-size: 0.85rem;
+        color: #ffffff !important;
+        margin-bottom: 20px;
+      }
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .course-rating {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.88rem;
+        margin-bottom: 20px;
+      }
+      .course-pricing {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid var(--glass-border);
+        padding-top: 16px;
+      }
+      .price-lbl {
+        font-size: 0.75rem;
+        color: var(--text-tertiary);
+      }
+      .price-val {
+        font-size: 1.25rem;
+        font-weight: 800;
+      }
+
+/* Extracted from: dashboard.html */
+.dash-grid {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 32px;
+        align-items: flex-start;
+        padding: 40px 0;
+      }
+      .dash-sidebar {
+        border-radius: 20px;
+        padding: 24px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        position: sticky;
+        top: 100px;
+      }
+      .sidebar-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 0 8px;
+      }
+      .user-name-title {
+        font-weight: 800;
+        font-size: 1.1rem;
+      }
+      .user-role-badge {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: var(--accent-light);
+        padding: 2px 8px;
+        border-radius: 4px;
+        width: fit-content;
+      }
+      .sidebar-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .sidebar-item {
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.92rem;
+        color: #ffffff !important;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+      }
+      .sidebar-item:hover, .sidebar-item.active {
+        color: var(--text-primary);
+        background: var(--btn-secondary-bg);
+      }
+      .sidebar-item svg {
+        color: var(--text-tertiary);
+        transition: color var(--transition-fast);
+      }
+      .sidebar-item:hover svg, .sidebar-item.active svg {
+        color: var(--accent);
+      }
+      .workspace-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--glass-border);
+        padding-bottom: 20px;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .workspace-title {
+        font-size: 1.6rem;
+        font-weight: 800;
+      }
+      .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+        text-align: left;
+      }
+      .data-table th {
+        padding: 12px 16px;
+        border-bottom: 2px solid var(--glass-border);
+        color: #ffffff !important;
+        font-weight: 700;
+      }
+      .data-table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--glass-border);
+        color: var(--text-primary);
+      }
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+      .cert-frame {
+        border: 15px double var(--accent);
+        padding: 40px;
+        background: white;
+        color: #0f172a;
+        max-width: 680px;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+      }
+      .cert-frame h2 {
+        font-family: var(--font-heading);
+        font-size: 2.2rem;
+        font-weight: 900;
+        letter-spacing: 0.05em;
+        color: var(--text-primary);
+        margin-bottom: 10px;
+      }
+      .cert-subtitle {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        color: #ffffff !important;
+        margin-bottom: 30px;
+      }
+      .cert-text {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      .cert-name {
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--accent);
+        border-bottom: 2px solid var(--glass-border);
+        display: inline-block;
+        padding-bottom: 6px;
+        margin-bottom: 24px;
+      }
+      @media (max-width: 991px) {
+        .dash-grid {
+          grid-template-columns: 1fr;
+        }
+        .dash-sidebar {
+          position: relative;
+          top: 0;
+        }
+      }
+
+/* Extracted from: internships.html */
+.intern-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 60px;
+      }
+      .intern-card {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 32px;
+        align-items: center;
+      }
+      .intern-details-title {
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+      .intern-meta {
+        display: flex;
+        gap: 24px;
+        font-size: 0.85rem;
+        color: #ffffff !important;
+        margin-bottom: 16px;
+      }
+      .intern-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .milestone-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+      .milestone-badge {
+        background: var(--accent-light);
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 6px;
+      }
+      .intern-actions {
+        border-left: 1px solid var(--glass-border);
+        padding-left: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .value-point {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      .simulator-container {
+        border-radius: 24px;
+        padding: 32px;
+        margin-top: 40px;
+      }
+      .checklist-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        transition: all var(--transition-fast);
+        cursor: pointer;
+        margin-bottom: 8px;
+      }
+      .checklist-item:hover {
+        background: var(--btn-secondary-bg);
+      }
+      .checklist-item.checked {
+        background: var(--accent-light);
+        border-color: rgba(37, 99, 235, 0.15);
+      }
+      .checkbox-mock {
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+        border: 2px solid var(--text-tertiary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: all var(--transition-fast);
+        margin-top: 2px;
+      }
+      .checklist-item.checked .checkbox-mock {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: white;
+      }
+      .checklist-item.checked .checkbox-mock::after {
+        content: '✓';
+        font-size: 0.75rem;
+        font-weight: 800;
+      }
+      .checklist-text {
+        font-size: 0.92rem;
+        color: var(--text-primary);
+        font-weight: 500;
+      }
+      .checklist-item.checked .checklist-text {
+        color: var(--accent);
+        text-decoration: line-through;
+        opacity: 0.75;
+      }
+      .progress-display {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 24px;
+      }
+      @media (max-width: 768px) {
+        .intern-card {
+          grid-template-columns: 1fr;
+        }
+        .intern-actions {
+          border-left: none;
+          padding-left: 0;
+          border-top: 1px solid var(--glass-border);
+          padding-top: 24px;
+        }
+      }
+
+/* Extracted from: login.html */
+.login-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - 180px);
+        padding: 40px 24px;
+      }
+      .login-card {
+        width: 100%;
+        max-width: 440px;
+        padding: 40px;
+        border-radius: 24px;
+      }
+      .auth-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .auth-title {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+      .auth-subtitle {
+        font-size: 0.88rem;
+        color: #ffffff !important;
+      }
+
+/* Extracted from: pages/courses/course-ai-core.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-ai-ml.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-ansys-analysis.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-autocad-design.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-bda-program.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-business-analyst.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-catia-design.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-cloud-devops.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-cybersec.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-data-analytics.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-data-science.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-devops.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-digital-mktg.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-embedded-systems.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-entrepreneurship.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-ev-eng.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-finance-acct.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-fullstack-web.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-gen-ai.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-hr-mgmt.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-iot-robotics.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-matlab-simulink.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-mktg-mgmt.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-python-prog.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-revit-bim.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-rtl-design.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-sap-erp.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-six-sigma.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-solidworks.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-ui-ux.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/courses/course-vlsi-design.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(34, 197, 94, 0.25);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/programs/program-ai-ml.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(37, 99, 235, 0.15);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/programs/program-civil.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(37, 99, 235, 0.15);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/programs/program-cs.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(37, 99, 235, 0.15);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/programs/program-ece.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(37, 99, 235, 0.15);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: pages/programs/program-mech.html */
+.program-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      .program-grid-2 {
+        grid-template-columns: 1.8fr 1.2fr;
+      }
+    }
+    .syllabus-module {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+      transition: border-color 0.2s;
+    }
+    .syllabus-module:hover {
+      border-color: rgba(37, 99, 235, 0.15);
+    }
+    .skills-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .skill-pill {
+      background: rgba(34, 197, 94, 0.12);
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(34, 197, 94, 0.3);
+    }
+    .spec-card {
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+    }
+    [data-theme="dark"] .syllabus-module,
+    [data-theme="dark"] .spec-card {
+      background: #111827 !important;
+      border-color: #1f2937 !important;
+    }
+    [data-theme="dark"] .skill-pill {
+      background: rgba(255,255,255,0.05) !important;
+      color: #94a3b8 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+    }
+
+/* Extracted from: privacy.html */
+.legal-hero {
+        padding: 240px 0 60px 0;
+        text-align: center;
+      }
+      .legal-badge {
+        display: inline-block;
+        background: rgba(14, 165, 233, 0.12);
+        color: #16a34a;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: 999px;
+        margin-bottom: 20px;
+      }
+      .legal-hero h1 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: #0f172a;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+      }
+      .legal-hero p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.15rem;
+        color: #475569;
+        max-width: 760px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+      .legal-card {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 60px;
+      }
+      .legal-section {
+        margin-bottom: 32px;
+        padding: 36px;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+      }
+      [data-theme="dark"] .legal-section {
+        background: rgba(15, 23, 42, 0.7) !important;
+        border-color: rgba(255, 255, 255, 0.1) !important;
+      }
+      .legal-section h2 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      [data-theme="dark"] .legal-section h2 {
+        color: #f8fafc !important;
+      }
+      .legal-section h2 .sec-icon {
+        background: rgba(34, 197, 94, 0.25);
+        color: #16a34a;
+        font-size: 1.1rem;
+        padding: 6px 12px;
+        border-radius: 10px;
+      }
+      .legal-section p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.05rem;
+        color: #1e293b;
+        line-height: 1.8;
+        margin-bottom: 16px;
+        font-weight: 600;
+      }
+      [data-theme="dark"] .legal-section p {
+        color: #e2e8f0 !important;
+      }
+      .legal-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 16px 0;
+      }
+      .legal-list li {
+        position: relative;
+        padding-left: 24px;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.05rem;
+        color: #1e293b;
+        line-height: 1.8;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+      [data-theme="dark"] .legal-list li {
+        color: #e2e8f0 !important;
+      }
+      .legal-list li::before {
+        content: "•";
+        position: absolute;
+        left: 8px;
+        color: #16a34a;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+      .highlight-box {
+        background: rgba(34, 197, 94, 0.25) !important;
+        border-left: 4px solid #16a34a;
+        padding: 18px 24px;
+        border-radius: 0 16px 16px 0;
+        margin: 20px 0;
+        font-family: 'Inter', sans-serif;
+        color: #0f172a !important;
+        font-weight: 700;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      [data-theme="dark"] .highlight-box {
+        color: #f8fafc !important;
+        background: rgba(34, 197, 94, 0.25) !important;
+      }
+      @media (max-width: 768px) {
+        .legal-hero h1 { font-size: 2.4rem; }
+        .legal-section { padding: 20px; }
+      }
+
+/* Extracted from: register.html */
+.register-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - 180px);
+        padding: 40px 24px;
+      }
+      .register-card {
+        width: 100%;
+        max-width: 460px;
+        padding: 40px;
+        border-radius: 24px;
+      }
+      .auth-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .auth-title {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+      .auth-subtitle {
+        font-size: 0.88rem;
+        color: var(--text-secondary) !important;
+      }
+
+/* Extracted from: terms.html */
+.legal-hero {
+        padding: 240px 0 60px 0;
+        text-align: center;
+      }
+      .legal-badge {
+        display: inline-block;
+        background: rgba(14, 165, 233, 0.12);
+        color: #16a34a;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: 999px;
+        margin-bottom: 20px;
+      }
+      .legal-hero h1 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: #0f172a;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+      }
+      .legal-hero p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.15rem;
+        color: #475569;
+        max-width: 760px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+      .legal-card {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 60px;
+      }
+      .legal-section {
+        margin-bottom: 32px;
+        padding: 36px;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+      }
+      [data-theme="dark"] .legal-section {
+        background: rgba(15, 23, 42, 0.7) !important;
+        border-color: rgba(255, 255, 255, 0.1) !important;
+      }
+      .legal-section h2 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      [data-theme="dark"] .legal-section h2 {
+        color: #f8fafc !important;
+      }
+      .legal-section h2 .sec-num {
+        background: #16a34a;
+        color: #ffffff !important;
+        font-size: 0.85rem;
+        font-weight: 800;
+        padding: 4px 12px;
+        border-radius: 999px;
+      }
+      .legal-section p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.05rem;
+        color: #1e293b;
+        line-height: 1.8;
+        margin-bottom: 16px;
+        font-weight: 600;
+      }
+      [data-theme="dark"] .legal-section p {
+        color: #e2e8f0 !important;
+      }
+      .legal-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 16px 0;
+      }
+      .legal-list li {
+        position: relative;
+        padding-left: 24px;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.05rem;
+        color: #1e293b;
+        line-height: 1.8;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+      [data-theme="dark"] .legal-list li {
+        color: #e2e8f0 !important;
+      }
+      .legal-list li::before {
+        content: "•";
+        position: absolute;
+        left: 8px;
+        color: #16a34a;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+      .highlight-box {
+        background: rgba(34, 197, 94, 0.25) !important;
+        border-left: 4px solid #16a34a;
+        padding: 18px 24px;
+        border-radius: 0 16px 16px 0;
+        margin: 20px 0;
+        font-family: 'Inter', sans-serif;
+        color: #0f172a !important;
+        font-weight: 700;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      [data-theme="dark"] .highlight-box {
+        color: #f8fafc !important;
+        background: rgba(34, 197, 94, 0.25) !important;
+      }
+      @media (max-width: 768px) {
+        .legal-hero h1 { font-size: 2.4rem; }
+        .legal-section { padding: 20px; }
+      }
