@@ -6399,6 +6399,29 @@ button.btn-signup-new:hover {
     max-width: 100% !important;
   }
 
+  /* Animated Bucket & Floating Badges Mobile Optimization */
+  .div-floating-badge {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 8px auto !important;
+    display: inline-flex !important;
+    max-width: fit-content !important;
+  }
+
+  .btn-animated-bucket,
+  .btn-animated-bucket-secondary {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 20px !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+  }
+
+
   /* 4. Footer Sitemap Grid Mobile Alignment */
   .footer-sitemap-grid {
     grid-template-columns: 1fr !important;
