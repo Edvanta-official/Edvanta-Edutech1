@@ -6444,7 +6444,6 @@ button.btn-signup-new:hover {
 }
 
 @media screen and (max-width: 480px) {
-  body,
   .hero-hub-section,
   .careers-container,
   .about-hero-section,
@@ -6483,7 +6482,7 @@ button.btn-signup-new:hover {
   /* Fix Hero Section Top Padding & Layout on Mobile */
   .hero-skill-hub,
   section.hero-skill-hub {
-    padding-top: 100px !important;
+    padding-top: 110px !important;
     padding-bottom: 40px !important;
   }
 
@@ -6597,7 +6596,7 @@ button.btn-signup-new:hover {
   }
 
   .hero-skill-hub {
-    padding-top: 100px !important;
+    padding-top: 110px !important;
     padding-bottom: 40px !important;
   }
 
@@ -6877,7 +6876,7 @@ button.btn-signup-new:hover {
   /* 2. Hero Section Mobile Spacing */
   .hero-skill-hub,
   section.hero-skill-hub {
-    padding-top: 100px !important;
+    padding-top: 110px !important;
     padding-bottom: 40px !important;
   }
 
@@ -7373,7 +7372,7 @@ svg filter#noiseFilter {
   section.hero-skill-hub,
   section.hero-skill-hub[style],
   body.home-page section.hero-skill-hub {
-    padding-top: 90px !important;
+    padding-top: 110px !important;
     padding-bottom: 24px !important;
   }
 
