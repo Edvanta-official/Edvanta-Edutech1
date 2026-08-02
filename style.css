@@ -7499,7 +7499,38 @@ svg filter#noiseFilter {
     width: 52px !important;
     height: 52px !important;
   }
+
+  /* 24/7 Academic Support Mobile Responsive Rules */
+  #support h2 {
+    font-size: 2.2rem !important;
+    line-height: 1.15 !important;
+    max-width: 100% !important;
+  }
+
+  #support p {
+    font-size: 0.95rem !important;
+    max-width: 100% !important;
+  }
+
+  #support .course-bucket-animated-card {
+    padding: 28px 18px !important;
+  }
+
+  #support div[style*="grid-template-columns"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+    text-align: center !important;
+  }
+
+  #support div[style*="grid-template-columns"] > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
 }
+
 
 /* ==========================================================================
    CONSOLIDATED INLINE STYLES FROM HTML PAGES
