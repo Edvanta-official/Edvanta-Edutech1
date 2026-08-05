@@ -7427,13 +7427,9 @@ svg filter#noiseFilter {
     padding-top: 0 !important;
   }
 
-  /* Strict Mobile Section Padding Override */
-  section,
-  main section,
-  section[style],
-  /* Internal Page Sections */
-  #programs,
+  /* Internal Page Sections (Excludes Top Hero Sections) */
   .partner-marquee-section,
+  #programs,
   #testimonials,
   #community,
   #support,
@@ -7447,18 +7443,28 @@ svg filter#noiseFilter {
     box-sizing: border-box !important;
   }
 
-  /* Top Hero Sections for All Pages Across Entire Website (Generous 210px gap below nav bar on all mobile phones) */
+  /* Top Hero Sections for All Pages (High Specificity Overrides to beat inline style="padding:...") */
   .hero-skill-hub,
   section.hero-skill-hub,
   section.hero-skill-hub[style],
   body.home-page section.hero-skill-hub,
   .about-hero-section,
+  section.about-hero-section,
+  section.about-hero-section[style],
+  section[class*="about"][style],
   .blogs-hero-section,
+  section.blogs-hero-section[style],
   .courses-section,
+  section.courses-section[style],
   .courses-hero-section,
   .careers-container,
+  section.careers-container,
+  section.careers-container[style],
+  section[class*="careers"][style],
   .contact-hero-section,
+  section.contact-hero-section[style],
   .placements-hero-section,
+  section.placements-hero-section[style],
   .internships-hero-section,
   .privacy-container,
   .terms-container,
@@ -7468,7 +7474,7 @@ svg filter#noiseFilter {
   .dashboard-container,
   main > section:first-of-type,
   main > div:first-of-type {
-    padding-top: 210px !important;
+    padding-top: 180px !important;
     padding-bottom: 32px !important;
     padding-left: 18px !important;
     padding-right: 18px !important;
