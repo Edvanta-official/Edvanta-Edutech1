@@ -6719,7 +6719,7 @@ button.btn-signup-new:hover {
 
   .hero-student-card-container > div[style*="position: relative; z-index: 10"],
   .hero-student-card-container > div[style*="position: relative"] {
-    height: 380px !important;
+    height: 400px !important;
     width: 100% !important;
     border-radius: 28px !important;
     overflow: hidden !important;
@@ -6732,25 +6732,43 @@ button.btn-signup-new:hover {
   .hero-student-card-container img {
     height: 100% !important;
     width: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
     border-radius: 28px !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
   }
 
-  .hero-student-card-container .floating-badge-animate-slow {
+  /* 1. Google Certifications Badge (Top Right) */
+  .hero-student-card-container .hero-badge-certifications {
     position: absolute !important;
-    top: 20px !important;
+    top: 15px !important;
     right: -15px !important;
+    bottom: auto !important;
+    left: auto !important;
     transform: scale(0.82) !important;
     z-index: 30 !important;
   }
 
-  .hero-student-card-container .floating-badge-animate {
+  /* 2. Enrolled Students Badge (Middle Left) */
+  .hero-student-card-container .hero-badge-enrolled {
     position: absolute !important;
-    bottom: 110px !important;
+    top: 54% !important;
     left: -20px !important;
+    bottom: auto !important;
+    right: auto !important;
+    transform: translateY(-50%) scale(0.82) !important;
+    z-index: 30 !important;
+  }
+
+  /* 3. Google Reviews Badge (Bottom Right) */
+  .hero-student-card-container .hero-badge-reviews {
+    position: absolute !important;
+    bottom: 15px !important;
+    right: -15px !important;
+    top: auto !important;
+    left: auto !important;
     transform: scale(0.82) !important;
     z-index: 30 !important;
   }
