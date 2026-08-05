@@ -6700,37 +6700,40 @@ button.btn-signup-new:hover {
 @media screen and (max-width: 768px) {
   .hero-student-card-container {
     height: auto !important;
-    min-height: 360px !important;
+    min-height: 400px !important;
     width: 100% !important;
     max-width: 320px !important;
-    margin: 10px auto 0 auto !important;
+    margin: 20px auto 0 auto !important;
     position: relative !important;
   }
 
-  /* Hide decorative rotated background cards on mobile screens */
+  /* Show decorative rotated background cards on mobile screens matching reference design */
   .hero-student-card-container > div[style*="transform: rotate"] {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: rotate(-18deg) scale(0.82) !important;
+    transform-origin: center center !important;
+    right: 20px !important;
   }
 
   .hero-student-card-container > div[style*="position: relative; z-index: 10"],
   .hero-student-card-container > div[style*="position: relative"] {
-    height: 360px !important;
+    height: 380px !important;
     width: 100% !important;
-    border-radius: 24px !important;
+    border-radius: 28px !important;
     overflow: hidden !important;
-    background: linear-gradient(135deg, #16a34a 0%, #052e16 100%) !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25) !important;
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important;
+    box-shadow: 0 20px 45px rgba(22, 163, 74, 0.35) !important;
+    position: relative !important;
+    z-index: 10 !important;
   }
 
   .hero-student-card-container img {
     height: 100% !important;
     width: 100% !important;
-    object-fit: contain !important;
-    border-radius: 24px !important;
+    object-fit: cover !important;
+    border-radius: 28px !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -6738,16 +6741,16 @@ button.btn-signup-new:hover {
 
   .hero-student-card-container .floating-badge-animate-slow {
     position: absolute !important;
-    top: 15px !important;
-    right: -10px !important;
+    top: 20px !important;
+    right: -15px !important;
     transform: scale(0.82) !important;
     z-index: 30 !important;
   }
 
   .hero-student-card-container .floating-badge-animate {
     position: absolute !important;
-    bottom: 20px !important;
-    left: -10px !important;
+    bottom: 110px !important;
+    left: -20px !important;
     transform: scale(0.82) !important;
     z-index: 30 !important;
   }
