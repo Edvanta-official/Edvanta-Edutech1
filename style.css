@@ -7526,8 +7526,99 @@ svg filter#noiseFilter {
     text-align: center !important;
   }
 
-  .hero-skill-hub div[style*="display: flex"] {
+  /* ==========================================================================
+     MOBILE COURSE DETAILS PAGES RESPONSIVE STYLING (PAGES/COURSES/*.HTML)
+     ========================================================================== */
+  main.container,
+  body main.container,
+  body > main.container {
+    padding-top: 105px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Green Course Detail Hero Card */
+  main.container > div:first-child[style*="background: #22c55e"],
+  main.container > div:first-child {
+    padding: 24px 18px 28px 18px !important;
+    border-radius: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Header row inside Green Hero Card (TRENDING . CS and CERTIFICATE PARTNER) */
+  main.container > div:first-child > div:first-child {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-bottom: 16px !important;
+  }
+
+  main.container h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+    margin: 16px 0 14px 0 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  main.container p {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Company Pills (Microsoft, Google) */
+  main.container div[style*="background: rgba(255, 255, 255, 0.25)"] {
+    padding: 5px 12px !important;
+    font-size: 12px !important;
+    border-radius: 6px !important;
+  }
+
+  /* Stipend Badge (₹29,999 · HIGH STIPEND OFFERED*) - Fixes overlap on mobile */
+  .inner-stipend-pill,
+  main.container div.inner-stipend-pill,
+  main.container div[style*="HIGH STIPEND OFFERED"] {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    right: auto !important;
+    left: auto !important;
+    margin-top: 18px !important;
+    display: inline-block !important;
+    max-width: 100% !important;
+    font-size: 9.5px !important;
+    padding: 6px 14px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    border-radius: 99px !important;
+  }
+
+  /* Course Metadata Card (DURATION, PROGRAM, GUARANTEED, Buttons) */
+  main.container > div.glass-panel {
+    padding: 20px 16px !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 18px !important;
+    margin-bottom: 28px !important;
+  }
+
+  main.container > div.glass-panel > div:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  main.container > div.glass-panel a {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
     justify-content: center !important;
+    text-align: center !important;
   }
 
   /* 4. Programs & Careers Grid Stacking */
