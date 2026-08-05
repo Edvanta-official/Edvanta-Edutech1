@@ -7447,52 +7447,34 @@ svg filter#noiseFilter {
     box-sizing: border-box !important;
   }
 
-  /* Top Hero Sections for Subpages (Clears Fixed Header Bar cleanly across all phones with 35px+ safety gap) */
+  /* Top Hero Sections for All Pages Across Entire Website (Pushes content 175px down cleanly below nav bar on all mobile phones) */
+  .hero-skill-hub,
+  section.hero-skill-hub,
+  section.hero-skill-hub[style],
+  body.home-page section.hero-skill-hub,
   .about-hero-section,
   .blogs-hero-section,
   .courses-section,
+  .courses-hero-section,
   .careers-container,
   .contact-hero-section,
   .placements-hero-section,
+  .internships-hero-section,
   .privacy-container,
   .terms-container,
-  .legal-container {
-    padding-top: 145px !important;
+  .legal-container,
+  .login-container,
+  .register-container,
+  .dashboard-container,
+  main > section:first-of-type,
+  main > div:first-of-type {
+    padding-top: 175px !important;
     padding-bottom: 32px !important;
     padding-left: 18px !important;
     padding-right: 18px !important;
     margin-top: 0 !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
-  }
-
-  /* About Hero Section Mobile Typography Tuning */
-  .about-hero-section h1 {
-    font-size: 1.85rem !important;
-    line-height: 1.25 !important;
-    margin: 0 auto 16px auto !important;
-  }
-
-  .about-hero-section p {
-    font-size: 0.95rem !important;
-    line-height: 1.65 !important;
-    margin: 0 auto 28px auto !important;
-  }
-
-  .about-hero-section span[style*="letter-spacing"] {
-    font-size: 11px !important;
-    padding: 6px 18px !important;
-    letter-spacing: 2px !important;
-    margin-bottom: 18px !important;
-  }
-
-  /* 3. Hero Section Typography & Spacing */
-  .hero-skill-hub,
-  section.hero-skill-hub,
-  section.hero-skill-hub[style],
-  body.home-page section.hero-skill-hub {
-    padding-top: 110px !important;
-    padding-bottom: 24px !important;
   }
 
   .hero-main-grid {
