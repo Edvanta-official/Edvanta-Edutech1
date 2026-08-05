@@ -7412,20 +7412,36 @@ svg filter#noiseFilter {
   section,
   main section,
   section[style],
+  /* Internal Page Sections */
   #programs,
   .partner-marquee-section,
   #testimonials,
   #community,
   #support,
-  #blogs,
-  .courses-section,
-  .careers-container,
-  .blogs-hero-section,
-  .about-hero-section {
+  #blogs {
     padding-top: 36px !important;
     padding-bottom: 24px !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
+    margin-top: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Top Hero Sections for Subpages (Clears Fixed Header Bar cleanly across all phones) */
+  .about-hero-section,
+  .blogs-hero-section,
+  .courses-section,
+  .careers-container,
+  .contact-hero-section,
+  .placements-hero-section,
+  .privacy-container,
+  .terms-container,
+  .legal-container {
+    padding-top: 110px !important;
+    padding-bottom: 32px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
     margin-top: 0 !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
