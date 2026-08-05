@@ -21,7 +21,7 @@ function getHtmlEntries(dir = __dirname, baseDir = __dirname) {
 }
 
 export default defineConfig({
-  base: '/',
+  base: './',
   plugins: [react()],
   build: {
     rollupOptions: {
