@@ -7447,7 +7447,7 @@ svg filter#noiseFilter {
     box-sizing: border-box !important;
   }
 
-  /* Top Hero Sections for All Pages Across Entire Website (Pushes content 175px down cleanly below nav bar on all mobile phones) */
+  /* Top Hero Sections for All Pages Across Entire Website (Generous 210px gap below nav bar on all mobile phones) */
   .hero-skill-hub,
   section.hero-skill-hub,
   section.hero-skill-hub[style],
@@ -7468,13 +7468,19 @@ svg filter#noiseFilter {
   .dashboard-container,
   main > section:first-of-type,
   main > div:first-of-type {
-    padding-top: 175px !important;
+    padding-top: 210px !important;
     padding-bottom: 32px !important;
     padding-left: 18px !important;
     padding-right: 18px !important;
     margin-top: 0 !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  /* Hide background floating accents that overlap top mobile hero badges */
+  .about-hero-section > div[style*="rotate"],
+  .careers-container > div[style*="rotate"] {
+    display: none !important;
   }
 
   .hero-main-grid {
