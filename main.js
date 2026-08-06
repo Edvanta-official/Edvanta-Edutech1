@@ -76,13 +76,13 @@ function initMobileMenu() {
 function highlightActiveLink() {
   const rawPath = window.location.pathname.toLowerCase();
   const page = rawPath.split("/").pop() || 'index.html';
-  const navItems = document.querySelectorAll('.nav-links-new .nav-item-new, .nav-item-new');
+  const navItems = document.querySelectorAll('.nav-links-new .nav-item-new, .nav-item-new, .mobile-nav-link');
   navItems.forEach(item => {
     item.classList.remove('active');
     const href = item.getAttribute('href');
     if (!href) return;
     const linkPage = href.split("/").pop().toLowerCase();
-    if (page === linkPage && linkPage !== '') {
+    if (page === linkPage || (page === '' && linkPage === 'index.html') || (page === 'index.html' && linkPage === 'index.html')) {
       item.classList.add('active');
     } else if (rawPath.includes('/blogs/') && linkPage === 'blogs.html') {
       item.classList.add('active');
@@ -247,17 +247,45 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 function initNavbarScroll() {
-  const container = document.querySelector('.nav-pill-container');
-  const logoImg = document.querySelector('.logo-svg');
-  if (!container) return;
-  let isScrolling;
+  const header = document.querySelector('header');
+  const navContainer = document.querySelector('.nav-pill-container');
+  if (!header) return;
+
+  let lastScrollTop = 0;
+  const threshold = 8;
+
   const handleScroll = () => {
-    if (window.scrollY > 20) {
-      container.classList.add('scrolled');
-    } else {
-      container.classList.remove('scrolled');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (navContainer) {
+      if (scrollTop > 20) {
+        navContainer.classList.add('scrolled');
+      } else {
+        navContainer.classList.remove('scrolled');
+      }
     }
+
+    if (scrollTop > 80) {
+      if (Math.abs(scrollTop - lastScrollTop) > threshold) {
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down -> hide navbar & logo up
+          header.classList.add('nav-header-hidden');
+          header.classList.remove('nav-header-visible');
+        } else {
+          // Scrolling up -> bring navbar & logo back down
+          header.classList.remove('nav-header-hidden');
+          header.classList.add('nav-header-visible');
+        }
+      }
+    } else {
+      // Near top of page -> keep navbar & logo visible
+      header.classList.remove('nav-header-hidden');
+      header.classList.add('nav-header-visible');
+    }
+
+    lastScrollTop = Math.max(0, scrollTop);
   };
+
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); 
 }

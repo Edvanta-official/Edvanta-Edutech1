@@ -6160,8 +6160,21 @@ footer.sitemap-footer,
   }
 }
 
+header {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  will-change: transform;
+}
+
+header.nav-header-hidden {
+  transform: translateY(-125%) !important;
+}
+
+header.nav-header-visible {
+  transform: translateY(0) !important;
+}
+
 /* ==========================================================================
-   NAVBAR LINK HOVER & ACTIVE STYLES (LIGHT GREEN THEME)
+   NAVBAR LINK HOVER & ACTIVE STYLES (PASTEL GRAY GREEN THEME)
    ========================================================================== */
 .nav-item-new {
   font-weight: 600 !important;
@@ -6179,25 +6192,48 @@ footer.sitemap-footer,
 }
 
 .nav-item-new:hover {
-  background: rgba(158, 188, 158, 0.14) !important;
-  color: #9ebc9e !important;
-  border: 1px solid rgba(158, 188, 158, 0.3) !important;
-  box-shadow: 0 4px 12px rgba(158, 188, 158, 0.12) !important;
-  transform: translateY(-1px) !important;
+  background: #9ebc9e !important;
+  color: #ffffff !important;
+  border: 1px solid #769a85 !important;
+  box-shadow: 0 6px 18px rgba(158, 188, 158, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.nav-item-new:hover svg {
+  stroke: #ffffff !important;
+  color: #ffffff !important;
 }
 
 .nav-item-new:hover span.badge-new,
 .nav-item-new:hover span {
-  background: #9ebc9e !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  color: #28322c !important;
 }
 
 .nav-item-new.active {
-  background: rgba(158, 188, 158, 0.2) !important;
+  background: #9ebc9e !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  border: 1.5px solid #769a85 !important;
+  box-shadow: 0 6px 18px rgba(158, 188, 158, 0.45) !important;
+}
+
+.nav-item-new.active svg {
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.nav-item-new.active span.badge-new,
+.nav-item-new.active span {
+  background: #ffffff !important;
+  color: #28322c !important;
+}
+
+.mobile-nav-link.active {
+  background: rgba(158, 188, 158, 0.25) !important;
   color: #9ebc9e !important;
   font-weight: 800 !important;
-  border: 1.5px solid rgba(158, 188, 158, 0.4) !important;
-  box-shadow: 0 4px 14px rgba(158, 188, 158, 0.15) !important;
+  border: 1.5px solid #9ebc9e !important;
 }
 
 .nav-item-new.active span.badge-new,

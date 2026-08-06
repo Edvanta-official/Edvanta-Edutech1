@@ -132,4 +132,33 @@
 .partner-marquee-section,
 .marquee-card {
   border: 2px solid #9ebc9e !important;
+}
+
+header {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  will-change: transform;
+}
+
+header.nav-header-hidden {
+  transform: translateY(-125%) !important;
+}
+
+header.nav-header-visible {
+  transform: translateY(0) !important;
+}
+
+.nav-item-new:hover {
+  background: #9ebc9e !important;
+  color: #ffffff !important;
+  border: 1px solid #769a85 !important;
+  box-shadow: 0 6px 18px rgba(158, 188, 158, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.nav-item-new.active {
+  background: #9ebc9e !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  border: 1.5px solid #769a85 !important;
+  box-shadow: 0 6px 18px rgba(158, 188, 158, 0.45) !important;
 }
