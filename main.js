@@ -345,9 +345,10 @@ function init3DBackgroundCanvas() {
   const ctx = canvas.getContext('2d');
   let width, height;
   let time = 0;
+  let rotationAngle = 0;
   let mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
   let orbs = [];
-  const orbCount = 18;
+  const orbCount = 22;
   function resize() {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
@@ -359,11 +360,12 @@ function init3DBackgroundCanvas() {
       orbs.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: Math.random() * 50 + 25,
-        speedY: Math.random() * 0.15 + 0.05,
-        speedX: (Math.random() - 0.5) * 0.15,
-        pulseSpeed: Math.random() * 0.01 + 0.005,
-        alpha: Math.random() * 0.35 + 0.15
+        radius: Math.random() * 55 + 25,
+        speedY: Math.random() * 0.12 + 0.04,
+        speedX: (Math.random() - 0.5) * 0.12,
+        pulseSpeed: Math.random() * 0.01 + 0.004,
+        alpha: Math.random() * 0.35 + 0.15,
+        colorIndex: i % 5
       });
     }
   }
@@ -378,13 +380,35 @@ function init3DBackgroundCanvas() {
       return; // Skip continuous heavy 3D particle rendering on mobile for 60fps scrolling
     }
     ctx.clearRect(0, 0, width, height);
-    time += 0.006; // Slow ambient step speed
+    time += 0.005; // Ultra-slow smooth ambient step
+    rotationAngle += 0.0004; // Slow continuous rotation
     mouse.x += (mouse.targetX - mouse.x) * 0.03;
     mouse.y += (mouse.targetY - mouse.y) * 0.03;
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    const gridColor = isDark ? 'rgba(118, 159, 134, 0.15)' : 'rgba(118, 159, 134, 0.1)';
-    const orbColor1 = isDark ? 'rgba(143, 174, 155, ' : 'rgba(118, 159, 134, ';
-    const orbColor2 = isDark ? 'rgba(118, 159, 134, ' : 'rgba(143, 174, 155, ';
+    
+    // Multi-color Edvanta Logo Session Palette
+    const logoColorPalette = isDark ? [
+      'rgba(158, 188, 158, ', // Logo Sage Gray
+      'rgba(118, 154, 133, ', // Logo Mineral Sage
+      'rgba(82, 112, 96, ',   // Deep Forest Sage
+      'rgba(180, 205, 184, ', // Soft Mint Sage
+      'rgba(60, 78, 68, '     // Slate Shadow
+    ] : [
+      'rgba(158, 188, 158, ', // Logo Sage Gray
+      'rgba(118, 154, 133, ', // Logo Mineral Sage
+      'rgba(138, 168, 146, ', // Soft Sage
+      'rgba(40, 50, 44, ',    // Logo Charcoal Slate
+      'rgba(180, 205, 184, '  // Pearl Sage
+    ];
+
+    const gridColor = isDark ? 'rgba(158, 188, 158, 0.14)' : 'rgba(158, 188, 158, 0.12)';
+
+    // Rotate entire canvas background slowly
+    ctx.save();
+    ctx.translate(width / 2, height / 2);
+    ctx.rotate(rotationAngle);
+    ctx.translate(-width / 2, -height / 2);
+
     for (let i = 0; i < orbs.length; i++) {
       const orb = orbs[i];
       orb.y -= orb.speedY;
@@ -392,20 +416,24 @@ function init3DBackgroundCanvas() {
       if (orb.y + orb.radius < 0) orb.y = height + orb.radius;
       if (orb.x < 0) orb.x = width;
       if (orb.x > width) orb.x = 0;
-      const currentAlpha = orb.alpha + Math.sin(time * 1.5 + i) * 0.06;
+      
+      const currentAlpha = orb.alpha + Math.sin(time * 1.5 + i) * 0.07;
       const gradient = ctx.createRadialGradient(
-        orb.x + mouse.x * 0.5, orb.y + mouse.y * 0.5, 0,
-        orb.x + mouse.x * 0.5, orb.y + mouse.y * 0.5, orb.radius * 1.5
+        orb.x + mouse.x * 0.4, orb.y + mouse.y * 0.4, 0,
+        orb.x + mouse.x * 0.4, orb.y + mouse.y * 0.4, orb.radius * 1.5
       );
-      const colorChoice = i % 2 === 0 ? orbColor1 : orbColor2;
-      gradient.addColorStop(0, colorChoice + Math.max(0, currentAlpha) + ')');
-      gradient.addColorStop(0.6, colorChoice + (currentAlpha * 0.3) + ')');
-      gradient.addColorStop(1, colorChoice + '0)');
+      
+      const colorPrefix = logoColorPalette[i % logoColorPalette.length];
+      gradient.addColorStop(0, colorPrefix + Math.max(0, currentAlpha) + ')');
+      gradient.addColorStop(0.6, colorPrefix + (currentAlpha * 0.3) + ')');
+      gradient.addColorStop(1, colorPrefix + '0)');
+      
       ctx.beginPath();
-      ctx.arc(orb.x + mouse.x * 0.5, orb.y + mouse.y * 0.5, orb.radius * 1.5, 0, Math.PI * 2);
+      ctx.arc(orb.x + mouse.x * 0.4, orb.y + mouse.y * 0.4, orb.radius * 1.5, 0, Math.PI * 2);
       ctx.fillStyle = gradient;
       ctx.fill();
     }
+
     const rows = 24;
     const cols = 28;
     const spacingX = width / (cols - 4);
@@ -429,6 +457,8 @@ function init3DBackgroundCanvas() {
       ctx.strokeStyle = gridColor;
       ctx.stroke();
     }
+
+    ctx.restore();
     requestAnimationFrame(render);
   }
   render();

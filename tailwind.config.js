@@ -7,30 +7,30 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#769f86',
-          dark: '#4d6c59',
-          light: '#8fae9b',
+          DEFAULT: '#9ebc9e',
+          dark: '#769a85',
+          light: '#e6efe7',
         },
         secondary: {
-          DEFAULT: '#2c3a32',
-          dark: '#1a241e',
-          light: '#42554a',
+          DEFAULT: '#28322c',
+          dark: '#1c2621',
+          light: '#3d4a41',
         },
         accent: {
-          DEFAULT: '#8fae9b',
-          dark: '#5d846c',
-          light: '#c2d4c8',
+          DEFAULT: '#769a85',
+          dark: '#527060',
+          light: '#c8dacd',
         },
-        bgLight: '#f4f7f5',
-        bgDark: '#121815',
+        bgLight: '#f5f7f5',
+        bgDark: '#1a221d',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         manrope: ['Manrope', 'sans-serif'],
       },
       boxShadow: {
-        'glow': '0 0 15px rgba(118, 159, 134, 0.25)',
-        'glow-lg': '0 0 25px rgba(118, 159, 134, 0.45)',
+        'glow': '0 0 15px rgba(158, 188, 158, 0.25)',
+        'glow-lg': '0 0 25px rgba(158, 188, 158, 0.45)',
       }
     },
   },

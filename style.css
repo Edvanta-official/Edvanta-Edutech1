@@ -34,8 +34,8 @@
   --font-body:
     "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  /* Theme variables - Light Mode (Default: Pastel Gray Green) */
-  --bg-app: #f4f7f5;
+  /* Theme variables - Light Mode (Edvanta Logo Sage & Slate Charcoal) */
+  --bg-app: #f5f7f5;
   --font-heading:
     "Poppins", "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
@@ -44,52 +44,53 @@
     sans-serif;
   --bg-gradient: linear-gradient(
     135deg,
-    #f4f7f5 0%,
-    #e4ede6 40%,
-    #ebf2ed 70%,
-    #f0f5f1 100%
+    #f5f7f5 0%,
+    #e2ebe3 40%,
+    #eaf2ec 70%,
+    #f2f6f3 100%
   );
-  --bg-navbar: rgba(244, 247, 245, 0.92);
-  --border-navbar: rgba(118, 159, 134, 0.25);
-  --text-primary: #1c2621;
-  --text-secondary: #2e3a33;
-  --text-tertiary: #4a5a50;
-  --accent: #769f86;
-  --accent-light: #e3ebe5;
+  --bg-navbar: rgba(245, 247, 245, 0.94);
+  --border-navbar: rgba(158, 188, 158, 0.3);
+  --text-primary: #28322c;
+  --text-secondary: #3d4a41;
+  --text-tertiary: #58665c;
+  --accent: #9ebc9e;
+  --accent-light: #e6efe7;
+  --accent-dark: #769a85;
   --accent-gradient: linear-gradient(
     135deg,
-    #769f86 0%,
-    #8fae9b 50%,
-    #5d846c 100%
+    #9ebc9e 0%,
+    #769a85 50%,
+    #527060 100%
   );
   --accent-gradient-hover: linear-gradient(
     135deg,
-    #5d846c 0%,
-    #769f86 50%,
-    #4a6c57 100%
+    #769a85 0%,
+    #527060 50%,
+    #36483e 100%
   );
 
-  --btn-secondary-bg: #2e3d34;
-  --btn-secondary-hover: #769f86;
+  --btn-secondary-bg: #28322c;
+  --btn-secondary-hover: #9ebc9e;
 
   /* Glassmorphism */
-  --glass-bg: rgba(244, 247, 245, 0.88);
-  --glass-border: rgba(118, 159, 134, 0.3);
-  --glass-shadow: 0 12px 35px 0 rgba(118, 159, 134, 0.12);
+  --glass-bg: rgba(245, 247, 245, 0.9);
+  --glass-border: rgba(158, 188, 158, 0.35);
+  --glass-shadow: 0 12px 35px 0 rgba(158, 188, 158, 0.15);
 
   /* UI Elements */
   --card-bg: #ffffff;
-  --card-border: rgba(118, 159, 134, 0.25);
+  --card-border: rgba(158, 188, 158, 0.3);
 
   /* Badge Colors */
-  --badge-bg: #769f86;
-  --badge-text: #ffffff;
+  --badge-bg: #9ebc9e;
+  --badge-text: #28322c;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(118, 159, 134, 0.08);
+  --shadow-sm: 0 2px 8px rgba(40, 50, 44, 0.08);
   --shadow-md:
-    0 10px 25px -5px rgba(118, 159, 134, 0.12), 0 8px 10px -6px rgba(118, 159, 134, 0.08);
-  --shadow-lg: 0 20px 40px -15px rgba(118, 159, 134, 0.18);
+    0 10px 25px -5px rgba(40, 50, 44, 0.12), 0 8px 10px -6px rgba(40, 50, 44, 0.08);
+  --shadow-lg: 0 20px 40px -15px rgba(40, 50, 44, 0.18);
 
   /* Transition speeds */
   --transition-fast: 0.3s ease;
@@ -98,50 +99,51 @@
 }
 
 [data-theme="dark"] {
-  /* Dark Mode Variables - Pastel Sage Dark */
-  --bg-app: #121815;
+  /* Dark Mode Variables - Logo Charcoal & Sage Dark */
+  --bg-app: #1a221d;
   --bg-gradient: linear-gradient(
     135deg,
-    #121815 0%,
-    #18221d 40%,
-    #1c2822 70%,
-    #141d18 100%
+    #1a221d 0%,
+    #212b25 40%,
+    #28322c 70%,
+    #1c2621 100%
   );
-  --bg-navbar: rgba(18, 24, 21, 0.9);
-  --border-navbar: rgba(118, 159, 134, 0.3);
-  --text-primary: #f0f5f2;
-  --text-secondary: #d3dfd7;
-  --text-tertiary: #a1b5aa;
-  --accent: #8fae9b;
-  --accent-light: #24352b;
+  --bg-navbar: rgba(26, 34, 29, 0.92);
+  --border-navbar: rgba(158, 188, 158, 0.35);
+  --text-primary: #f2f7f3;
+  --text-secondary: #d4e0d6;
+  --text-tertiary: #a4b5a7;
+  --accent: #9ebc9e;
+  --accent-light: #2c3830;
+  --accent-dark: #769a85;
   --accent-gradient: linear-gradient(
     135deg,
-    #769f86 0%,
-    #8fae9b 50%,
-    #5d846c 100%
+    #9ebc9e 0%,
+    #769a85 50%,
+    #527060 100%
   );
   --accent-gradient-hover: linear-gradient(
     135deg,
-    #5d846c 0%,
-    #769f86 50%,
-    #4a6c57 100%
+    #769a85 0%,
+    #527060 50%,
+    #36483e 100%
   );
 
-  --btn-secondary-bg: #769f86;
-  --btn-secondary-hover: #8fae9b;
+  --btn-secondary-bg: #9ebc9e;
+  --btn-secondary-hover: #769a85;
 
   /* Glassmorphism */
-  --glass-bg: rgba(18, 24, 21, 0.85);
-  --glass-border: rgba(118, 159, 134, 0.35);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --glass-bg: rgba(26, 34, 29, 0.88);
+  --glass-border: rgba(158, 188, 158, 0.35);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 
   /* UI Elements */
-  --card-bg: rgba(24, 34, 29, 0.92);
-  --card-border: rgba(118, 159, 134, 0.3);
+  --card-bg: rgba(33, 43, 37, 0.94);
+  --card-border: rgba(158, 188, 158, 0.3);
 
   /* Badge Colors */
-  --badge-bg: #8fae9b;
-  --badge-text: #121815;
+  --badge-bg: #9ebc9e;
+  --badge-text: #1a221d;
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
