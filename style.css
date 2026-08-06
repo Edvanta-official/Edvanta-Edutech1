@@ -10960,6 +10960,29 @@ footer.sitemap-footer,
   color: #9ebc9e !important;
 }
 
+/* Green borders for all section div sessions and cards */
+.glass,
+.glass-panel,
+.card,
+.card-3d-effect,
+.bucket-category-card,
+.course-bucket-animated-card,
+.rinex-course-card,
+.job-card,
+.footer-card-box,
+.stat-card,
+.partner-marquee-section,
+.marquee-card,
+.testimonial-card,
+.blog-card,
+.course-card,
+.section-card,
+div[class*="-card"],
+div[class*="panel"] {
+  border-color: #9ebc9e !important;
+}
+
+
 
 
 
