@@ -69,7 +69,7 @@
   animation-play-state: paused;
 }
 .animate-bubble-rotate {
-  animation: rotateBubbleContainer 50s linear infinite;
+  animation: rotateBubbleContainer 90s linear infinite;
   transform-origin: center center;
 }
 .bubble {
