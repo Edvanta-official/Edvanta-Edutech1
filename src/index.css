@@ -66,7 +66,10 @@
   animation: ticker 45s linear infinite;
 }
 .animate-ticker:hover {
-  animation-play-state: paused;
+  animation-play-state: running !important;
+}
+.marquee-infinite-container:hover .marquee-infinite-track {
+  animation-play-state: running !important;
 }
 .animate-bubble-rotate {
   animation: rotateBubbleContainer 90s linear infinite;

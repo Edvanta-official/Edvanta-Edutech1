@@ -1010,7 +1010,7 @@ header {
 
 /* Pause marquee on hover */
 .marquee-container:hover .marquee-track {
-  animation-play-state: paused;
+  animation-play-state: running !important;
 }
 
 .partner-logo {
@@ -4430,7 +4430,7 @@ html {
 }
 
 .partner-marquee-track:hover {
-  animation-play-state: paused !important;
+  animation-play-state: running !important;
 }
 
 @keyframes marqueeContinuous {
@@ -6172,7 +6172,7 @@ footer.sitemap-footer,
 }
 
 .partner-marquee-container:hover .partner-marquee-track {
-  animation-play-state: paused;
+  animation-play-state: running !important;
 }
 
 @keyframes slideRightToLeft {
@@ -10890,7 +10890,7 @@ svg filter#noiseFilter {
 }
 
 .marquee-infinite-container:hover .marquee-infinite-track {
-  animation-play-state: paused;
+  animation-play-state: running !important;
 }
 
 @keyframes marqueeContinuous {
