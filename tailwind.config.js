@@ -1,36 +1,36 @@
 export default {
   content: [
     "./index.html",
-    "./src*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0B1F3A',
-          dark: '#05101E',
-          light: '#133563',
+          DEFAULT: '#769f86',
+          dark: '#4d6c59',
+          light: '#8fae9b',
         },
         secondary: {
-          DEFAULT: '#1E90FF',
-          dark: '#0066CC',
-          light: '#4DA6FF',
+          DEFAULT: '#2c3a32',
+          dark: '#1a241e',
+          light: '#42554a',
         },
         accent: {
-          DEFAULT: '#00D4FF',
-          dark: '#00A3C4',
-          light: '#4DEDFF',
+          DEFAULT: '#8fae9b',
+          dark: '#5d846c',
+          light: '#c2d4c8',
         },
-        bgLight: '#F8FAFC',
-        bgDark: '#0F172A',
+        bgLight: '#f4f7f5',
+        bgDark: '#121815',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         manrope: ['Manrope', 'sans-serif'],
       },
       boxShadow: {
-        'glow': '0 0 15px rgba(0, 212, 255, 0.25)',
-        'glow-lg': '0 0 25px rgba(0, 212, 255, 0.45)',
+        'glow': '0 0 15px rgba(118, 159, 134, 0.25)',
+        'glow-lg': '0 0 25px rgba(118, 159, 134, 0.45)',
       }
     },
   },

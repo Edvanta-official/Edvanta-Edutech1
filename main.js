@@ -359,32 +359,32 @@ function init3DBackgroundCanvas() {
       orbs.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: Math.random() * 40 + 20,
-        speedY: Math.random() * 0.4 + 0.2,
-        speedX: (Math.random() - 0.5) * 0.3,
-        pulseSpeed: Math.random() * 0.02 + 0.01,
-        alpha: Math.random() * 0.4 + 0.15
+        radius: Math.random() * 50 + 25,
+        speedY: Math.random() * 0.15 + 0.05,
+        speedX: (Math.random() - 0.5) * 0.15,
+        pulseSpeed: Math.random() * 0.01 + 0.005,
+        alpha: Math.random() * 0.35 + 0.15
       });
     }
   }
   window.addEventListener('resize', resize);
   resize();
   window.addEventListener('mousemove', (e) => {
-    mouse.targetX = (e.clientX / width - 0.5) * 40;
-    mouse.targetY = (e.clientY / height - 0.5) * 40;
+    mouse.targetX = (e.clientX / width - 0.5) * 30;
+    mouse.targetY = (e.clientY / height - 0.5) * 30;
   });
   function render() {
     if (window.innerWidth <= 768) {
       return; // Skip continuous heavy 3D particle rendering on mobile for 60fps scrolling
     }
     ctx.clearRect(0, 0, width, height);
-    time += 0.02;
-    mouse.x += (mouse.targetX - mouse.x) * 0.05;
-    mouse.y += (mouse.targetY - mouse.y) * 0.05;
+    time += 0.006; // Slow ambient step speed
+    mouse.x += (mouse.targetX - mouse.x) * 0.03;
+    mouse.y += (mouse.targetY - mouse.y) * 0.03;
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    const gridColor = isDark ? 'rgba(56, 189, 248, 0.12)' : 'rgba(37, 99, 235, 0.08)';
-    const orbColor1 = isDark ? 'rgba(56, 189, 248, ' : 'rgba(37, 99, 235, ';
-    const orbColor2 = isDark ? 'rgba(139, 92, 246, ' : 'rgba(2, 132, 199, ';
+    const gridColor = isDark ? 'rgba(118, 159, 134, 0.15)' : 'rgba(118, 159, 134, 0.1)';
+    const orbColor1 = isDark ? 'rgba(143, 174, 155, ' : 'rgba(118, 159, 134, ';
+    const orbColor2 = isDark ? 'rgba(118, 159, 134, ' : 'rgba(143, 174, 155, ';
     for (let i = 0; i < orbs.length; i++) {
       const orb = orbs[i];
       orb.y -= orb.speedY;
@@ -392,7 +392,7 @@ function init3DBackgroundCanvas() {
       if (orb.y + orb.radius < 0) orb.y = height + orb.radius;
       if (orb.x < 0) orb.x = width;
       if (orb.x > width) orb.x = 0;
-      const currentAlpha = orb.alpha + Math.sin(time * 2 + i) * 0.08;
+      const currentAlpha = orb.alpha + Math.sin(time * 1.5 + i) * 0.06;
       const gradient = ctx.createRadialGradient(
         orb.x + mouse.x * 0.5, orb.y + mouse.y * 0.5, 0,
         orb.x + mouse.x * 0.5, orb.y + mouse.y * 0.5, orb.radius * 1.5
@@ -414,11 +414,11 @@ function init3DBackgroundCanvas() {
     ctx.lineWidth = isDark ? 1.2 : 1.0;
     for (let r = 0; r < rows; r++) {
       const perspectiveScale = Math.pow(r / rows, 1.8);
-      const y = horizon + r * spacingY * (perspectiveScale + 0.2) + mouse.y * 0.4;
+      const y = horizon + r * spacingY * (perspectiveScale + 0.2) + mouse.y * 0.3;
       ctx.beginPath();
       for (let c = 0; c <= cols; c++) {
-        const x = (c - 2) * spacingX + (c - cols / 2) * perspectiveScale * 25 + mouse.x * 0.3;
-        const wave = Math.sin(time + c * 0.3 + r * 0.2) * 14 * perspectiveScale;
+        const x = (c - 2) * spacingX + (c - cols / 2) * perspectiveScale * 25 + mouse.x * 0.2;
+        const wave = Math.sin(time + c * 0.2 + r * 0.15) * 12 * perspectiveScale;
         const drawY = y + wave;
         if (c === 0) {
           ctx.moveTo(x, drawY);
