@@ -53,23 +53,23 @@
   --text-primary: #000000;
   --text-secondary: #1e293b;
   --text-tertiary: #475569;
-  --accent: #16a34a;
+  --accent: #9ebc9e;
   --accent-light: #dcfce7;
   --accent-gradient: linear-gradient(
     135deg,
-    #16a34a 0%,
-    #22c55e 50%,
-    #15803d 100%
+    #9ebc9e 0%,
+    #9ebc9e 50%,
+    #769a85 100%
   );
   --accent-gradient-hover: linear-gradient(
     135deg,
-    #15803d 0%,
-    #16a34a 50%,
+    #769a85 0%,
+    #9ebc9e 50%,
     #166534 100%
   );
 
   --btn-secondary-bg: #000000;
-  --btn-secondary-hover: #16a34a;
+  --btn-secondary-hover: #9ebc9e;
 
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.9);
@@ -81,7 +81,7 @@
   --card-border: rgba(226, 232, 240, 0.9);
 
   /* Badge Colors */
-  --badge-bg: #16a34a;
+  --badge-bg: #9ebc9e;
   --badge-text: #ffffff;
 
   /* Shadows */
@@ -101,44 +101,44 @@
   --bg-app: #000000;
   --bg-gradient: radial-gradient(
     circle at 10% 20%,
-    rgba(22, 163, 74, 0.2) 0%,
+    rgba(158, 188, 158, 0.2) 0%,
     rgba(5, 5, 5, 0.95) 45%,
     rgba(0, 0, 0, 1) 90%
   );
   --bg-navbar: rgba(0, 0, 0, 0.85);
-  --border-navbar: rgba(34, 197, 94, 0.3);
+  --border-navbar: rgba(158, 188, 158, 0.3);
   --text-primary: #ffffff;
   --text-secondary: #e2e8f0;
   --text-tertiary: #94a3b8;
-  --accent: #22c55e;
+  --accent: #9ebc9e;
   --accent-light: #14532d;
   --accent-gradient: linear-gradient(
     135deg,
-    #16a34a 0%,
-    #22c55e 50%,
-    #15803d 100%
+    #9ebc9e 0%,
+    #9ebc9e 50%,
+    #769a85 100%
   );
   --accent-gradient-hover: linear-gradient(
     135deg,
-    #15803d 0%,
-    #16a34a 50%,
+    #769a85 0%,
+    #9ebc9e 50%,
     #166534 100%
   );
 
-  --btn-secondary-bg: #16a34a;
-  --btn-secondary-hover: #22c55e;
+  --btn-secondary-bg: #9ebc9e;
+  --btn-secondary-hover: #9ebc9e;
 
   /* Glassmorphism */
   --glass-bg: rgba(0, 0, 0, 0.75);
-  --glass-border: rgba(34, 197, 94, 0.3);
+  --glass-border: rgba(158, 188, 158, 0.3);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 
   /* UI Elements */
   --card-bg: rgba(15, 23, 42, 0.9);
-  --card-border: rgba(34, 197, 94, 0.3);
+  --card-border: rgba(158, 188, 158, 0.3);
 
   /* Badge Colors */
-  --badge-bg: #22c55e;
+  --badge-bg: #9ebc9e;
   --badge-text: #ffffff;
 
   /* Shadows */
@@ -244,7 +244,7 @@ body::before {
     /* Green, White, Red, Yellow, Orange Rotating Bubbles */
     radial-gradient(
       circle at 12% 18%,
-      rgba(34, 197, 94, 0.85) 0%,
+      rgba(158, 188, 158, 0.85) 0%,
       rgba(21, 128, 61, 0.3) 65px,
       transparent 85px
     ),
@@ -286,7 +286,7 @@ body::before {
     /* Orange Bubble */
     radial-gradient(
         circle at 35% 48%,
-        rgba(34, 197, 94, 0.85) 0%,
+        rgba(158, 188, 158, 0.85) 0%,
         rgba(21, 128, 61, 0.3) 62px,
         transparent 82px
       ),
@@ -344,7 +344,7 @@ body::after {
     /* Yellow Bubble */
     radial-gradient(
         circle at 50% 88%,
-        rgba(34, 197, 94, 0.85) 0%,
+        rgba(158, 188, 158, 0.85) 0%,
         rgba(21, 128, 61, 0.3) 68px,
         transparent 88px
       ),
@@ -3125,13 +3125,13 @@ footer {
   font-weight: 900 !important;
   font-size: 15px !important;
   letter-spacing: 5px !important;
-  color: #16a34a !important;
-  -webkit-text-fill-color: #16a34a !important;
+  color: #9ebc9e !important;
+  -webkit-text-fill-color: #9ebc9e !important;
   text-transform: uppercase;
   display: block;
   margin-bottom: 14px;
   opacity: 1 !important;
-  text-shadow: 0 0 16px rgba(34, 197, 94, 0.75), 0 0 30px rgba(34, 197, 94, 0.4) !important;
+  text-shadow: 0 0 16px rgba(158, 188, 158, 0.75), 0 0 30px rgba(158, 188, 158, 0.4) !important;
 }
 
 .giant-edvanta-watermark {
@@ -3140,28 +3140,28 @@ footer {
   max-height: 125px;
   height: auto;
   opacity: 0.38 !important;
-  fill: #22c55e !important;
+  fill: #9ebc9e !important;
   margin: 0 auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.55)) drop-shadow(0 0 45px rgba(34, 197, 94, 0.3)) !important;
+  filter: drop-shadow(0 0 20px rgba(158, 188, 158, 0.55)) drop-shadow(0 0 45px rgba(158, 188, 158, 0.3)) !important;
   transition: opacity 0.3s ease, fill 0.3s ease, filter 0.3s ease;
 }
 
 [data-theme="dark"] .footer-giant-watermark-container {
-  border-top-color: rgba(34, 197, 94, 0.25) !important;
+  border-top-color: rgba(158, 188, 158, 0.25) !important;
 }
 
 [data-theme="dark"] .footer-giant-watermark-container span {
-  color: #22c55e !important;
-  -webkit-text-fill-color: #22c55e !important;
-  text-shadow: 0 0 20px rgba(34, 197, 94, 0.85), 0 0 40px rgba(34, 197, 94, 0.5) !important;
+  color: #9ebc9e !important;
+  -webkit-text-fill-color: #9ebc9e !important;
+  text-shadow: 0 0 20px rgba(158, 188, 158, 0.85), 0 0 40px rgba(158, 188, 158, 0.5) !important;
   opacity: 1 !important;
 }
 
 [data-theme="dark"] .giant-edvanta-watermark {
-  fill: #22c55e !important;
+  fill: #9ebc9e !important;
   opacity: 0.45 !important;
-  filter: drop-shadow(0 0 25px rgba(34, 197, 94, 0.65)) drop-shadow(0 0 50px rgba(34, 197, 94, 0.35)) !important;
+  filter: drop-shadow(0 0 25px rgba(158, 188, 158, 0.65)) drop-shadow(0 0 50px rgba(158, 188, 158, 0.35)) !important;
 }
 
 /* --- About Page Some Words Card Responsive layout --- */
@@ -3831,19 +3831,19 @@ html {
   height: 0 !important;
   border-left: 0.15em solid transparent !important;
   border-right: 0.15em solid transparent !important;
-  border-bottom: 0.26em solid #22c55e !important; /* Emerald green triangle */
-  filter: drop-shadow(0 0 2px rgba(34, 197, 94, 0.6)) !important;
+  border-bottom: 0.26em solid #9ebc9e !important; /* Emerald green triangle */
+  filter: drop-shadow(0 0 2px rgba(158, 188, 158, 0.6)) !important;
   animation: greenTrianglePulse 3s infinite ease-in-out alternate !important;
 }
 
 @keyframes greenTrianglePulse {
   0% {
     opacity: 0.75;
-    filter: drop-shadow(0 0 1px rgba(34, 197, 94, 0.4)) !important;
+    filter: drop-shadow(0 0 1px rgba(158, 188, 158, 0.4)) !important;
   }
   100% {
     opacity: 1;
-    filter: drop-shadow(0 0 4px rgba(34, 197, 94, 0.85)) !important;
+    filter: drop-shadow(0 0 4px rgba(158, 188, 158, 0.85)) !important;
   }
 }
 
@@ -3899,19 +3899,19 @@ html {
 }
 
 .green-triangle-path {
-  fill: #22c55e !important;
-  filter: drop-shadow(0 0 4px rgba(34, 197, 94, 0.5)) !important;
+  fill: #9ebc9e !important;
+  filter: drop-shadow(0 0 4px rgba(158, 188, 158, 0.5)) !important;
   animation: svgGreenTrianglePulse 3s infinite ease-in-out alternate !important;
 }
 
 @keyframes svgGreenTrianglePulse {
   0% {
     opacity: 0.8;
-    filter: drop-shadow(0 0 3px rgba(34, 197, 94, 0.4)) !important;
+    filter: drop-shadow(0 0 3px rgba(158, 188, 158, 0.4)) !important;
   }
   100% {
     opacity: 1;
-    filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.85)) !important;
+    filter: drop-shadow(0 0 10px rgba(158, 188, 158, 0.85)) !important;
   }
 }
 
@@ -4121,7 +4121,7 @@ html {
 }
 .badge-green {
   background: #dcfce7;
-  color: #16a34a;
+  color: #9ebc9e;
 }
 
 /* --- Multi-Tier Programs Flyout Sub-Menu (Reference Screenshot Design) --- */
@@ -5761,8 +5761,8 @@ footer.sitemap-footer,
   text-align: center;
   max-width: 1150px;
   margin: 0 auto;
-  border: 2.5px solid #22c55e;
-  box-shadow: 0 20px 50px rgba(34, 197, 94, 0.25);
+  border: 2.5px solid #9ebc9e;
+  box-shadow: 0 20px 50px rgba(158, 188, 158, 0.25);
   transition:
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.4s ease,
@@ -5773,32 +5773,32 @@ footer.sitemap-footer,
 
 [data-theme="dark"] .course-bucket-animated-card {
   background: transparent !important;
-  border-color: #22c55e;
-  box-shadow: 0 20px 50px rgba(34, 197, 94, 0.3);
+  border-color: #9ebc9e;
+  box-shadow: 0 20px 50px rgba(158, 188, 158, 0.3);
 }
 
 .course-bucket-animated-card:hover {
   transform: translateY(-8px) scale(1.015);
   box-shadow:
-    0 30px 70px rgba(34, 197, 94, 0.35),
-    0 0 40px rgba(34, 197, 94, 0.2);
+    0 30px 70px rgba(158, 188, 158, 0.35),
+    0 0 40px rgba(158, 188, 158, 0.2);
 }
 
 @keyframes bucketBorderGlow {
   0% {
-    border-color: #22c55e;
+    border-color: #9ebc9e;
     box-shadow:
-      0 20px 50px rgba(34, 197, 94, 0.18),
-      0 0 20px rgba(34, 197, 94, 0.15);
+      0 20px 50px rgba(158, 188, 158, 0.18),
+      0 0 20px rgba(158, 188, 158, 0.15);
   }
   50% {
-    border-color: #16a34a;
+    border-color: #9ebc9e;
     box-shadow:
-      0 25px 60px rgba(22, 163, 74, 0.32),
-      0 0 35px rgba(22, 163, 74, 0.3);
+      0 25px 60px rgba(158, 188, 158, 0.32),
+      0 0 35px rgba(158, 188, 158, 0.3);
   }
   100% {
-    border-color: #4ade80;
+    border-color: #9ebc9e;
     box-shadow:
       0 22px 55px rgba(74, 222, 128, 0.25),
       0 0 25px rgba(74, 222, 128, 0.2);
@@ -5842,7 +5842,7 @@ footer.sitemap-footer,
   font-size: 42px;
   display: inline-block;
   animation: cartFloatBounce 3s ease-in-out infinite;
-  filter: drop-shadow(0 8px 16px rgba(34, 197, 94, 0.3));
+  filter: drop-shadow(0 8px 16px rgba(158, 188, 158, 0.3));
 }
 
 @keyframes cartFloatBounce {
@@ -5865,7 +5865,7 @@ footer.sitemap-footer,
   font-size: 36px;
   margin: 0;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #000000 0%, #16a34a 50%, #22c55e 100%);
+  background: linear-gradient(135deg, #000000 0%, #9ebc9e 50%, #9ebc9e 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5873,7 +5873,7 @@ footer.sitemap-footer,
 }
 
 [data-theme="dark"] .animated-bucket-heading {
-  background: linear-gradient(135deg, #ffffff 0%, #4ade80 50%, #22c55e 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #9ebc9e 50%, #9ebc9e 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5894,7 +5894,7 @@ footer.sitemap-footer,
 /* 5. Animated Action Button ("OPEN ANIMATED BUCKET ↓") */
 .btn-animated-bucket {
   position: relative;
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #9ebc9e 0%, #9ebc9e 100%);
   color: #ffffff !important;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
@@ -5904,7 +5904,7 @@ footer.sitemap-footer,
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 12px 35px rgba(22, 163, 74, 0.4);
+  box-shadow: 0 12px 35px rgba(158, 188, 158, 0.4);
   text-transform: uppercase;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
@@ -5919,7 +5919,7 @@ footer.sitemap-footer,
   position: absolute;
   inset: -4px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #4ade80, #16a34a, #22c55e);
+  background: linear-gradient(135deg, #9ebc9e, #9ebc9e, #9ebc9e);
   z-index: -1;
   opacity: 0.6;
   filter: blur(8px);
@@ -5928,7 +5928,7 @@ footer.sitemap-footer,
 
 .btn-animated-bucket:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 18px 45px rgba(22, 163, 74, 0.55);
+  box-shadow: 0 18px 45px rgba(158, 188, 158, 0.55);
 }
 
 .btn-animated-bucket:active {
@@ -6002,14 +6002,14 @@ footer.sitemap-footer,
   background: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  border: 1.5px solid rgba(34, 197, 94, 0.5);
+  border: 1.5px solid rgba(158, 188, 158, 0.5);
   border-radius: 999px;
   padding: 8px 18px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 12px;
-  color: #15803d;
+  color: #769a85;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -6018,7 +6018,7 @@ footer.sitemap-footer,
 
 [data-theme="dark"] .div-floating-badge {
   background: transparent !important;
-  color: #4ade80;
+  color: #9ebc9e;
   border-color: rgba(74, 222, 128, 0.4);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
@@ -6080,7 +6080,7 @@ footer.sitemap-footer,
   border-radius: inherit;
   background: linear-gradient(
     135deg,
-    rgba(34, 197, 94, 0.12) 0%,
+    rgba(158, 188, 158, 0.12) 0%,
     transparent 60%
   );
   opacity: 0;
@@ -6094,9 +6094,9 @@ footer.sitemap-footer,
 
 .bucket-category-card:hover {
   transform: translateY(-8px) scale(1.02) !important;
-  background: rgba(34, 197, 94, 0.06) !important;
-  box-shadow: 0 20px 45px rgba(34, 197, 94, 0.3) !important;
-  border-color: #22c55e !important;
+  background: rgba(158, 188, 158, 0.06) !important;
+  box-shadow: 0 20px 45px rgba(158, 188, 158, 0.3) !important;
+  border-color: #9ebc9e !important;
 }
 
 .bucket-category-card:hover .category-emoji {
@@ -6179,30 +6179,30 @@ footer.sitemap-footer,
 }
 
 .nav-item-new:hover {
-  background: rgba(34, 197, 94, 0.14) !important;
-  color: #16a34a !important;
-  border: 1px solid rgba(34, 197, 94, 0.3) !important;
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.12) !important;
+  background: rgba(158, 188, 158, 0.14) !important;
+  color: #9ebc9e !important;
+  border: 1px solid rgba(158, 188, 158, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(158, 188, 158, 0.12) !important;
   transform: translateY(-1px) !important;
 }
 
 .nav-item-new:hover span.badge-new,
 .nav-item-new:hover span {
-  background: #16a34a !important;
+  background: #9ebc9e !important;
   color: #ffffff !important;
 }
 
 .nav-item-new.active {
-  background: rgba(34, 197, 94, 0.2) !important;
-  color: #16a34a !important;
+  background: rgba(158, 188, 158, 0.2) !important;
+  color: #9ebc9e !important;
   font-weight: 800 !important;
-  border: 1.5px solid rgba(34, 197, 94, 0.4) !important;
-  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.15) !important;
+  border: 1.5px solid rgba(158, 188, 158, 0.4) !important;
+  box-shadow: 0 4px 14px rgba(158, 188, 158, 0.15) !important;
 }
 
 .nav-item-new.active span.badge-new,
 .nav-item-new.active span {
-  background: #16a34a !important;
+  background: #9ebc9e !important;
   color: #ffffff !important;
 }
 
@@ -6233,8 +6233,8 @@ footer.sitemap-footer,
 }
 
 .dropdown-item-link:hover {
-  background: rgba(34, 197, 94, 0.15) !important;
-  color: #16a34a !important;
+  background: rgba(158, 188, 158, 0.15) !important;
+  color: #9ebc9e !important;
   transform: translateX(4px) !important;
 }
 
@@ -6253,10 +6253,10 @@ footer.sitemap-footer,
 .nav-signup-btn,
 a.btn-signup-new,
 button.btn-signup-new {
-  background: #16a34a !important;
+  background: #9ebc9e !important;
   color: #ffffff !important;
-  border: 1px solid #16a34a !important;
-  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.35) !important;
+  border: 1px solid #9ebc9e !important;
+  box-shadow: 0 8px 24px rgba(158, 188, 158, 0.35) !important;
   transition: all 0.3s ease !important;
 }
 
@@ -6265,11 +6265,11 @@ button.btn-signup-new {
 .nav-signup-btn:hover,
 a.btn-signup-new:hover,
 button.btn-signup-new:hover {
-  background: #15803d !important;
+  background: #769a85 !important;
   color: #ffffff !important;
-  border-color: #15803d !important;
+  border-color: #769a85 !important;
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.5) !important;
+  box-shadow: 0 12px 30px rgba(158, 188, 158, 0.5) !important;
 }
 
 /* Floating WhatsApp Widget Styling */
@@ -6723,8 +6723,8 @@ button.btn-signup-new:hover {
     width: 100% !important;
     border-radius: 28px !important;
     overflow: hidden !important;
-    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important;
-    box-shadow: 0 20px 45px rgba(22, 163, 74, 0.35) !important;
+    background: linear-gradient(135deg, #9ebc9e 0%, #769a85 100%) !important;
+    box-shadow: 0 20px 45px rgba(158, 188, 158, 0.35) !important;
     position: relative !important;
     z-index: 10 !important;
   }
@@ -6893,7 +6893,7 @@ button.btn-signup-new:hover {
     min-width: 40px !important;
     min-height: 40px !important;
     background: #ffffff !important;
-    border: 1.5px solid rgba(34, 197, 94, 0.4) !important;
+    border: 1.5px solid rgba(158, 188, 158, 0.4) !important;
     border-radius: 50% !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
     cursor: pointer !important;
@@ -6904,8 +6904,8 @@ button.btn-signup-new:hover {
 
   .mobile-hamburger-btn:hover,
   #mobileMenuOpenBtn:hover {
-    background: rgba(34, 197, 94, 0.1) !important;
-    border-color: #16a34a !important;
+    background: rgba(158, 188, 158, 0.1) !important;
+    border-color: #9ebc9e !important;
     transform: scale(1.05) !important;
   }
 
@@ -6916,7 +6916,7 @@ button.btn-signup-new:hover {
     pointer-events: none !important;
     width: 18px !important;
     height: 18px !important;
-    stroke: #16a34a !important;
+    stroke: #9ebc9e !important;
   }
 
   .logo-card-container,
@@ -7080,7 +7080,7 @@ button.btn-signup-new:hover {
   font-family: 'Poppins', sans-serif !important;
   font-weight: 900 !important;
   font-size: 22px !important;
-  color: #16a34a !important;
+  color: #9ebc9e !important;
   letter-spacing: 2px !important;
 }
 
@@ -7125,9 +7125,9 @@ button.btn-signup-new:hover {
 
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
-  background: rgba(34, 197, 94, 0.12) !important;
-  color: #16a34a !important;
-  border-color: #22c55e !important;
+  background: rgba(158, 188, 158, 0.12) !important;
+  color: #9ebc9e !important;
+  border-color: #9ebc9e !important;
   transform: translateX(4px) !important;
 }
 
@@ -7138,14 +7138,14 @@ button.btn-signup-new:hover {
   justify-content: center !important;
   height: 50px !important;
   width: 100% !important;
-  background: #16a34a !important;
+  background: #9ebc9e !important;
   color: #ffffff !important;
   font-family: 'Poppins', sans-serif !important;
   font-weight: 800 !important;
   font-size: 15px !important;
   border-radius: 999px !important;
   text-decoration: none !important;
-  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4) !important;
+  box-shadow: 0 10px 25px rgba(158, 188, 158, 0.4) !important;
   box-sizing: border-box !important;
 }
 
@@ -7363,7 +7363,7 @@ svg filter#noiseFilter {
     min-width: 40px !important;
     min-height: 40px !important;
     background: #ffffff !important;
-    border: 1.5px solid rgba(34, 197, 94, 0.4) !important;
+    border: 1.5px solid rgba(158, 188, 158, 0.4) !important;
     border-radius: 50% !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
     cursor: pointer !important;
@@ -7379,7 +7379,7 @@ svg filter#noiseFilter {
     pointer-events: none !important;
     width: 18px !important;
     height: 18px !important;
-    stroke: #16a34a !important;
+    stroke: #9ebc9e !important;
   }
 
   .logo-card-container,
@@ -7540,7 +7540,7 @@ svg filter#noiseFilter {
   }
 
   /* Green Course Detail Hero Card */
-  main.container > div:first-child[style*="background: #22c55e"],
+  main.container > div:first-child[style*="background: #9ebc9e"],
   main.container > div:first-child {
     padding: 24px 18px 28px 18px !important;
     border-radius: 20px !important;
@@ -7773,18 +7773,18 @@ svg filter#noiseFilter {
         font-family: 'Poppins', sans-serif;
         font-size: 0.85rem;
         font-weight: 700;
-        background: rgba(34, 197, 94, 0.1);
+        background: rgba(158, 188, 158, 0.1);
         color: #000000 !important;
-        border: 1px solid rgba(34, 197, 94, 0.3);
+        border: 1px solid rgba(158, 188, 158, 0.3);
         cursor: pointer;
         transition: all 0.2s ease;
       }
-      .tab-btn:hover { border-color: #16a34a; }
+      .tab-btn:hover { border-color: #9ebc9e; }
       .tab-btn.active {
-        background: #16a34a !important;
+        background: #9ebc9e !important;
         color: #ffffff !important;
-        border-color: #16a34a !important;
-        box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
+        border-color: #9ebc9e !important;
+        box-shadow: 0 4px 14px rgba(158, 188, 158, 0.35);
       }
       .search-input-blogs {
         padding: 12px 20px 12px 44px;
@@ -7945,22 +7945,22 @@ svg filter#noiseFilter {
         border-radius: 999px;
         font-size: 0.88rem;
         font-weight: 800;
-        background: rgba(34, 197, 94, 0.12);
+        background: rgba(158, 188, 158, 0.12);
         color: #000000 !important;
-        border: 1px solid rgba(34, 197, 94, 0.35);
+        border: 1px solid rgba(158, 188, 158, 0.35);
         cursor: pointer;
         transition: all var(--transition-fast);
       }
       .tab-btn:hover {
         color: #000000 !important;
-        border-color: #16a34a !important;
-        background: rgba(34, 197, 94, 0.22);
+        border-color: #9ebc9e !important;
+        background: rgba(158, 188, 158, 0.22);
       }
       .tab-btn.active {
-        background: #16a34a !important;
+        background: #9ebc9e !important;
         color: #ffffff !important;
-        border-color: #16a34a !important;
-        box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
+        border-color: #9ebc9e !important;
+        box-shadow: 0 4px 14px rgba(158, 188, 158, 0.35);
       }
       .search-box {
         position: relative;
@@ -8386,7 +8386,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8395,13 +8395,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -8446,7 +8446,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8455,13 +8455,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -8506,7 +8506,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8515,13 +8515,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -8566,7 +8566,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8575,13 +8575,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -8626,7 +8626,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8635,13 +8635,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -8686,7 +8686,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8695,13 +8695,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -8746,7 +8746,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8755,13 +8755,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -8806,7 +8806,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8815,13 +8815,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -8866,7 +8866,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8875,13 +8875,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -8926,7 +8926,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8935,13 +8935,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -8986,7 +8986,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -8995,13 +8995,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9046,7 +9046,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9055,13 +9055,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9106,7 +9106,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9115,13 +9115,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9166,7 +9166,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9175,13 +9175,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9226,7 +9226,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9235,13 +9235,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9286,7 +9286,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9295,13 +9295,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9346,7 +9346,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9355,13 +9355,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9406,7 +9406,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9415,13 +9415,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9466,7 +9466,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9475,13 +9475,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9526,7 +9526,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9535,13 +9535,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9586,7 +9586,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9595,13 +9595,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9646,7 +9646,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9655,13 +9655,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9706,7 +9706,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9715,13 +9715,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9766,7 +9766,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9775,13 +9775,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9826,7 +9826,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9835,13 +9835,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9886,7 +9886,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9895,13 +9895,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -9946,7 +9946,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -9955,13 +9955,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -10006,7 +10006,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -10015,13 +10015,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -10066,7 +10066,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -10075,13 +10075,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -10126,7 +10126,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -10135,13 +10135,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -10186,7 +10186,7 @@ svg filter#noiseFilter {
       transition: border-color 0.2s;
     }
     .syllabus-module:hover {
-      border-color: rgba(34, 197, 94, 0.25);
+      border-color: rgba(158, 188, 158, 0.25);
     }
     .skills-pills {
       display: flex;
@@ -10195,13 +10195,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -10255,13 +10255,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 600;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -10315,13 +10315,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 600;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -10375,13 +10375,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 600;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -10435,13 +10435,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 600;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -10495,13 +10495,13 @@ svg filter#noiseFilter {
       margin-top: 15px;
     }
     .skill-pill {
-      background: rgba(34, 197, 94, 0.12);
-      color: #16a34a;
+      background: rgba(158, 188, 158, 0.12);
+      color: #9ebc9e;
       font-size: 13px;
       font-weight: 600;
       padding: 6px 14px;
       border-radius: 999px;
-      border: 1.5px solid rgba(34, 197, 94, 0.3);
+      border: 1.5px solid rgba(158, 188, 158, 0.3);
     }
     .spec-card {
       border: 1px solid rgba(0,0,0,0.05);
@@ -10532,7 +10532,7 @@ svg filter#noiseFilter {
       .legal-badge {
         display: inline-block;
         background: rgba(14, 165, 233, 0.12);
-        color: #16a34a;
+        color: #9ebc9e;
         font-family: 'Poppins', sans-serif;
         font-size: 11px;
         font-weight: 800;
@@ -10593,8 +10593,8 @@ svg filter#noiseFilter {
         color: #f8fafc !important;
       }
       .legal-section h2 .sec-icon {
-        background: rgba(34, 197, 94, 0.25);
-        color: #16a34a;
+        background: rgba(158, 188, 158, 0.25);
+        color: #9ebc9e;
         font-size: 1.1rem;
         padding: 6px 12px;
         border-radius: 10px;
@@ -10632,13 +10632,13 @@ svg filter#noiseFilter {
         content: "•";
         position: absolute;
         left: 8px;
-        color: #16a34a;
+        color: #9ebc9e;
         font-weight: bold;
         font-size: 1.3rem;
       }
       .highlight-box {
-        background: rgba(34, 197, 94, 0.25) !important;
-        border-left: 4px solid #16a34a;
+        background: rgba(158, 188, 158, 0.25) !important;
+        border-left: 4px solid #9ebc9e;
         padding: 18px 24px;
         border-radius: 0 16px 16px 0;
         margin: 20px 0;
@@ -10650,7 +10650,7 @@ svg filter#noiseFilter {
       }
       [data-theme="dark"] .highlight-box {
         color: #f8fafc !important;
-        background: rgba(34, 197, 94, 0.25) !important;
+        background: rgba(158, 188, 158, 0.25) !important;
       }
       @media (max-width: 768px) {
         .legal-hero h1 { font-size: 2.4rem; }
@@ -10693,7 +10693,7 @@ svg filter#noiseFilter {
       .legal-badge {
         display: inline-block;
         background: rgba(14, 165, 233, 0.12);
-        color: #16a34a;
+        color: #9ebc9e;
         font-family: 'Poppins', sans-serif;
         font-size: 11px;
         font-weight: 800;
@@ -10754,7 +10754,7 @@ svg filter#noiseFilter {
         color: #f8fafc !important;
       }
       .legal-section h2 .sec-num {
-        background: #16a34a;
+        background: #9ebc9e;
         color: #ffffff !important;
         font-size: 0.85rem;
         font-weight: 800;
@@ -10794,13 +10794,13 @@ svg filter#noiseFilter {
         content: "•";
         position: absolute;
         left: 8px;
-        color: #16a34a;
+        color: #9ebc9e;
         font-weight: bold;
         font-size: 1.3rem;
       }
       .highlight-box {
-        background: rgba(34, 197, 94, 0.25) !important;
-        border-left: 4px solid #16a34a;
+        background: rgba(158, 188, 158, 0.25) !important;
+        border-left: 4px solid #9ebc9e;
         padding: 18px 24px;
         border-radius: 0 16px 16px 0;
         margin: 20px 0;
@@ -10812,7 +10812,7 @@ svg filter#noiseFilter {
       }
       [data-theme="dark"] .highlight-box {
         color: #f8fafc !important;
-        background: rgba(34, 197, 94, 0.25) !important;
+        background: rgba(158, 188, 158, 0.25) !important;
       }
       @media (max-width: 768px) {
         .legal-hero h1 { font-size: 2.4rem; }
@@ -10828,10 +10828,10 @@ svg filter#noiseFilter {
 
 .social-pill:hover {
   transform: translateY(-6px) scale(1.1) !important;
-  background: #22c55e !important;
+  background: #9ebc9e !important;
   color: #ffffff !important;
-  border-color: #4ade80 !important;
-  box-shadow: 0 14px 28px rgba(34, 197, 94, 0.45), 0 0 20px rgba(34, 197, 94, 0.6) !important;
+  border-color: #9ebc9e !important;
+  box-shadow: 0 14px 28px rgba(158, 188, 158, 0.45), 0 0 20px rgba(158, 188, 158, 0.6) !important;
   z-index: 10 !important;
 }
 
@@ -10891,7 +10891,7 @@ footer.sitemap-footer,
 .sitemap-footer .footer-card-box {
   background: #ffffff !important;
   color: #0f172a !important;
-  border: 2px solid rgba(34, 197, 94, 0.4) !important;
+  border: 2px solid rgba(158, 188, 158, 0.4) !important;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06) !important;
 }
 
@@ -10910,21 +10910,21 @@ footer.sitemap-footer,
 }
 
 .sitemap-footer .sitemap-link:hover {
-  color: #16a34a !important;
+  color: #9ebc9e !important;
 }
 
 /* Watermark SVG & Bottom Copyright Legal Row */
 .giant-edvanta-watermark {
-  fill: #16a34a !important;
+  fill: #9ebc9e !important;
   opacity: 0.25 !important;
 }
 
 .footer-giant-watermark-container {
-  border-top: 1px solid rgba(34, 197, 94, 0.25) !important;
+  border-top: 1px solid rgba(158, 188, 158, 0.25) !important;
 }
 
 .footer-giant-watermark-container + div {
-  border-top: 1px solid rgba(34, 197, 94, 0.25) !important;
+  border-top: 1px solid rgba(158, 188, 158, 0.25) !important;
 }
 
 .footer-giant-watermark-container + div span,
@@ -10933,7 +10933,7 @@ footer.sitemap-footer,
 }
 
 .footer-giant-watermark-container + div a:hover {
-  color: #16a34a !important;
+  color: #9ebc9e !important;
 }
 
 
