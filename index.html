@@ -239,18 +239,21 @@
          </svg>
         </span>
        </a>
-       <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; color: #334155;">
-        Enrolled by <strong style="color: #000000;">15,000+ Students</strong>
-       </span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; color: #334155;">
+         Enrolled by <strong style="color: #000000;">15,000+ Students</strong>
+        </span>
+       </div>
       </div>
-     </div>
-     <div class="hero-student-card-container" onclick="toggleHeroStudentImage()" title="Click image to change photo" style="cursor: pointer; position: relative;">
-        <!-- Glowing Soft Aura Background -->
-        <div class="hero-ambient-glow" style="position: absolute; inset: -15px; background: radial-gradient(circle, rgba(158, 188, 158, 0.45) 0%, rgba(15, 23, 42, 0.05) 70%); border-radius: 45px; filter: blur(25px); z-index: 1;"></div>
+      <div class="hero-student-card-container" onclick="toggleHeroStudentImage()" title="Click image to change photo" style="cursor: pointer; position: relative;">
+        <!-- 1. Soft Ambient Glowing Aura -->
+        <div class="hero-ambient-glow"></div>
+
+        <!-- 2. Backside Animated Layered Card -->
+        <div class="hero-backside-card"></div>
         
-        <!-- Main Image Card Frame -->
-        <div id="heroStudentImgContainer" class="hero-main-card-frame" style="position: relative; z-index: 10; height: 440px; border-radius: 32px; overflow: hidden; background: linear-gradient(145deg, rgba(158, 188, 158, 0.25) 0%, rgba(255, 255, 255, 0.6) 100%); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 2px solid rgba(158, 188, 158, 0.4); box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12); cursor: pointer; display: flex; align-items: center; justify-content: center;">
-         <img id="mainHeroStudentImg" alt="Student Learner" src="images/hero_student_girl.jpg" style="max-height: 100%; width: auto; max-width: 100%; object-fit: contain; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.15)); cursor: pointer; transition: all 0.3s ease; display: block; margin: 0 auto;"/>
+        <!-- 3. Main Student Image Card Frame -->
+        <div id="heroStudentImgContainer" class="hero-main-card-frame">
+         <img id="mainHeroStudentImg" alt="Student Learner" src="images/hero_student_girl.jpg" />
         </div>
        <div class="floating-badge-animate-slow hero-badge-certifications" style="position: absolute; top: 70px; right: 0; z-index: 25; background: #ffffff; border-radius: 18px; padding: 12px 20px; box-shadow: 0 18px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; gap: 10px; pointer-events: none;">
        <svg height="22" viewbox="0 0 24 24" width="22">

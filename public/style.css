@@ -6787,13 +6787,82 @@ button.btn-signup-new:hover {
   }
 }
 
-/* --- Hero Student Section: Ultra-Smooth Ambient Glow & Floating Animation --- */
+/* --- Hero Student Section: 3D Layered Card with Animated Backside --- */
 .hero-student-card-container {
   position: relative;
   height: 480px;
+  width: 360px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+/* 1. Soft Ambient Aura */
+.hero-ambient-glow {
+  position: absolute;
+  inset: -15px;
+  background: radial-gradient(circle, rgba(158, 188, 158, 0.55) 0%, rgba(21, 128, 61, 0.15) 60%, transparent 80%);
+  border-radius: 45px;
+  filter: blur(25px);
+  z-index: 1;
+  pointer-events: none;
+  animation: heroAuraPulse 4s ease-in-out infinite;
+}
+
+/* 2. Backside Animated Card Layer */
+.hero-backside-card {
+  position: absolute;
+  width: 100%;
+  height: 430px;
+  background: linear-gradient(135deg, #769a85 0%, #0f172a 100%);
+  border-radius: 36px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+  z-index: 2;
+  pointer-events: none;
+  animation: heroBacksideCardAnim 7s ease-in-out infinite;
+}
+
+/* 3. Main Student Image Card Frame */
+.hero-main-card-frame {
+  position: relative;
+  z-index: 10;
+  height: 440px;
+  width: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #9ebc9e 0%, #769a85 100%);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 25px 55px rgba(15, 23, 42, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: heroSmoothFloat 5s ease-in-out infinite;
+}
+
+.hero-main-card-frame img,
+.hero-student-card-container img {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 28px !important;
+  display: block !important;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Keyframes */
+@keyframes heroBacksideCardAnim {
+  0% {
+    transform: rotate(-10deg) translateY(0px) scale(0.95);
+  }
+  50% {
+    transform: rotate(-16deg) translateY(-12px) scale(0.98);
+  }
+  100% {
+    transform: rotate(-10deg) translateY(0px) scale(0.95);
+  }
 }
 
 @keyframes heroSmoothFloat {
@@ -6801,7 +6870,7 @@ button.btn-signup-new:hover {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   100% {
     transform: translateY(0px);
@@ -6811,7 +6880,7 @@ button.btn-signup-new:hover {
 @keyframes heroAuraPulse {
   0% {
     opacity: 0.6;
-    transform: scale(0.97);
+    transform: scale(0.96);
   }
   50% {
     opacity: 0.95;
@@ -6819,7 +6888,7 @@ button.btn-signup-new:hover {
   }
   100% {
     opacity: 0.6;
-    transform: scale(0.97);
+    transform: scale(0.96);
   }
 }
 
@@ -6841,26 +6910,20 @@ button.btn-signup-new:hover {
   }
 }
 
-.hero-main-card-frame {
-  animation: heroSmoothFloat 6s ease-in-out infinite !important;
-}
-
-.hero-ambient-glow {
-  animation: heroAuraPulse 4s ease-in-out infinite !important;
-}
-
 @media screen and (max-width: 768px) {
   .hero-student-card-container {
-    height: auto !important;
-    min-height: 410px !important;
+    height: 420px !important;
     width: 100% !important;
-    max-width: 330px !important;
-    margin: 15px auto 0 auto !important;
+    max-width: 320px !important;
+    margin: 20px auto 0 auto !important;
     position: relative !important;
   }
 
-  .hero-student-card-container > div[style*="transform: rotate"] {
-    display: none !important;
+  .hero-backside-card {
+    height: 370px !important;
+    border-radius: 28px !important;
+    display: block !important;
+    animation: heroBacksideCardAnim 6s ease-in-out infinite !important;
   }
 
   .hero-ambient-glow {
@@ -6877,20 +6940,16 @@ button.btn-signup-new:hover {
     height: 380px !important;
     width: 100% !important;
     border-radius: 28px !important;
-    overflow: hidden !important;
-    background: linear-gradient(145deg, rgba(158, 188, 158, 0.3) 0%, rgba(255, 255, 255, 0.8) 100%) !important;
-    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12) !important;
-    position: relative !important;
-    z-index: 10 !important;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18) !important;
     animation: heroSmoothFloat 5s ease-in-out infinite !important;
   }
 
   .hero-student-card-container img {
     height: 100% !important;
     width: 100% !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    border-radius: 28px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 26px !important;
     display: block !important;
   }
 
