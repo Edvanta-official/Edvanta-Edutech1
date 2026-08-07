@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://edvanta-edutech1.vercel.app/sitemap.xml
+Sitemap: https://edvanta-official.github.io/Edvanta-Edutech1/sitemap.xml
