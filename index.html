@@ -172,9 +172,12 @@
       </div>
       <div style="position: absolute; width: 35px; height: 90px; background: #000000; border-radius: 18px; transform: rotate(-22deg); left: 70px; top: 30px; opacity: 0.85;">
       </div>
-      <div style="position: relative; z-index: 10; height: 440px; border-radius: 28px; overflow: hidden; background: transparent;">
-       <img alt="Student Learner" src="images/hero_student_girl.jpg" style="height: 100%; object-fit: contain; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));"/>
-      </div>
+      <div id="heroStudentImgContainer" onclick="openStudentPhotoModal(2)" title="Click to view 2nd photo (Boys Image)" style="position: relative; z-index: 10; height: 440px; border-radius: 28px; overflow: hidden; background: transparent; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img id="mainHeroStudentImg" alt="Student Learner" src="images/hero_student_girl.jpg" style="height: 100%; object-fit: contain; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));"/>
+        <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+          <span>📸 Click to view 2nd photo</span>
+        </div>
+       </div>
       <div class="floating-badge-animate-slow hero-badge-certifications" style="position: absolute; top: 70px; right: 0; z-index: 25; background: #ffffff; border-radius: 18px; padding: 12px 20px; box-shadow: 0 18px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; gap: 10px;">
        <svg height="22" viewbox="0 0 24 24" width="22">
         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4">
@@ -1565,15 +1568,74 @@
      </div>
     </div>
    </div>
-  </footer>
-  <script src="./main.js" type="module">
+  <!-- STUDENT PHOTO POPUP MODAL -->
+  <div id="studentPhotoModal" style="display: none; position: fixed; inset: 0; z-index: 10000; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); align-items: center; justify-content: center; padding: 20px;">
+    <div style="position: relative; background: #ffffff; border-radius: 28px; max-width: 650px; width: 100%; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.3); border: 2px solid rgba(158, 188, 158, 0.4); text-align: center; padding: 24px;">
+      
+      <!-- Close Button -->
+      <button onclick="closeStudentPhotoModal()" style="position: absolute; top: 18px; right: 18px; background: #f1f5f9; border: none; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease; z-index: 10;" onmouseover="this.style.background='#e2e8f0'" onmouseout="this.style.background='#f1f5f9'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <!-- Modal Title -->
+      <div style="margin-bottom: 16px;">
+        <span style="font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 2px; color: #9ebc9e; text-transform: uppercase;">EDVANTA LEARNERS &amp; PLACEMENTS</span>
+        <h3 id="modalPhotoTitle" style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 800; color: #0f172a; margin: 4px 0 0 0;">Edvanta Successful Students</h3>
+      </div>
+
+      <!-- Image Display Container -->
+      <div style="width: 100%; height: 420px; border-radius: 20px; overflow: hidden; background: #f8fafc; display: flex; align-items: center; justify-content: center; position: relative; padding: 10px;">
+        <img id="modalStudentImg" src="images/students_photo.jpg" alt="Edvanta Learners" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 16px; transition: all 0.3s ease; filter: drop-shadow(0 10px 25px rgba(0,0,0,0.1));" />
+      </div>
+
+      <!-- Footer & Controls -->
+      <div style="margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+        <div style="display: flex; gap: 8px;">
+          <button onclick="showModalImage(1)" id="imgTab1" style="padding: 8px 16px; border-radius: 12px; border: 1px solid #cbd5e1; background: #f1f5f9; color: #334155; font-size: 12px; font-weight: 700; cursor: pointer; transition: all 0.2s;">1st Photo (Girl)</button>
+          <button onclick="showModalImage(2)" id="imgTab2" style="padding: 8px 16px; border-radius: 12px; border: 1px solid #9ebc9e; background: #9ebc9e; color: #ffffff; font-size: 12px; font-weight: 700; cursor: pointer; transition: all 0.2s;">2nd Photo (Boys)</button>
+        </div>
+        <button onclick="closeStudentPhotoModal()" style="padding: 10px 22px; background: #0f172a; color: #ffffff; border: none; border-radius: 14px; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; cursor: pointer;">Close</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function openStudentPhotoModal(imgNum) {
+      if (typeof imgNum === 'undefined') imgNum = 2;
+      var modal = document.getElementById('studentPhotoModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        showModalImage(imgNum);
+      }
+    }
+
+    function closeStudentPhotoModal() {
+      var modal = document.getElementById('studentPhotoModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function showModalImage(num) {
+      var imgEl = document.getElementById('modalStudentImg');
+      var mainImg = document.getElementById('mainHeroStudentImg');
+      var titleEl = document.getElementById('modalPhotoTitle');
+      var tab1 = document.getElementById('imgTab1');
+      var tab2 = document.getElementById('imgTab2');
+
+      if (num === 1) {
+        if (imgEl) imgEl.src = 'images/hero_student_girl.jpg';
+        if (mainImg) mainImg.src = 'images/hero_student_girl.jpg';
+        if (titleEl) titleEl.innerText = '1st Photo - Edvanta Student Learner';
+        if (tab1) { tab1.style.background = '#9ebc9e'; tab1.style.color = '#fff'; tab1.style.borderColor = '#9ebc9e'; }
+        if (tab2) { tab2.style.background = '#f1f5f9'; tab2.style.color = '#334155'; tab2.style.borderColor = '#cbd5e1'; }
+      } else {
+        if (imgEl) imgEl.src = 'images/students_photo.jpg';
+        if (mainImg) mainImg.src = 'images/students_photo.jpg';
+        if (titleEl) titleEl.innerText = '2nd Photo - Edvanta Successful Students';
+        if (tab2) { tab2.style.background = '#9ebc9e'; tab2.style.color = '#fff'; tab2.style.borderColor = '#9ebc9e'; }
+        if (tab1) { tab1.style.background = '#f1f5f9'; tab1.style.color = '#334155'; tab1.style.borderColor = '#cbd5e1'; }
+      }
+    }
   </script>
-     
-  
-  
-  
-  
-  
-  
 </body>
 </html>
