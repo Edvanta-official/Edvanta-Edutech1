@@ -6532,11 +6532,24 @@ button.btn-signup-new:hover {
     overflow: hidden !important;
   }
 
-  /* Hardware acceleration for scroll containers */
+  /* Ensure background gradient layers cover 100% of mobile screen without clipping */
+  body::before,
+  body::after {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    z-index: -10 !important;
+    pointer-events: none !important;
+    display: block !important;
+  }
+
   body, html {
     -webkit-overflow-scrolling: touch;
-    transform: translateZ(0);
-    will-change: scroll-position;
+    width: 100% !important;
+    overflow-x: hidden !important;
   }
 
 
