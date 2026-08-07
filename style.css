@@ -6770,11 +6770,29 @@ button.btn-signup-new:hover {
   }
   50% {
     opacity: 0.95;
-    transform: scale(1.03);
+    transform: scale(1.04);
   }
   100% {
     opacity: 0.6;
     transform: scale(0.97);
+  }
+}
+
+@keyframes floatBadgeMobileRight {
+  0% {
+    transform: scale(0.78) translateY(0px);
+  }
+  100% {
+    transform: scale(0.78) translateY(-10px);
+  }
+}
+
+@keyframes floatBadgeMobileLeft {
+  0% {
+    transform: scale(0.85) translateY(0px);
+  }
+  100% {
+    transform: scale(0.85) translateY(-10px);
   }
 }
 
@@ -6789,7 +6807,7 @@ button.btn-signup-new:hover {
 @media screen and (max-width: 768px) {
   .hero-student-card-container {
     height: auto !important;
-    min-height: 400px !important;
+    min-height: 410px !important;
     width: 100% !important;
     max-width: 330px !important;
     margin: 15px auto 0 auto !important;
@@ -6800,16 +6818,26 @@ button.btn-signup-new:hover {
     display: none !important;
   }
 
+  .hero-ambient-glow {
+    position: absolute !important;
+    inset: -10px !important;
+    border-radius: 40px !important;
+    background: radial-gradient(circle, rgba(158, 188, 158, 0.5) 0%, rgba(15, 23, 42, 0.05) 70%) !important;
+    filter: blur(20px) !important;
+    z-index: 1 !important;
+    animation: heroAuraPulse 4s ease-in-out infinite !important;
+  }
+
   .hero-main-card-frame {
     height: 380px !important;
     width: 100% !important;
     border-radius: 28px !important;
     overflow: hidden !important;
-    background: linear-gradient(145deg, rgba(158, 188, 158, 0.3) 0%, rgba(255, 255, 255, 0.7) 100%) !important;
+    background: linear-gradient(145deg, rgba(158, 188, 158, 0.3) 0%, rgba(255, 255, 255, 0.8) 100%) !important;
     box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12) !important;
     position: relative !important;
     z-index: 10 !important;
-    animation: heroSmoothFloat 6s ease-in-out infinite !important;
+    animation: heroSmoothFloat 5s ease-in-out infinite !important;
   }
 
   .hero-student-card-container img {
@@ -6821,32 +6849,32 @@ button.btn-signup-new:hover {
     display: block !important;
   }
 
-  /* 1. Google Certifications Badge (Top Right - Compact Size) */
+  /* 1. Google Certifications Badge (Top Right - Floating Animation Enabled) */
   .hero-student-card-container .hero-badge-certifications {
     position: absolute !important;
     top: 10px !important;
     right: -8px !important;
     bottom: auto !important;
     left: auto !important;
-    transform: scale(0.68) !important;
     transform-origin: top right !important;
     padding: 8px 14px !important;
     border-radius: 14px !important;
     z-index: 30 !important;
+    animation: floatBadgeMobileRight 4.5s ease-in-out infinite alternate !important;
   }
 
-  /* 2. Enrolled Students Badge (Moved to Bottom Left as requested) */
+  /* 2. Enrolled Students Badge (Bottom Left - Floating Animation Enabled) */
   .hero-student-card-container .hero-badge-enrolled {
     position: absolute !important;
     bottom: 20px !important;
-    left: -15px !important;
+    left: -12px !important;
     top: auto !important;
     right: auto !important;
-    transform: scale(0.85) !important;
+    transform-origin: bottom left !important;
     z-index: 30 !important;
+    animation: floatBadgeMobileLeft 4s ease-in-out infinite alternate !important;
   }
 
-  /* 3. Hide 4.4 Review Box on Mobile as requested */
   .hero-student-card-container .hero-badge-reviews {
     display: none !important;
   }
