@@ -165,25 +165,36 @@
        </span>
       </div>
      </div>
-     <div class="hero-student-card-container">
-       <div style="position: absolute; width: 320px; height: 410px; background: linear-gradient(135deg, #9ebc9e 0%, #000000 100%); border-radius: 40px; transform: rotate(-22deg) skewX(-4deg); right: 50px; top: 15px; box-shadow: 0 20px 50px rgba(158, 188, 158, 0.3);">
-       </div>
-       <div style="position: absolute; width: 50px; height: 140px; background: #9ebc9e; border-radius: 25px; transform: rotate(-22deg); right: 20px; top: 0px; opacity: 0.9;">
-       </div>
-       <div style="position: absolute; width: 35px; height: 90px; background: #000000; border-radius: 18px; transform: rotate(-22deg); left: 70px; top: 30px; opacity: 0.85;">
-       </div>
-       <div id="heroStudentImgContainer" onclick="toggleHeroStudentImage()" title="Click to swap image (Girl / Boys)" style="position: relative; z-index: 10; height: 440px; border-radius: 28px; overflow: hidden; background: transparent; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-        <img id="mainHeroStudentImg" alt="Student Learner" src="images/hero_student_girl.jpg" style="height: 100%; object-fit: contain; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15)); transition: opacity 0.2s ease;"/>
-        
-        <div id="heroImgToggleBadge" style="position: absolute; bottom: 12px; right: 12px; background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px); color: #ffffff; padding: 7px 15px; border-radius: 22px; font-size: 11.5px; font-weight: 700; font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.25); user-select: none;">
-          <span id="heroImgBadgeText">🔄 Click for Boys photo (1/2)</span>
+     <div class="hero-student-card-container" onclick="toggleHeroStudentImage()" title="Click anywhere near or on the image to switch between Girl & Boys photo" style="cursor: pointer; position: relative;">
+        <div style="position: absolute; width: 320px; height: 410px; background: linear-gradient(135deg, #9ebc9e 0%, #000000 100%); border-radius: 40px; transform: rotate(-22deg) skewX(-4deg); right: 50px; top: 15px; box-shadow: 0 20px 50px rgba(158, 188, 158, 0.3);">
         </div>
+        <div style="position: absolute; width: 50px; height: 140px; background: #9ebc9e; border-radius: 25px; transform: rotate(-22deg); right: 20px; top: 0px; opacity: 0.9;">
+        </div>
+        <div style="position: absolute; width: 35px; height: 90px; background: #000000; border-radius: 18px; transform: rotate(-22deg); left: 70px; top: 30px; opacity: 0.85;">
+        </div>
+        <div id="heroStudentImgContainer" style="position: relative; z-index: 10; height: 440px; border-radius: 28px; overflow: hidden; background: transparent; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+         <img id="mainHeroStudentImg" alt="Student Learner" src="images/hero_student_girl.jpg" style="height: 100%; object-fit: contain; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15)); transition: opacity 0.2s ease;"/>
+         
+         <!-- Previous Arrow Button -->
+         <button onclick="event.stopPropagation(); setHeroStudentImage(1);" title="Switch to Girl Photo" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3); color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 30; transition: all 0.2s ease; box-shadow: 0 8px 20px rgba(0,0,0,0.25);" onmouseover="this.style.background='#9ebc9e'" onmouseout="this.style.background='rgba(15, 23, 42, 0.85)'">
+           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="15 18 9 12 15 6"/></svg>
+         </button>
 
-        <div style="position: absolute; bottom: 16px; left: 20px; display: flex; gap: 6px; z-index: 15;">
-          <span id="heroDot1" style="width: 10px; height: 10px; border-radius: 50%; background: #9ebc9e; display: inline-block; transition: all 0.3s; box-shadow: 0 0 8px rgba(158, 188, 158, 0.8);"></span>
-          <span id="heroDot2" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.5); display: inline-block; transition: all 0.3s;"></span>
-       </div>
-      <div class="floating-badge-animate-slow hero-badge-certifications" style="position: absolute; top: 70px; right: 0; z-index: 25; background: #ffffff; border-radius: 18px; padding: 12px 20px; box-shadow: 0 18px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; gap: 10px;">
+         <!-- Next Arrow Button -->
+         <button onclick="event.stopPropagation(); setHeroStudentImage(2);" title="Switch to Boys Photo" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3); color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 30; transition: all 0.2s ease; box-shadow: 0 8px 20px rgba(0,0,0,0.25);" onmouseover="this.style.background='#9ebc9e'" onmouseout="this.style.background='rgba(15, 23, 42, 0.85)'">
+           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
+         </button>
+
+         <div id="heroImgToggleBadge" style="position: absolute; bottom: 12px; right: 12px; background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px); color: #ffffff; padding: 8px 16px; border-radius: 22px; font-size: 12px; font-weight: 700; font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.25); user-select: none; z-index: 20;">
+           <span id="heroImgBadgeText">🔄 Click to switch photo (1/2)</span>
+         </div>
+
+         <div style="position: absolute; bottom: 16px; left: 20px; display: flex; gap: 8px; z-index: 20; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(6px); padding: 6px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">
+           <span id="heroDot1" onclick="event.stopPropagation(); setHeroStudentImage(1);" title="Girl Photo" style="width: 12px; height: 12px; border-radius: 50%; background: #9ebc9e; display: inline-block; cursor: pointer; transition: all 0.3s; box-shadow: 0 0 8px rgba(158, 188, 158, 0.8);"></span>
+           <span id="heroDot2" onclick="event.stopPropagation(); setHeroStudentImage(2);" title="Boys Photo" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); display: inline-block; cursor: pointer; transition: all 0.3s;"></span>
+         </div>
+        </div>
+       <div class="floating-badge-animate-slow hero-badge-certifications" style="position: absolute; top: 70px; right: 0; z-index: 25; background: #ffffff; border-radius: 18px; padding: 12px 20px; box-shadow: 0 18px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; gap: 10px;">
        <svg height="22" viewbox="0 0 24 24" width="22">
         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4">
         </path>
