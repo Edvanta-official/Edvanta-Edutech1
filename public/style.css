@@ -6787,7 +6787,7 @@ button.btn-signup-new:hover {
   }
 }
 
-/* --- Hero Student Section: 3D Layered Card with Animated Backside --- */
+/* --- Hero Student Section: Sleek Card Frame with Soft Glowing Ambient Aura --- */
 .hero-student-card-container {
   position: relative;
   height: 480px;
@@ -6799,32 +6799,23 @@ button.btn-signup-new:hover {
   cursor: pointer;
 }
 
-/* 1. Soft Ambient Aura */
+/* 1. Soft Ambient Glowing Aura */
 .hero-ambient-glow {
   position: absolute;
-  inset: -15px;
-  background: radial-gradient(circle, rgba(158, 188, 158, 0.55) 0%, rgba(21, 128, 61, 0.15) 60%, transparent 80%);
-  border-radius: 45px;
-  filter: blur(25px);
+  inset: -12px;
+  background: radial-gradient(circle, rgba(158, 188, 158, 0.6) 0%, rgba(21, 128, 61, 0.15) 60%, transparent 80%);
+  border-radius: 42px;
+  filter: blur(22px);
   z-index: 1;
   pointer-events: none;
   animation: heroAuraPulse 4s ease-in-out infinite;
 }
 
-/* 2. Backside Animated Card Layer */
 .hero-backside-card {
-  position: absolute;
-  width: 100%;
-  height: 430px;
-  background: linear-gradient(135deg, #769a85 0%, #0f172a 100%);
-  border-radius: 36px;
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
-  z-index: 2;
-  pointer-events: none;
-  animation: heroBacksideCardAnim 7s ease-in-out infinite;
+  display: none !important;
 }
 
-/* 3. Main Student Image Card Frame */
+/* 2. Main Student Image Card Frame */
 .hero-main-card-frame {
   position: relative;
   z-index: 10;
@@ -6832,9 +6823,9 @@ button.btn-signup-new:hover {
   width: 100%;
   border-radius: 32px;
   overflow: hidden;
-  background: linear-gradient(145deg, #9ebc9e 0%, #769a85 100%);
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 25px 55px rgba(15, 23, 42, 0.2);
+  background: #9ebc9e;
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 25px 55px rgba(158, 188, 158, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6852,19 +6843,6 @@ button.btn-signup-new:hover {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Keyframes */
-@keyframes heroBacksideCardAnim {
-  0% {
-    transform: rotate(-10deg) translateY(0px) scale(0.95);
-  }
-  50% {
-    transform: rotate(-16deg) translateY(-12px) scale(0.98);
-  }
-  100% {
-    transform: rotate(-10deg) translateY(0px) scale(0.95);
-  }
-}
-
 @keyframes heroSmoothFloat {
   0% {
     transform: translateY(0px);
@@ -6880,15 +6858,15 @@ button.btn-signup-new:hover {
 @keyframes heroAuraPulse {
   0% {
     opacity: 0.6;
-    transform: scale(0.96);
+    transform: scale(0.97);
   }
   50% {
     opacity: 0.95;
-    transform: scale(1.04);
+    transform: scale(1.03);
   }
   100% {
     opacity: 0.6;
-    transform: scale(0.96);
+    transform: scale(0.97);
   }
 }
 
@@ -6912,26 +6890,19 @@ button.btn-signup-new:hover {
 
 @media screen and (max-width: 768px) {
   .hero-student-card-container {
-    height: 420px !important;
+    height: 400px !important;
     width: 100% !important;
     max-width: 320px !important;
     margin: 20px auto 0 auto !important;
     position: relative !important;
   }
 
-  .hero-backside-card {
-    height: 370px !important;
-    border-radius: 28px !important;
-    display: block !important;
-    animation: heroBacksideCardAnim 6s ease-in-out infinite !important;
-  }
-
   .hero-ambient-glow {
     position: absolute !important;
     inset: -10px !important;
-    border-radius: 40px !important;
-    background: radial-gradient(circle, rgba(158, 188, 158, 0.5) 0%, rgba(15, 23, 42, 0.05) 70%) !important;
-    filter: blur(20px) !important;
+    border-radius: 36px !important;
+    background: radial-gradient(circle, rgba(158, 188, 158, 0.55) 0%, rgba(15, 23, 42, 0.05) 70%) !important;
+    filter: blur(18px) !important;
     z-index: 1 !important;
     animation: heroAuraPulse 4s ease-in-out infinite !important;
   }
@@ -6940,7 +6911,8 @@ button.btn-signup-new:hover {
     height: 380px !important;
     width: 100% !important;
     border-radius: 28px !important;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18) !important;
+    background: #9ebc9e !important;
+    box-shadow: 0 18px 40px rgba(158, 188, 158, 0.35) !important;
     animation: heroSmoothFloat 5s ease-in-out infinite !important;
   }
 
