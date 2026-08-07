@@ -31,6 +31,9 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+    watch: {
+      ignored: ['**/images/**', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.ico']
+    },
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
