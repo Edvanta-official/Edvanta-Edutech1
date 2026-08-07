@@ -166,17 +166,22 @@
       </div>
      </div>
      <div class="hero-student-card-container">
-      <div style="position: absolute; width: 320px; height: 410px; background: linear-gradient(135deg, #9ebc9e 0%, #000000 100%); border-radius: 40px; transform: rotate(-22deg) skewX(-4deg); right: 50px; top: 15px; box-shadow: 0 20px 50px rgba(158, 188, 158, 0.3);">
-      </div>
-      <div style="position: absolute; width: 50px; height: 140px; background: #9ebc9e; border-radius: 25px; transform: rotate(-22deg); right: 20px; top: 0px; opacity: 0.9;">
-      </div>
-      <div style="position: absolute; width: 35px; height: 90px; background: #000000; border-radius: 18px; transform: rotate(-22deg); left: 70px; top: 30px; opacity: 0.85;">
-      </div>
-      <div id="heroStudentImgContainer" onclick="openStudentPhotoModal(2)" title="Click to view 2nd photo (Boys Image)" style="position: relative; z-index: 10; height: 440px; border-radius: 28px; overflow: hidden; background: transparent; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-        <img id="mainHeroStudentImg" alt="Student Learner" src="images/hero_student_girl.jpg" style="height: 100%; object-fit: contain; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));"/>
-        <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
-          <span>📸 Click to view 2nd photo</span>
+       <div style="position: absolute; width: 320px; height: 410px; background: linear-gradient(135deg, #9ebc9e 0%, #000000 100%); border-radius: 40px; transform: rotate(-22deg) skewX(-4deg); right: 50px; top: 15px; box-shadow: 0 20px 50px rgba(158, 188, 158, 0.3);">
+       </div>
+       <div style="position: absolute; width: 50px; height: 140px; background: #9ebc9e; border-radius: 25px; transform: rotate(-22deg); right: 20px; top: 0px; opacity: 0.9;">
+       </div>
+       <div style="position: absolute; width: 35px; height: 90px; background: #000000; border-radius: 18px; transform: rotate(-22deg); left: 70px; top: 30px; opacity: 0.85;">
+       </div>
+       <div id="heroStudentImgContainer" onclick="toggleHeroStudentImage()" title="Click to swap image (Girl / Boys)" style="position: relative; z-index: 10; height: 440px; border-radius: 28px; overflow: hidden; background: transparent; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img id="mainHeroStudentImg" alt="Student Learner" src="images/hero_student_girl.jpg" style="height: 100%; object-fit: contain; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15)); transition: opacity 0.2s ease;"/>
+        
+        <div id="heroImgToggleBadge" style="position: absolute; bottom: 12px; right: 12px; background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px); color: #ffffff; padding: 7px 15px; border-radius: 22px; font-size: 11.5px; font-weight: 700; font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.25); box-shadow: 0 10px 25px rgba(0,0,0,0.25); user-select: none;">
+          <span id="heroImgBadgeText">🔄 Click for Boys photo (1/2)</span>
         </div>
+
+        <div style="position: absolute; bottom: 16px; left: 20px; display: flex; gap: 6px; z-index: 15;">
+          <span id="heroDot1" style="width: 10px; height: 10px; border-radius: 50%; background: #9ebc9e; display: inline-block; transition: all 0.3s; box-shadow: 0 0 8px rgba(158, 188, 158, 0.8);"></span>
+          <span id="heroDot2" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.5); display: inline-block; transition: all 0.3s;"></span>
        </div>
       <div class="floating-badge-animate-slow hero-badge-certifications" style="position: absolute; top: 70px; right: 0; z-index: 25; background: #ffffff; border-radius: 18px; padding: 12px 20px; box-shadow: 0 18px 40px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; gap: 10px;">
        <svg height="22" viewbox="0 0 24 24" width="22">
@@ -1601,8 +1606,44 @@
   </div>
 
   <script>
+    var currentHeroImgIndex = 1;
+
+    function toggleHeroStudentImage() {
+      if (currentHeroImgIndex === 1) {
+        setHeroStudentImage(2);
+      } else {
+        setHeroStudentImage(1);
+      }
+    }
+
+    function setHeroStudentImage(num) {
+      currentHeroImgIndex = num;
+      var mainImg = document.getElementById('mainHeroStudentImg');
+      var badgeText = document.getElementById('heroImgBadgeText');
+      var dot1 = document.getElementById('heroDot1');
+      var dot2 = document.getElementById('heroDot2');
+
+      if (mainImg) {
+        mainImg.style.opacity = '0.3';
+        setTimeout(function() {
+          if (num === 1) {
+            mainImg.src = 'images/hero_student_girl.jpg';
+            if (badgeText) badgeText.innerHTML = '🔄 Click for Boys photo (1/2)';
+            if (dot1) { dot1.style.background = '#9ebc9e'; dot1.style.boxShadow = '0 0 8px rgba(158, 188, 158, 0.8)'; }
+            if (dot2) { dot2.style.background = 'rgba(255,255,255,0.5)'; dot2.style.boxShadow = 'none'; }
+          } else {
+            mainImg.src = 'images/students_photo.jpg';
+            if (badgeText) badgeText.innerHTML = '🔄 Click for Girl photo (2/2)';
+            if (dot2) { dot2.style.background = '#9ebc9e'; dot2.style.boxShadow = '0 0 8px rgba(158, 188, 158, 0.8)'; }
+            if (dot1) { dot1.style.background = 'rgba(255,255,255,0.5)'; dot1.style.boxShadow = 'none'; }
+          }
+          mainImg.style.opacity = '1';
+        }, 150);
+      }
+    }
+
     function openStudentPhotoModal(imgNum) {
-      if (typeof imgNum === 'undefined') imgNum = 2;
+      if (typeof imgNum === 'undefined') imgNum = currentHeroImgIndex;
       var modal = document.getElementById('studentPhotoModal');
       if (modal) {
         modal.style.display = 'flex';
@@ -1617,21 +1658,20 @@
 
     function showModalImage(num) {
       var imgEl = document.getElementById('modalStudentImg');
-      var mainImg = document.getElementById('mainHeroStudentImg');
       var titleEl = document.getElementById('modalPhotoTitle');
       var tab1 = document.getElementById('imgTab1');
       var tab2 = document.getElementById('imgTab2');
 
+      setHeroStudentImage(num);
+
       if (num === 1) {
         if (imgEl) imgEl.src = 'images/hero_student_girl.jpg';
-        if (mainImg) mainImg.src = 'images/hero_student_girl.jpg';
-        if (titleEl) titleEl.innerText = '1st Photo - Edvanta Student Learner';
+        if (titleEl) titleEl.innerText = '1st Photo - Edvanta Student Learner (Girl)';
         if (tab1) { tab1.style.background = '#9ebc9e'; tab1.style.color = '#fff'; tab1.style.borderColor = '#9ebc9e'; }
         if (tab2) { tab2.style.background = '#f1f5f9'; tab2.style.color = '#334155'; tab2.style.borderColor = '#cbd5e1'; }
       } else {
         if (imgEl) imgEl.src = 'images/students_photo.jpg';
-        if (mainImg) mainImg.src = 'images/students_photo.jpg';
-        if (titleEl) titleEl.innerText = '2nd Photo - Edvanta Successful Students';
+        if (titleEl) titleEl.innerText = '2nd Photo - Edvanta Successful Students (Boys)';
         if (tab2) { tab2.style.background = '#9ebc9e'; tab2.style.color = '#fff'; tab2.style.borderColor = '#9ebc9e'; }
         if (tab1) { tab1.style.background = '#f1f5f9'; tab1.style.color = '#334155'; tab1.style.borderColor = '#cbd5e1'; }
       }
