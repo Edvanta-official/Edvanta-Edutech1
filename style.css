@@ -6751,34 +6751,63 @@ button.btn-signup-new:hover {
   justify-content: center;
 }
 
+@keyframes slowRotatingCardBackground {
+  0% {
+    transform: rotate(-18deg) scale(0.85);
+  }
+  25% {
+    transform: rotate(-12deg) scale(0.88);
+  }
+  50% {
+    transform: rotate(-24deg) scale(0.86);
+  }
+  75% {
+    transform: rotate(-14deg) scale(0.84);
+  }
+  100% {
+    transform: rotate(-18deg) scale(0.85);
+  }
+}
+
+@keyframes slowRotatingCardBackgroundDesktop {
+  0% {
+    transform: rotate(-22deg) skewX(-4deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-14deg) skewX(-2deg) translateY(-10px);
+  }
+  100% {
+    transform: rotate(-22deg) skewX(-4deg) translateY(0);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero-student-card-container {
     height: auto !important;
-    min-height: 400px !important;
+    min-height: 420px !important;
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 340px !important;
     margin: 20px auto 0 auto !important;
     position: relative !important;
   }
 
-  /* Show decorative rotated background cards on mobile screens matching reference design */
+  /* Show decorative rotated background cards on mobile screens with slow smooth rotation */
   .hero-student-card-container > div[style*="transform: rotate"] {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
-    transform: rotate(-18deg) scale(0.82) !important;
+    animation: slowRotatingCardBackground 12s ease-in-out infinite !important;
     transform-origin: center center !important;
     right: 20px !important;
   }
 
   .hero-student-card-container > div[style*="position: relative; z-index: 10"],
   .hero-student-card-container > div[style*="position: relative"] {
-    height: 380px !important;
+    height: 400px !important;
     width: 100% !important;
     border-radius: 28px !important;
     overflow: hidden !important;
-    background: linear-gradient(135deg, #9ebc9e 0%, #769a85 100%) !important;
-    box-shadow: 0 20px 45px rgba(158, 188, 158, 0.35) !important;
+    background: transparent !important;
     position: relative !important;
     z-index: 10 !important;
   }
@@ -6786,8 +6815,8 @@ button.btn-signup-new:hover {
   .hero-student-card-container img {
     height: 100% !important;
     width: 100% !important;
-    object-fit: cover !important;
-    object-position: center 15% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
     border-radius: 28px !important;
     display: block !important;
     visibility: visible !important;
