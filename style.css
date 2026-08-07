@@ -6494,10 +6494,42 @@ button.btn-signup-new:hover {
     -webkit-backdrop-filter: none !important;
   }
 
-  /* Disable continuous canvas/blur animations on mobile */
-  #bg3dCanvas,
+  /* Enable continuous background canvas and floating pill animations on mobile */
+  #bg3dCanvas {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+    opacity: 0.85 !important;
+  }
+
   .floating-pills-container {
-    display: none !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+  }
+
+  section.hero-skill-hub {
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 90px !important;
+    padding-bottom: 30px !important;
+    position: relative !important;
+    overflow: hidden !important;
   }
 
   /* Hardware acceleration for scroll containers */

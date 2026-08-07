@@ -404,9 +404,6 @@ function init3DBackgroundCanvas() {
     mouse.targetY = (e.clientY / height - 0.5) * 30;
   });
   function render() {
-    if (window.innerWidth <= 768) {
-      return; // Skip continuous heavy 3D particle rendering on mobile for 60fps scrolling
-    }
     ctx.clearRect(0, 0, width, height);
     time += 0.005; // Ultra-slow smooth ambient step
     rotationAngle += 0.0004; // Slow continuous rotation
