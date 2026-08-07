@@ -6742,7 +6742,7 @@ button.btn-signup-new:hover {
   }
 }
 
-/* --- Hero Student Card Container: Laptop & Mobile Perfection --- */
+/* --- Hero Student Section: Ultra-Smooth Ambient Glow & Floating Animation --- */
 .hero-student-card-container {
   position: relative;
   height: 480px;
@@ -6751,65 +6751,65 @@ button.btn-signup-new:hover {
   justify-content: center;
 }
 
-@keyframes slowRotatingCardBackground {
+@keyframes heroSmoothFloat {
   0% {
-    transform: rotate(-18deg) scale(0.85);
-  }
-  25% {
-    transform: rotate(-12deg) scale(0.88);
+    transform: translateY(0px);
   }
   50% {
-    transform: rotate(-24deg) scale(0.86);
-  }
-  75% {
-    transform: rotate(-14deg) scale(0.84);
+    transform: translateY(-10px);
   }
   100% {
-    transform: rotate(-18deg) scale(0.85);
+    transform: translateY(0px);
   }
 }
 
-@keyframes slowRotatingCardBackgroundDesktop {
+@keyframes heroAuraPulse {
   0% {
-    transform: rotate(-22deg) skewX(-4deg) translateY(0);
+    opacity: 0.6;
+    transform: scale(0.97);
   }
   50% {
-    transform: rotate(-14deg) skewX(-2deg) translateY(-10px);
+    opacity: 0.95;
+    transform: scale(1.03);
   }
   100% {
-    transform: rotate(-22deg) skewX(-4deg) translateY(0);
+    opacity: 0.6;
+    transform: scale(0.97);
   }
+}
+
+.hero-main-card-frame {
+  animation: heroSmoothFloat 6s ease-in-out infinite !important;
+}
+
+.hero-ambient-glow {
+  animation: heroAuraPulse 4s ease-in-out infinite !important;
 }
 
 @media screen and (max-width: 768px) {
   .hero-student-card-container {
     height: auto !important;
-    min-height: 420px !important;
+    min-height: 400px !important;
     width: 100% !important;
-    max-width: 340px !important;
-    margin: 20px auto 0 auto !important;
+    max-width: 330px !important;
+    margin: 15px auto 0 auto !important;
     position: relative !important;
   }
 
-  /* Show decorative rotated background cards on mobile screens with slow smooth rotation */
   .hero-student-card-container > div[style*="transform: rotate"] {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    animation: slowRotatingCardBackground 12s ease-in-out infinite !important;
-    transform-origin: center center !important;
-    right: 20px !important;
+    display: none !important;
   }
 
-  .hero-student-card-container > div[style*="position: relative; z-index: 10"],
-  .hero-student-card-container > div[style*="position: relative"] {
-    height: 400px !important;
+  .hero-main-card-frame {
+    height: 380px !important;
     width: 100% !important;
     border-radius: 28px !important;
     overflow: hidden !important;
-    background: transparent !important;
+    background: linear-gradient(145deg, rgba(158, 188, 158, 0.3) 0%, rgba(255, 255, 255, 0.7) 100%) !important;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12) !important;
     position: relative !important;
     z-index: 10 !important;
+    animation: heroSmoothFloat 6s ease-in-out infinite !important;
   }
 
   .hero-student-card-container img {
@@ -6819,8 +6819,6 @@ button.btn-signup-new:hover {
     object-position: center center !important;
     border-radius: 28px !important;
     display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
   }
 
   /* 1. Google Certifications Badge (Top Right - Compact Size) */
