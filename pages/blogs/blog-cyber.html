@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Security Essentials: Defending Systems Against Threat Vectors - Edvanta Blog</title>
+    <link rel="icon" type="image/png" href="../../assets/favicon-Bq7d6eDI.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>(function(){var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}})();</script>
+  <script type="module" crossorigin src="../../assets/main-CCTcA-B_.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/style-Da5xDnVe.css">
+</head>
+  <body>
+  <!-- TOP FIXED MOBILE NAVIGATION MENU DRAWER -->
+  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" onclick="closeMobileDrawer()"></div>
+  <div id="mobileMenuPanel" class="mobile-menu-drawer">
+    <div class="mobile-menu-header">
+      <div style="width: 40px;"></div>
+      <div class="mobile-menu-logo-center">
+        <span class="mobile-menu-logo">EDVANTA</span>
+      </div>
+      <button id="mobileMenuCloseBtn" class="mobile-close-btn" aria-label="Close Menu" onclick="closeMobileDrawer()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="../../index.html" class="mobile-nav-link" onclick="closeMobileDrawer()">🏠 Home</a>
+      <a href="../../about.html" class="mobile-nav-link" onclick="closeMobileDrawer()">📌 About</a>
+      <a href="../../courses.html" class="mobile-nav-link" onclick="closeMobileDrawer()">🎓 Programs</a>
+      <a href="../../blogs.html" class="mobile-nav-link" onclick="closeMobileDrawer()">✍️ Blogs</a>
+      <a href="https://lms.edvanta-edu.com/" target="_blank" class="mobile-nav-link" onclick="closeMobileDrawer()">💻 LMS Portal</a>
+      <a href="../../careers.html" class="mobile-nav-link" onclick="closeMobileDrawer()">🚀 Career</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" class="mobile-nav-signup-btn" onclick="closeMobileDrawer()">🟢 Sign Up</a>
+    </div>
+  </div>
+  <script>
+    function openMobileDrawer() {
+      var panel = document.getElementById('mobileMenuPanel');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      if (panel) panel.classList.add('open');
+      if (backdrop) backdrop.classList.add('open');
+    }
+    function closeMobileDrawer() {
+      var panel = document.getElementById('mobileMenuPanel');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      if (panel) panel.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('open');
+    }
+  </script>
+  
+
+  
+
+    <canvas id="bg3dCanvas"></canvas>
+          <header style="position: fixed; top: 0; left: 0; width: 100%; z-index: 999; padding: 18px 0; background: transparent;">
+   <div class="container navbar-inner" style="display: flex; justify-content: flex-start; align-items: center; max-width: 100%; margin: 0 auto; padding: 0 40px; gap: 20px;">
+    <button id="mobileMenuOpenBtn" class="mobile-hamburger-btn" aria-label="Open Navigation Menu" onclick="openMobileDrawer()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+      <div class="logo-card-container" style="background: transparent !important; box-shadow: none !important; border: none !important; padding: 0;">
+      <a class="logo" href="../../index.html" style="display: flex; align-items: center; text-decoration: none;">
+       <img alt="Edvanta Company Logo" class="site-logo-img" src="../../assets/company_logo_hd-DFTetHpo.png" />
+      </a>
+    </div>
+    <div class="nav-pill-container glass-panel" style="display: flex; align-items: center; height: 56px; border-radius: 50px; background: rgba(255, 255, 255, 0.98); border: 1px solid rgba(226, 232, 240, 0.9); backdrop-filter: blur(22px); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08); padding: 0 28px; gap: 16px;">
+      <nav class="nav-links-new" style="display: flex; align-items: center; gap: 12px;">
+       <a class="nav-item-new" href="../../about.html" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #0f172a; text-decoration: none; padding: 8px 18px; border-radius: 999px; font-size: 0.9rem;">
+        About
+       </a>
+       <div class="nav-item-dropdown-wrapper">
+         <a class="nav-item-new" href="../../courses.html" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #0f172a; text-decoration: none; padding: 8px 18px; border-radius: 999px; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 5px;">
+          Programs
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+         </a>
+         <div class="dropdown-menu-panel" style="position: absolute; top: 100%; left: 0; margin-top: 10px; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(22px); border: 2px solid rgba(158, 188, 158, 0.35); border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); padding: 12px; min-width: 260px; display: none; flex-direction: column; gap: 6px; z-index: 1000;">
+           <a href="../../courses.html?cat=IT" class="dropdown-item-link" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13.5px; color: #0f172a; text-decoration: none; transition: all 0.2s;">
+             <span style="font-size: 16px;">💻</span> IT &amp; Emerging Tech
+           </a>
+           <a href="../../courses.html?cat=Core" class="dropdown-item-link" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13.5px; color: #0f172a; text-decoration: none; transition: all 0.2s;">
+             <span style="font-size: 16px;">⚙️</span> Core Engineering
+           </a>
+           <a href="../../courses.html?cat=Management" class="dropdown-item-link" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13.5px; color: #0f172a; text-decoration: none; transition: all 0.2s;">
+             <span style="font-size: 16px;">📊</span> Management &amp; Non-IT
+           </a>
+         </div>
+       </div>
+       <a class="nav-item-new" href="../../blogs.html" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #0f172a; text-decoration: none; padding: 8px 18px; border-radius: 999px; font-size: 0.9rem;">
+        Blogs
+       </a>
+       <a class="nav-item-new" href="https://lms.edvanta-edu.com/" target="_blank" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #0f172a; text-decoration: none; padding: 8px 18px; border-radius: 999px; font-size: 0.9rem;">
+        LMS Portal
+       </a>
+       <a class="nav-item-new" href="../../careers.html" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #0f172a; text-decoration: none; padding: 8px 18px; border-radius: 999px; font-size: 0.9rem;">
+        Career
+       </a>
+      </nav>
+    </div>
+    <div class="navbar-actions-new" style="display: flex; align-items: center; margin-left: auto;">
+     <a class="btn-signup-new" href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" style="display: flex; align-items: center; justify-content: center; height: 56px; padding: 0 32px; border-radius: 50px; background: #9ebc9e !important; color: #ffffff !important; font-weight: 700; text-decoration: none; box-shadow: 0 12px 35px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.1); font-family: 'Poppins', sans-serif; font-size: 0.9rem;">
+      Sign Up
+     </a>
+    </div>
+   </div>
+  </header>
+    <main style="padding: 150px 0 80px 0;">
+      <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+        <div class="course-bucket-animated-card" style="padding: 48px 36px; margin: 0 auto; background: transparent !important; backdrop-filter: none !important;">
+        <div style="display: grid; grid-template-columns: 1fr 340px; gap: 48px; align-items: start;">
+          <div>
+            <div style="width: 100%; height: 280px; border-radius: 24px; margin-bottom: 32px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); overflow: hidden; position: relative;">
+              <img src="../../assets/blog_cyber-Dag8EsL-.jpg" alt="Cyber Security Essentials: Defending Systems Against Threat Vectors" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <span style="display: inline-block; background: rgba(158, 188, 158, 0.12); color: #9ebc9e; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 1.5px; padding: 6px 14px; border-radius: 999px; text-transform: uppercase; margin-bottom: 16px;">
+              COMPUTER SCIENCE TECHNICAL GUIDE
+            </span>
+            <h1 style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 38px; color: #000000; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 20px 0;">
+              Cyber Security Essentials: Defending Systems Against Threat Vectors
+            </h1>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; flex-wrap: wrap; gap: 16px; background: rgba(0,0,0,0.03); padding: 14px 20px; border-radius: 14px;">
+              <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: #475569;">
+                Edvanta Engineering Editorial · Published 12 Jun, 2025
+              </span>
+              <a href="../courses/course-cybersec.html" style="background: #9ebc9e; color: #ffffff !important; border-radius: 999px; padding: 10px 22px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(158, 188, 158, 0.25);">
+                <span>Explore Full Course Syllabus →</span>
+              </a>
+            </div>
+            <div style="border-bottom: 1px solid #e2e8f0; border-top: 1px solid #e2e8f0; padding: 24px 0; margin-bottom: 32px;">
+              <h2 style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 24px; color: #000000; margin: 0 0 16px 0;">Industry Overview & Market Career Outlook</h2>
+              <p style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #1e293b; line-height: 1.8; margin: 0 0 16px 0; font-weight: 500;">
+                With cyber attacks escalating globally, organizations require elite security engineers to safeguard sensitive cloud infrastructure, financial transactions, and enterprise networks.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
+                <div style="background: #ffffff; padding: 16px 20px; border-radius: 14px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                  <span style="font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">AVERAGE SALARY PACKAGE</span>
+                  <p style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 900; color: #9ebc9e; margin: 4px 0 0 0;">₹10 - ₹28 LPA</p>
+                </div>
+                <div style="background: #ffffff; padding: 16px 20px; border-radius: 14px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                  <span style="font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">HIRING DEMAND</span>
+                  <p style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 900; color: #9ebc9e; margin: 4px 0 0 0;">Critical Need (40% surge in openings)</p>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom: 36px;">
+              <h3 style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 22px; color: #000000; margin: 0 0 16px 0;">Key Skills & Competencies You Will Master</h3>
+              <ul style="font-family: 'Inter', sans-serif; font-size: 1.02rem; color: #1e293b; line-height: 1.8; padding-left: 0; list-style: none; margin: 0 0 24px 0; font-weight: 500;">
+                <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;"><span style="color: #9ebc9e; font-weight: bold;">✓</span> Ethical Hacking & Penetration Testing</li><li style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;"><span style="color: #9ebc9e; font-weight: bold;">✓</span> Network Security & Firewall Architecture</li><li style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;"><span style="color: #9ebc9e; font-weight: bold;">✓</span> SIEM & SOC Security Monitoring</li><li style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;"><span style="color: #9ebc9e; font-weight: bold;">✓</span> Web Application Vulnerability Auditing</li><li style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;"><span style="color: #9ebc9e; font-weight: bold;">✓</span> Cryptography & PKI Infrastructure</li><li style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;"><span style="color: #9ebc9e; font-weight: bold;">✓</span> Incident Response & Threat Hunting</li>
+              </ul>
+              <h4 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 15px; color: #000000; margin: 0 0 12px 0; text-transform: uppercase; letter-spacing: 1px;">Software Tools & Technologies Taught:</h4>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span style="background: rgba(158, 188, 158, 0.12); color: #9ebc9e; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 999px; display: inline-block;">Kali Linux</span> <span style="background: rgba(158, 188, 158, 0.12); color: #9ebc9e; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 999px; display: inline-block;">Wireshark</span> <span style="background: rgba(158, 188, 158, 0.12); color: #9ebc9e; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 999px; display: inline-block;">Metasploit</span> <span style="background: rgba(158, 188, 158, 0.12); color: #9ebc9e; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 999px; display: inline-block;">Nmap</span> <span style="background: rgba(158, 188, 158, 0.12); color: #9ebc9e; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 999px; display: inline-block;">Burp Suite</span> <span style="background: rgba(158, 188, 158, 0.12); color: #9ebc9e; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 999px; display: inline-block;">Splunk</span> <span style="background: rgba(158, 188, 158, 0.12); color: #9ebc9e; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 999px; display: inline-block;">Snort</span>
+              </div>
+            </div>
+            <div style="margin-bottom: 40px;">
+              <h3 style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 24px; color: #000000; margin: 0 0 20px 0;">Complete 4-Module Curriculum Breakdown</h3>
+    <div style="background: rgba(255,255,255,0.7); backdrop-filter: blur(12px); border-left: 4px solid #9ebc9e; border-radius: 0 16px 16px 0; padding: 20px 24px; margin-bottom: 16px; border-top: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+      <h4 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 17px; color: #000000; margin: 0 0 8px 0;">Module 1: Networking & Linux Fundamentals</h4>
+      <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #475569; margin: 0; line-height: 1.65;">Understand TCP/IP protocols, OSI layer auditing, subnetting, Linux command line, system administration, and shell scripting.</p>
+    </div>
+    <div style="background: rgba(255,255,255,0.7); backdrop-filter: blur(12px); border-left: 4px solid #9ebc9e; border-radius: 0 16px 16px 0; padding: 20px 24px; margin-bottom: 16px; border-top: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+      <h4 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 17px; color: #000000; margin: 0 0 8px 0;">Module 2: Vulnerability Assessment & Ethical Hacking</h4>
+      <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #475569; margin: 0; line-height: 1.65;">Perform network scanning with Nmap, vulnerability audits with Nessus, exploitation via Metasploit, and password cracking techniques.</p>
+    </div>
+    <div style="background: rgba(255,255,255,0.7); backdrop-filter: blur(12px); border-left: 4px solid #9ebc9e; border-radius: 0 16px 16px 0; padding: 20px 24px; margin-bottom: 16px; border-top: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+      <h4 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 17px; color: #000000; margin: 0 0 8px 0;">Module 3: Web Application & Cloud Security</h4>
+      <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #475569; margin: 0; line-height: 1.65;">Audit OWASP Top 10 vulnerabilities (SQL Injection, XSS, CSRF), configure WAFs, and harden AWS/Azure cloud perimeters.</p>
+    </div>
+    <div style="background: rgba(255,255,255,0.7); backdrop-filter: blur(12px); border-left: 4px solid #9ebc9e; border-radius: 0 16px 16px 0; padding: 20px 24px; margin-bottom: 16px; border-top: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+      <h4 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 17px; color: #000000; margin: 0 0 8px 0;">Module 4: SOC Operations, SIEM & Incident Response</h4>
+      <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #475569; margin: 0; line-height: 1.65;">Monitor security event logs using Splunk SIEM, configure IDS/IPS rules, conduct malware analysis, and execute incident containment protocols.</p>
+    </div>
+            </div>
+            <div style="margin-bottom: 40px;">
+              <h3 style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 22px; color: #000000; margin: 0 0 16px 0;">Hands-on Industry Capstone Projects</h3>
+              <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                <div style="background: #ffffff; border-radius: 14px; padding: 16px 20px; border: 1px solid rgba(0,0,0,0.08); font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; color: #000000; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);"><span style="font-size: 18px;">💻</span> Enterprise Network Penetration Test</div><div style="background: #ffffff; border-radius: 14px; padding: 16px 20px; border: 1px solid rgba(0,0,0,0.08); font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; color: #000000; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);"><span style="font-size: 18px;">💻</span> OWASP Web Application Security Audit</div><div style="background: #ffffff; border-radius: 14px; padding: 16px 20px; border: 1px solid rgba(0,0,0,0.08); font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; color: #000000; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);"><span style="font-size: 18px;">💻</span> SOC Incident Monitoring & SIEM Dashboard Setup</div>
+              </div>
+            </div>
+            <div style="background: rgba(158, 188, 158, 0.08); padding: 28px; border-radius: 20px; border-left: 5px solid #9ebc9e; margin-bottom: 32px;">
+              <h4 style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 20px; color: #000000; margin: 0 0 10px 0;">ISO 9001:2015 Verified Certification & Placement Support</h4>
+              <p style="font-family: 'Inter', sans-serif; font-size: 15px; color: #334155; line-height: 1.7; margin: 0 0 18px 0; font-weight: 500;">
+                Upon successful completion of the course and capstone projects, you earn an internationally recognized ISO 9001:2015 verified certificate along with 1-on-1 resume reviews, mock interviews, and direct referral portal access.
+              </p>
+              <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform" target="_blank" rel="noopener noreferrer" style="background: #9ebc9e; color: #ffffff !important; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 14px; padding: 12px 28px; border-radius: 999px; text-decoration: none; display: inline-block; box-shadow: 0 6px 18px rgba(158, 188, 158, 0.3);">Register Course Now →</a>
+                <a href="../courses/course-cybersec.html" style="background: #ffffff; color: #0f172a !important; border: 1.5px solid #cbd5e1; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 14px; padding: 12px 24px; border-radius: 999px; text-decoration: none; display: inline-block;">View Program Details</a>
+              </div>
+            </div>
+          </div>
+          <div style="position: sticky; top: 100px;">
+            <div style="background: #ffffff; border-radius: 32px; border: 1px solid rgba(0,0,0,0.07); padding: 36px 30px; box-shadow: 0 20px 45px rgba(0,0,0,0.06);">
+              <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 2.5px; color: #9ebc9e; text-transform: uppercase; display: block; margin-bottom: 16px;">ENROLL NOW</span>
+              <h3 style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 26px; color: #000000; line-height: 1.25; margin: 0 0 12px 0;">
+                Awesome discounts on all courses
+              </h3>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #475569; margin: 0 0 24px 0; line-height: 1.5; font-weight: 500;">
+                Get live interactive training, project certificates, and corporate placement access.
+              </p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform" target="_blank" rel="noopener noreferrer" style="background: #9ebc9e; color: #ffffff !important; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 15px; padding: 14px 28px; border-radius: 999px; text-decoration: none; display: inline-block; width: 100%; text-align: center; box-shadow: 0 8px 20px rgba(158, 188, 158, 0.3);">
+                Register Course →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </main>
+          <footer class="sitemap-footer" style="margin-top: 80px; padding: 60px 0 40px 0; background: transparent; position: relative; z-index: 20; color: #0f172a;">
+   <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+    <div class="footer-card-box" style="background: #ffffff !important; color: #0f172a !important; backdrop-filter: blur(16px); border-radius: 32px; border: 2px solid rgba(158, 188, 158, 0.4); padding: 50px 48px; box-shadow: 0 20px 50px rgba(0,0,0,0.08); margin-bottom: 30px;">
+     <div class="footer-sitemap-grid" style="display: grid; grid-template-columns: 2fr 1fr 1.3fr 1fr 1fr; gap: 40px; align-items: start;">
+      <div class="sitemap-brand-col">
+       <span class="sitemap-cat-label" style="display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; color: #9ebc9e; background: rgba(158, 188, 158, 0.15); padding: 4px 12px; border-radius: 999px; border: 1px solid rgba(158, 188, 158, 0.3);">
+        SITE MAP
+       </span>
+       <h3 style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 36px; color: #0f172a; margin: 0 0 32px 0; letter-spacing: -0.01em; line-height: 1.15;">
+        Find all our<br/><span style="color: #9ebc9e;">links here</span>
+       </h3>
+       <span class="sitemap-cat-label" style="display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; color: #9ebc9e; background: rgba(158, 188, 158, 0.15); padding: 4px 12px; border-radius: 999px; border: 1px solid rgba(158, 188, 158, 0.3);">
+        MEET FOR A COFFEE HERE
+       </span>
+       <p class="sitemap-address" style="font-family: 'Poppins', sans-serif; font-size: 14px; line-height: 1.65; margin: 0; max-width: 320px; color: #475569;">
+        Edvanta Edutech Private Limited. (HQ Office)<br/>
+        Madhapur, Hyderabad, Telangana - 500081<br/>
+        <strong style="color: #9ebc9e;">Phone:</strong> 7075854314<br/>
+        <strong style="color: #9ebc9e;">Email:</strong> hr@edvanta-edu.com
+       </p>
+      </div>
+      <div>
+       <span class="sitemap-cat-label" style="display: block; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; color: #9ebc9e;">
+        EXPLORE
+       </span>
+       <div style="display: flex; flex-direction: column; gap: 14px;">
+        <a class="sitemap-link" href="index.html" style="text-decoration: none; font-size: 14px; color: #334155;">Home</a>
+        <a class="sitemap-link" href="placements.html" style="text-decoration: none; font-size: 14px; color: #334155;">Partner</a>
+        <a class="sitemap-link" href="contact.html" style="text-decoration: none; font-size: 14px; color: #334155;">Contact Us</a>
+        <a class="sitemap-link" href="index.html#community" style="text-decoration: none; font-size: 14px; color: #334155;">Community</a>
+        <a class="sitemap-link" href="index.html#testimonials" style="text-decoration: none; font-size: 14px; color: #334155;">Reviews</a>
+        <a class="sitemap-link" href="https://lms.edvanta-edu.com/validate-certificate" target="_blank" style="text-decoration: none; font-size: 14px; color: #334155;">Verify Certificate</a>
+       </div>
+      </div>
+      <div>
+       <span class="sitemap-cat-label" style="display: block; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; color: #9ebc9e;">
+        PROGRAMS
+       </span>
+       <div style="display: flex; flex-direction: column; gap: 14px;">
+        <a class="sitemap-link" href="courses.html?cat=IT" style="text-decoration: none; font-size: 14px; color: #334155;">IT &amp; Emerging Tech</a>
+        <a class="sitemap-link" href="courses.html?cat=Core" style="text-decoration: none; font-size: 14px; color: #334155;">Core Engineering</a>
+        <a class="sitemap-link" href="courses.html?cat=Management" style="text-decoration: none; font-size: 14px; color: #334155;">Management &amp; Non-IT</a>
+        <a class="sitemap-link" href="courses.html" style="text-decoration: none; font-size: 14px; color: #334155;">All 28 Programs</a>
+       </div>
+      </div>
+      <div>
+       <span class="sitemap-cat-label" style="display: block; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; color: #9ebc9e;">
+        COMPANY
+       </span>
+       <div style="display: flex; flex-direction: column; gap: 14px;">
+        <a class="sitemap-link" href="about.html" style="text-decoration: none; font-size: 14px; color: #334155;">About Us</a>
+        <a class="sitemap-link" href="blogs.html" style="text-decoration: none; font-size: 14px; color: #334155;">Blogs</a>
+        <a class="sitemap-link" href="careers.html" style="text-decoration: none; font-size: 14px; color: #334155;">Career</a>
+       </div>
+      </div>
+      <div>
+       <span class="sitemap-cat-label" style="display: block; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; color: #9ebc9e;">
+        USER
+       </span>
+       <div style="display: flex; flex-direction: column; gap: 14px;">
+        <a class="sitemap-link" href="login.html" style="text-decoration: none; font-size: 14px; color: #334155;">Login</a>
+        <a class="sitemap-link" href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" style="text-decoration: none; font-size: 14px; color: #334155;" target="_blank">Sign Up</a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="footer-card-box" style="background: #ffffff !important; color: #0f172a !important; backdrop-filter: blur(16px); border-radius: 24px; border: 1.5px solid rgba(158, 188, 158, 0.3); padding: 28px 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 30px;">
+     <h4 class="social-media-title" style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 24px; margin: 0; line-height: 1.25; color: #0f172a;">
+      Find us on <span style="color: #9ebc9e;">💚</span><br/>social media
+     </h4>
+     <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+      <a class="social-pill" href="https://www.linkedin.com/company/edvanta-edutech/" style="background: rgba(158, 188, 158, 0.15); border: 1.5px solid #9ebc9e; border-radius: 999px; padding: 10px 22px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #9ebc9e; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;" target="_blank" rel="noopener noreferrer">
+       <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.77a1.6 1.6 0 1 0 1.6 1.6 1.6 1.6 0 0 0-1.6-1.6Z"/></svg>
+       <span>LinkedIn</span>
+       <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><line x1="7" x2="17" y1="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </a>
+      <a class="social-pill" href="https://www.instagram.com/edvanta_official?igsh=Y29tdGk5NjVmd2hs" style="background: rgba(158, 188, 158, 0.15); border: 1.5px solid #9ebc9e; border-radius: 999px; padding: 10px 22px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #9ebc9e; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;" target="_blank" rel="noopener noreferrer">
+       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+       <span>Instagram</span>
+       <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><line x1="7" x2="17" y1="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </a>
+      <a class="social-pill" href="mailto:hr@edvanta-edu.com" style="background: rgba(158, 188, 158, 0.15); border: 1.5px solid #9ebc9e; border-radius: 999px; padding: 10px 22px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #9ebc9e; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+       <span>hr@edvanta-edu.com</span>
+       <svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><line x1="7" x2="17" y1="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </a>
+      <a class="social-pill" href="tel:7075854314" style="background: rgba(158, 188, 158, 0.15); border: 1.5px solid #9ebc9e; border-radius: 999px; padding: 10px 22px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #9ebc9e; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+       <span>7075854314</span>
+      </a>
+     </div>
+    </div>
+    <div class="footer-giant-watermark-container" style="position: relative; width: 100%; overflow: hidden; padding-top: 40px; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+     <span style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 15px; letter-spacing: 5px; color: #9ebc9e; text-transform: uppercase; display: block; margin-bottom: 14px; text-shadow: 0 0 16px rgba(158, 188, 158, 0.75);">
+      EDUCATE. IMPROVE. INSPIRE
+     </span>
+     <svg class="giant-edvanta-watermark" height="auto" style="display: block; opacity: 0.38; fill: #9ebc9e; margin: 0 auto; max-width: 850px; filter: drop-shadow(0 0 20px rgba(158, 188, 158, 0.55));" viewbox="0 0 810 180" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10,40 L 90,40 L 75,70 L 10,70 Z"></path>
+      <path d="M 10,85 L 70,85 L 85,115 L 25,115 Z"></path>
+      <path d="M 10,130 L 95,130 L 80,160 L 10,160 Z"></path>
+      <path d="M 110,40 H 180 C 210,40 225,65 225,100 C 225,135 210,160 180,160 H 110 V 130 H 180 C 195,130 200,115 200,100 C 200,85 195,70 180,70 H 110 Z"></path>
+      <path d="M 235,40 H 270 L 305,120 L 340,40 H 375 L 322.5,160 H 287.5 Z"></path>
+      <path d="M 385,160 L 427.5,40 H 442.5 L 485,160 H 452.5 L 435,95 L 417.5,160 Z"></path>
+      <path d="M 417.5,160 L 435,110 L 452.5,160 Z"></path>
+      <path d="M 495,40 H 527.5 L 557.5,130 V 40 H 590 V 160 H 557.5 L 527.5,70 V 160 H 495 Z"></path>
+      <path d="M 595,40 H 690 V 70 H 657.5 V 160 H 627.5 V 70 H 595 Z"></path>
+      <path d="M 695,160 L 737.5,40 H 752.5 L 795,160 H 762.5 L 745,95 L 727.5,160 Z"></path>
+      <path d="M 727.5,160 L 745,110 L 762.5,160 Z"></path>
+     </svg>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding: 24px 10px 10px 10px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 20px;">
+     <span style="font-family: 'Poppins', sans-serif; font-size: 13px; color: #0f172a; font-weight: 700;">
+      ©Edvanta 2025
+     </span>
+     <div style="display: flex; gap: 24px; align-items: center;">
+      <a href="https://lms.edvanta-edu.com/validate-certificate" target="_blank" rel="noopener noreferrer" style="font-family: 'Poppins', sans-serif; font-size: 13px; color: #0f172a; text-decoration: none; font-weight: 700;">
+       Verified Certification
+      </a>
+      <a href="terms.html" style="font-family: 'Poppins', sans-serif; font-size: 13px; color: #0f172a; text-decoration: none; font-weight: 700;">
+       Terms and Condition
+      </a>
+      <a href="privacy.html" style="font-family: 'Poppins', sans-serif; font-size: 13px; color: #0f172a; text-decoration: none; font-weight: 700;">
+       Privacy policy
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+      <a href="https://wa.me/917075854314" target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.8.978 3.81 1.492 5.867 1.493H12.05c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+    
+  
+  
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial Intelligence Foundations | Edvanta Programs</title>
+  <link rel="icon" type="image/png" href="../../assets/favicon-Bq7d6eDI.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <script>(function(){var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}})();</script>
+  <script type="module" crossorigin src="../../assets/main-CCTcA-B_.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/style-Da5xDnVe.css">
+</head>
+<body>
+  <!-- TOP FIXED MOBILE NAVIGATION MENU DRAWER -->
+  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" onclick="closeMobileDrawer()"></div>
+  <div id="mobileMenuPanel" class="mobile-menu-drawer">
+    <div class="mobile-menu-header">
+      <div style="width: 40px;"></div>
+      <div class="mobile-menu-logo-center">
+        <span class="mobile-menu-logo">EDVANTA</span>
+      </div>
+      <button id="mobileMenuCloseBtn" class="mobile-close-btn" aria-label="Close Menu" onclick="closeMobileDrawer()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="../../index.html" class="mobile-nav-link" onclick="closeMobileDrawer()">🏠 Home</a>
+      <a href="../../about.html" class="mobile-nav-link" onclick="closeMobileDrawer()">📌 About</a>
+      <a href="../../courses.html" class="mobile-nav-link" onclick="closeMobileDrawer()">🎓 Programs</a>
+      <a href="../../blogs.html" class="mobile-nav-link" onclick="closeMobileDrawer()">✍️ Blogs</a>
+      <a href="https://lms.edvanta-edu.com/" target="_blank" class="mobile-nav-link" onclick="closeMobileDrawer()">💻 LMS Portal</a>
+      <a href="../../careers.html" class="mobile-nav-link" onclick="closeMobileDrawer()">🚀 Career</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" class="mobile-nav-signup-btn" onclick="closeMobileDrawer()">🟢 Sign Up</a>
+    </div>
+  </div>
+  <script>
+    function openMobileDrawer() {
+      var panel = document.getElementById('mobileMenuPanel');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      if (panel) panel.classList.add('open');
+      if (backdrop) backdrop.classList.add('open');
+    }
+    function closeMobileDrawer() {
+      var panel = document.getElementById('mobileMenuPanel');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      if (panel) panel.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('open');
+    }
+  </script>
+  
+
+  
+
+    <canvas id="bg3dCanvas"></canvas>
+    <div class="floating-theme-switch" id="themeToggler">
+      <button class="theme-btn active" data-mode="light" title="Light Mode">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <div class="theme-divider"></div>
+      <button class="theme-btn" data-mode="dark" title="Dark Mode">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+    <header style="position: fixed; top: 0; left: 0; width: 100%; z-index: 999; padding: 18px 0; background: transparent;">
+      <div class="container navbar-inner" style="display: flex; justify-content: flex-start; align-items: center; max-width: 100%; margin: 0 auto; padding: 0 40px; gap: 20px;">
+        <button id="mobileMenuOpenBtn" class="mobile-hamburger-btn" aria-label="Open Navigation Menu" onclick="openMobileDrawer()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+      <div class="logo-card-container" style="background: transparent !important; box-shadow: none !important; border: none !important; padding: 0;">
+          <a class="logo" href="../../index.html" style="display: flex; align-items: center; text-decoration: none;">
+            <img alt="Edvanta Company Logo" class="site-logo-img" src="../../assets/company_logo_hd-DFTetHpo.png" />
+          </a>
+        </div>
+        <div class="nav-pill-container glass-panel" style="display: flex; align-items: center; height: 56px; border-radius: 50px; background: rgba(255, 255, 255, 0.98); border: 1px solid rgba(226, 232, 240, 0.9); backdrop-filter: blur(22px); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08); padding: 0 28px; gap: 16px;">
+          <nav class="nav-links-new" style="display: flex; align-items: center; gap: 12px;">
+            <a class="nav-item-new" href="../../about.html" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #0f172a; text-decoration: none; padding: 8px 18px; border-radius: 999px; font-size: 0.9rem;">About</a>
+            <div class="nav-item-dropdown-wrapper">
+              <a class="nav-item-new" href="../../courses.html" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #0f172a; text-decoration: none; padding: 8px 18px; border-radius: 999px; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 5px;">
+                Programs
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </a>
+              <div class="dropdown-menu-panel" style="position: absolute; top: 100%; left: 0; margin-top: 10px; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(22px); border: 2px solid rgba(158, 188, 158, 0.35); border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); padding: 12px; min-width: 260px; display: none; flex-direction: column; gap: 6px; z-index: 1000;">
+                <a href="../../courses.html?cat=IT" class="dropdown-item-link" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13.5px; color: #0f172a; text-decoration: none; transition: all 0.2s;">
+                  <span style="font-size: 16px;">💻</span> IT &amp; Emerging Tech
+                </a>
+                <a href="../../courses.html?cat=Core" class="dropdown-item-link" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13.5px; color: #0f172a; text-decoration: none; transition: all 0.2s;">
+                  <span style="font-size: 16px;">⚙️</span> Core Engineering
+                </a>
+                <a href="../../courses.html?cat=Management" class="dropdown-item-link" style="display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13.5px; color: #0f172a; text-decoration: none; transition: all 0.2s;">
+                  <span style="font-size: 16px;">📊</span> Management &amp; Non-IT
+                </a>
+              </div>
+            </div>
+            <a class="nav-item-new" href="../../blogs.html" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #0f172a; text-decoration: none; padding: 8px 18px; border-radius: 999px; font-size: 0.9rem;">Blogs</a>
+            <a class="nav-item-new" href="https://lms.edvanta-edu.com/" target="_blank" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #0f172a; text-decoration: none; padding: 8px 18px; border-radius: 999px; font-size: 0.9rem;">LMS Portal</a>
+            <a class="nav-item-new" href="../../careers.html" style="font-weight: 600; font-family: 'Poppins', sans-serif; color: #0f172a; text-decoration: none; padding: 8px 18px; border-radius: 999px; font-size: 0.9rem;">Career</a>
+          </nav>
+        </div>
+        <div class="navbar-actions-new" style="display: flex; align-items: center; margin-left: auto;">
+          <a class="btn-signup-new" href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform?usp=header" target="_blank" style="display: flex; align-items: center; justify-content: center; height: 56px; padding: 0 32px; border-radius: 50px; background: #9ebc9e !important; color: #ffffff !important; font-weight: 700; text-decoration: none; box-shadow: 0 12px 35px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.1); font-family: 'Poppins', sans-serif; font-size: 0.9rem;">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 24px;">
+      <div style="background: #9ebc9e; border-radius: 24px; padding: 48px; position: relative; color: #ffffff; text-align: left; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06); margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; position: relative; z-index: 10;">
+          <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">TRENDING . CS</span>
+          <div style="background: #ffffff; border-radius: 8px; padding: 6px 14px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);">
+            <div style="font-family: 'Poppins', sans-serif; font-size: 8px; font-weight: 800; color: #0f2a4a; line-height: 1;">
+              <span style="color: #ffffff !important; font-size: 7px; display: block; margin-bottom: 2px; letter-spacing: 0.5px; text-align: left;">Futurewings</span>
+              CERTIFICATE PARTNER
+            </div>
+          </div>
+        </div>
+        <h1 style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 46px; color: #ffffff; margin: 36px 0 16px 0; line-height: 1.1; letter-spacing: -0.02em; position: relative; z-index: 10;">Artificial Intelligence Foundations</h1>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 500; margin: 0 0 12px 0; opacity: 0.95; position: relative; z-index: 10;">Trained by Industry professionals from</p>
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; position: relative; z-index: 10;">
+          <div style="background: rgba(255, 255, 255, 0.25); border-radius: 8px; padding: 6px 16px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 14px; color: #ffffff; border: 1px solid rgba(255,255,255,0.15);">Microsoft</div>
+          <div style="background: rgba(255, 255, 255, 0.25); border-radius: 8px; padding: 6px 16px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 14px; color: #ffffff; border: 1px solid rgba(255,255,255,0.15);">Google</div>
+        </div>
+        <div style="position: absolute; bottom: 40px; right: 48px; background: rgba(0, 0, 0, 0.2); border-radius: 99px; padding: 8px 20px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 1px; color: #ffffff; text-transform: uppercase; z-index: 10;" class="inner-stipend-pill">
+          ₹29,999 · HIGH STIPEND OFFERED*
+        </div>
+        <div style="position: absolute; bottom: -20px; left: 20px; font-size: 7vw; font-weight: 900; color: rgba(255, 255, 255, 0.08); font-family: 'Poppins', sans-serif; pointer-events: none; text-transform: uppercase;">CSE</div>
+      </div>
+
+      <div class="glass-panel" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; padding: 18px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.015); margin-bottom: 40px;">
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; text-align: left;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="color: #9ebc9e;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <span style="display: block; font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 700; color: #94a3b8; letter-spacing: 1px;">DURATION</span>
+              <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 14.5px; color: #0f172a !important;">4 Months · Online</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="color: #9ebc9e;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+            </div>
+            <div>
+              <span style="display: block; font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 700; color: #94a3b8; letter-spacing: 1px;">PROGRAM</span>
+              <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 14.5px; color: #0f172a !important;">Live classes</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="color: #9ebc9e;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <span style="display: block; font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 700; color: #94a3b8; letter-spacing: 1px;">GUARANTEED</span>
+              <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 14.5px; color: #0f172a !important;">Skills</span>
+            </div>
+          </div>
+        </div>
+        <a href="../../syllabi/AI-and-Machine-Learning_Edvanta.pdf" target="_blank" download="AI-and-Machine-Learning_Edvanta.pdf" style="background: #ffffff; border: 2px solid #0f172a; color: #000000; border-radius: 99px; padding: 12px 24px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.2s;">Download Syllabus</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform" target="_blank" rel="noopener noreferrer" style="background: #000000; border-radius: 99px; padding: 6px 6px 6px 24px; display: flex; align-items: center; gap: 16px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+          <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13.5px; color: #ffffff;">Register ₹29,999</span>
+          <div style="background: #9ebc9e; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: #000000; font-weight: 950; font-size: 14px; flex-shrink: 0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="program-grid-2">
+        <div>
+          <div class="glass-panel" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 40px; box-shadow: 0 10px 35px rgba(0,0,0,0.01); margin-bottom: 30px; text-align: left;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-weight: 850; font-size: 24px; color: inherit; margin: 0 0 20px 0;">Program Overview</h2>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 15px; line-height: 1.75; color: var(--text-secondary); margin: 0;">Understand core search algorithms, logic programming, knowledge representations, and model heuristics.</p>
+            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: inherit; margin: 30px 0 10px 0;">Key Skills You'll Learn</h3>
+            <div class="skills-pills">
+              <span class="skill-pill">Heuristics Search</span><span class="skill-pill">Logic Programming</span><span class="skill-pill">Knowledge Graphs</span><span class="skill-pill">Expert Systems</span><span class="skill-pill">Reinforcement Learning</span><span class="skill-pill">NLP Core</span>
+            </div>
+          </div>
+          <div id="curriculum" class="glass-panel" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 40px; box-shadow: 0 10px 35px rgba(0,0,0,0.01); margin-bottom: 30px; text-align: left;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-weight: 850; font-size: 24px; color: inherit; margin: 0 0 24px 0;">Curriculum Modules</h2>
+            <div class="syllabus-module">
+            <div style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 16px; color: #9ebc9e; margin-bottom: 6px;">Module 1: Heuristics & Path Search Algorithms</div>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-secondary); margin: 0;">Implement depth/breadth first searches, A* algorithms, minimax parameters, game search engines, and spatial path models.</p>
+          </div><div class="syllabus-module">
+            <div style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 16px; color: #9ebc9e; margin-bottom: 6px;">Module 2: Knowledge Graph Representation</div>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-secondary); margin: 0;">Build logical frameworks, predicate logic checkers, ontological databases, and expert consultation systems.</p>
+          </div><div class="syllabus-module">
+            <div style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 16px; color: #9ebc9e; margin-bottom: 6px;">Module 3: Reinforcement Learning Systems</div>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-secondary); margin: 0;">Create Q-learning algorithms, reward boundaries, environment feedback loops, and automated logic grids.</p>
+          </div>
+          </div>
+          <div class="glass-panel" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 40px; box-shadow: 0 10px 35px rgba(0,0,0,0.01); margin-bottom: 30px; text-align: left;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-weight: 850; font-size: 24px; color: inherit; margin: 0 0 20px 0;">Global Certifications</h2>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 15px; line-height: 1.75; color: var(--text-secondary); margin: 0 0 24px 0;">Receive an ISO 9001:2015 Verified Industry Credential signed by Edvanta systems reviewers and certified corporate partners.</p>
+            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: inherit; margin: 30px 0 16px 0;">Career Paths &amp; Opportunities</h3>
+            <ul style="font-family: 'Poppins', sans-serif; font-size: 14.5px; line-height: 1.8; color: #0f172a !important; padding-left: 20px; margin: 0;">
+              <li>Industry Specialist Engineer</li><li>R&amp;D Software Consultant</li><li>Senior Technical Analyst</li><li>Enterprise Project Lead</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 30px;">
+            <div class="spec-card">
+              <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 10px; color: var(--accent); letter-spacing: 1px; text-transform: uppercase;">DURATION</span>
+              <div style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 20px; color: #9ebc9e;">4 Months</div>
+            </div>
+            <div class="spec-card">
+              <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 10px; color: var(--accent); letter-spacing: 1px; text-transform: uppercase;">ELIGIBILITY</span>
+              <div style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13px; color: #9ebc9e; line-height: 1.3; margin-top: 4px;">B.Tech / Degree / Diploma</div>
+            </div>
+          </div>
+          <div id="register" class="glass-panel" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 20px; padding: 40px; box-shadow: 0 10px 35px rgba(0,0,0,0.01); text-align: left; position: sticky; top: 40px;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 850; font-size: 22px; color: inherit; margin: 0 0 8px 0;">Register Now</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 13.5px; color: var(--text-secondary); margin: 0 0 24px 0;">Secure your seat and start your learning track today by completing the official registration form.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScQnNse67qz9SkYDNQFTO2nY4hdeT7J0KqmyripVtCsrzDZ2g/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: flex; align-items: center; justify-content: center; width: 100%; background: #9ebc9e; color: #ffffff; font-weight: 800; border-radius: 12px; padding: 14px; text-decoration: none; text-align: center; box-shadow: 0 4px 15px rgba(22,163,74,0.25);">Open Registration Form ↗</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  <a href="https://wa.me/917075854314" target="_blank" rel="noopener noreferrer" class="whatsapp-widget" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.8.978 3.81 1.492 5.867 1.493H12.05c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+  
+  
+  
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://edvanta-official.github.io/Edvanta-Edutech1/sitemap.xml
