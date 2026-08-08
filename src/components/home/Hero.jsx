@@ -44,7 +44,7 @@ const Hero = () => {
                 className="h-full object-contain filter drop-shadow-2xl"
               />
             </div>
-            <div className="absolute top-14 -right-4 z-20 bg-white rounded-2xl p-3 px-5 shadow-xl border border-slate-100 flex items-center gap-3 animate-pulse">
+            <div className="absolute top-3 -right-4 z-20 bg-white rounded-2xl p-3 px-5 shadow-xl border border-slate-100 flex items-center gap-3 animate-pulse">
               <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 font-black text-xs flex items-center justify-center">G</div>
               <div>
                 <span className="block font-extrabold text-xs text-black leading-none">Google</span>
@@ -62,7 +62,7 @@ const Hero = () => {
                 <span className="font-extrabold text-xs text-black">1000+ Students</span>
               </div>
             </div>
-            <div className="absolute bottom-4 -right-2 z-20 bg-white rounded-2xl p-3 px-5 shadow-xl border border-slate-100 text-left">
+            <div className="absolute bottom-20 -right-2 z-20 bg-white rounded-2xl p-3 px-5 shadow-xl border border-slate-100 text-left">
               <div className="flex items-center gap-1 mb-1">
                 <span className="text-[10px] font-extrabold text-slate-600">REVIEWED 4.4+</span>
                 <div className="flex text-amber-400 text-[10px]"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
